@@ -101,7 +101,7 @@ Partial Class consulta_cliente
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(39, 20)
+        Me.Label1.Location = New System.Drawing.Point(240, 20)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(94, 13)
         Me.Label1.TabIndex = 2
@@ -109,7 +109,7 @@ Partial Class consulta_cliente
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(151, 20)
+        Me.TextBox1.Location = New System.Drawing.Point(357, 17)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(100, 20)
         Me.TextBox1.TabIndex = 3
