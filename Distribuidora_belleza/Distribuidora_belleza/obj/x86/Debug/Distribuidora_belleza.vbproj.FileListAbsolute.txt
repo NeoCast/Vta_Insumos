@@ -18,3 +18,7 @@ C:\Users\Usuario\Documents\Proyecto programacion\Distribuidora_belleza\Distribui
 C:\Users\Usuario\Documents\Proyecto programacion\Distribuidora_belleza\Distribuidora_belleza\obj\x86\Debug\form1.consulta_empleados.resources
 C:\Users\Usuario\Documents\Proyecto programacion\Distribuidora_belleza\Distribuidora_belleza\obj\x86\Debug\form1.consulta_proveedor.resources
 C:\Users\Usuario\Documents\Proyecto programacion\Distribuidora_belleza\Distribuidora_belleza\obj\x86\Debug\form1.ModificarProveedor.resources
+C:\Users\Usuario\Documents\github\Vta_Insumos\Distribuidora_belleza\Distribuidora_belleza\bin\Debug\Distribuidora_belleza.exe.config
+C:\Users\Usuario\Documents\github\Vta_Insumos\Distribuidora_belleza\Distribuidora_belleza\obj\x86\Debug\Distribuidora_belleza.exe
+C:\Users\Usuario\Documents\github\Vta_Insumos\Distribuidora_belleza\Distribuidora_belleza\obj\x86\Debug\Distribuidora_belleza.xml
+C:\Users\Usuario\Documents\github\Vta_Insumos\Distribuidora_belleza\Distribuidora_belleza\obj\x86\Debug\Distribuidora_belleza.pdb
