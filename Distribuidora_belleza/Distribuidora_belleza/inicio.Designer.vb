@@ -35,6 +35,8 @@ Partial Class inicio
         Me.EmpleadoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ProveedorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ConsultaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BuscarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EliminarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CajaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ConfiguracionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ConfiguracionToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
@@ -44,12 +46,13 @@ Partial Class inicio
         Me.ClienteBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ClienteTableAdapter = New form1.BaseBellezaDataSetTableAdapters.clienteTableAdapter()
         Me.TableAdapterManager = New form1.BaseBellezaDataSetTableAdapters.TableAdapterManager()
-        Me.EmpleadoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.EmpleadoTableAdapter = New form1.BaseBellezaDataSetTableAdapters.empleadoTableAdapter()
-        Me.ProveedorBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.ProveedorTableAdapter = New form1.BaseBellezaDataSetTableAdapters.proveedorTableAdapter()
-        Me.ArticulosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ArticulosTableAdapter = New form1.BaseBellezaDataSetTableAdapters.articulosTableAdapter()
+        Me.EmpleadoTableAdapter = New form1.BaseBellezaDataSetTableAdapters.empleadoTableAdapter()
+        Me.ProveedorTableAdapter = New form1.BaseBellezaDataSetTableAdapters.proveedorTableAdapter()
+        Me.EmpleadoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ProveedorBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ArticulosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ClienteToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.BaseBellezaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ClienteBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -62,36 +65,36 @@ Partial Class inicio
         '
         Me.Button1.Location = New System.Drawing.Point(34, 55)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(74, 54)
+        Me.Button1.Size = New System.Drawing.Size(84, 54)
         Me.Button1.TabIndex = 0
-        Me.Button1.Text = "Button1"
+        Me.Button1.Text = "ARTICULO"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'Button2
         '
         Me.Button2.Location = New System.Drawing.Point(34, 127)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(74, 54)
+        Me.Button2.Size = New System.Drawing.Size(84, 54)
         Me.Button2.TabIndex = 1
-        Me.Button2.Text = "Button2"
+        Me.Button2.Text = "CLIENTE"
         Me.Button2.UseVisualStyleBackColor = True
         '
         'Button3
         '
         Me.Button3.Location = New System.Drawing.Point(34, 201)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(74, 54)
+        Me.Button3.Size = New System.Drawing.Size(84, 54)
         Me.Button3.TabIndex = 2
-        Me.Button3.Text = "Button3"
+        Me.Button3.Text = "EMPLEADO"
         Me.Button3.UseVisualStyleBackColor = True
         '
         'Button4
         '
         Me.Button4.Location = New System.Drawing.Point(34, 278)
         Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(74, 54)
+        Me.Button4.Size = New System.Drawing.Size(84, 54)
         Me.Button4.TabIndex = 3
-        Me.Button4.Text = "Button4"
+        Me.Button4.Text = "PROVEEDOR"
         Me.Button4.UseVisualStyleBackColor = True
         '
         'MenuStrip1
@@ -142,9 +145,23 @@ Partial Class inicio
         '
         'ConsultaToolStripMenuItem
         '
+        Me.ConsultaToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BuscarToolStripMenuItem, Me.EliminarToolStripMenuItem})
         Me.ConsultaToolStripMenuItem.Name = "ConsultaToolStripMenuItem"
         Me.ConsultaToolStripMenuItem.Size = New System.Drawing.Size(66, 20)
         Me.ConsultaToolStripMenuItem.Text = "Consulta"
+        '
+        'BuscarToolStripMenuItem
+        '
+        Me.BuscarToolStripMenuItem.Name = "BuscarToolStripMenuItem"
+        Me.BuscarToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.BuscarToolStripMenuItem.Text = "Buscar"
+        '
+        'EliminarToolStripMenuItem
+        '
+        Me.EliminarToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ClienteToolStripMenuItem1})
+        Me.EliminarToolStripMenuItem.Name = "EliminarToolStripMenuItem"
+        Me.EliminarToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.EliminarToolStripMenuItem.Text = "Eliminar"
         '
         'CajaToolStripMenuItem
         '
@@ -201,33 +218,40 @@ Partial Class inicio
         Me.TableAdapterManager.empleadoTableAdapter = Me.EmpleadoTableAdapter
         Me.TableAdapterManager.proveedorTableAdapter = Me.ProveedorTableAdapter
         Me.TableAdapterManager.UpdateOrder = form1.BaseBellezaDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        Me.TableAdapterManager.ventasTableAdapter = Nothing
+        '
+        'ArticulosTableAdapter
+        '
+        Me.ArticulosTableAdapter.ClearBeforeFill = True
+        '
+        'EmpleadoTableAdapter
+        '
+        Me.EmpleadoTableAdapter.ClearBeforeFill = True
+        '
+        'ProveedorTableAdapter
+        '
+        Me.ProveedorTableAdapter.ClearBeforeFill = True
         '
         'EmpleadoBindingSource
         '
         Me.EmpleadoBindingSource.DataMember = "empleado"
         Me.EmpleadoBindingSource.DataSource = Me.BaseBellezaDataSet
         '
-        'EmpleadoTableAdapter
-        '
-        Me.EmpleadoTableAdapter.ClearBeforeFill = True
-        '
         'ProveedorBindingSource
         '
         Me.ProveedorBindingSource.DataMember = "proveedor"
         Me.ProveedorBindingSource.DataSource = Me.BaseBellezaDataSet
-        '
-        'ProveedorTableAdapter
-        '
-        Me.ProveedorTableAdapter.ClearBeforeFill = True
         '
         'ArticulosBindingSource
         '
         Me.ArticulosBindingSource.DataMember = "articulos"
         Me.ArticulosBindingSource.DataSource = Me.BaseBellezaDataSet
         '
-        'ArticulosTableAdapter
+        'ClienteToolStripMenuItem1
         '
-        Me.ArticulosTableAdapter.ClearBeforeFill = True
+        Me.ClienteToolStripMenuItem1.Name = "ClienteToolStripMenuItem1"
+        Me.ClienteToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
+        Me.ClienteToolStripMenuItem1.Text = "Cliente"
         '
         'inicio
         '
@@ -281,4 +305,7 @@ Partial Class inicio
     Friend WithEvents ProveedorBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents ArticulosTableAdapter As form1.BaseBellezaDataSetTableAdapters.articulosTableAdapter
     Friend WithEvents ArticulosBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents BuscarToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents EliminarToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ClienteToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
 End Class

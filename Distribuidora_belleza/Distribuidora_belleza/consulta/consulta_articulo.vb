@@ -39,4 +39,25 @@
 
 
     End Sub
+
+  
+
+    Private Sub ArticulosDataGridView_CellContentDoubleClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles ArticulosDataGridView.CellContentDoubleClick
+        Dim fila As Integer
+        fila = ArticulosDataGridView.CurrentCellAddress.Y
+        If ArticulosDataGridView.Item(0, fila).Value Is DBNull.Value Then
+            Exit Sub
+        Else
+
+            ModificarArticulo.txtId_articulo.Text = ArticulosDataGridView.Item(0, fila).Value()
+            ModificarArticulo.txtDescripcion.Text = ArticulosDataGridView.Item(1, fila).Value()
+            ModificarArticulo.txtCantidad_de_stock.Text = ArticulosDataGridView.Item(2, fila).Value()
+            ModificarArticulo.txtPrecio.Text = ArticulosDataGridView.Item(3, fila).Value()
+            ModificarArticulo.txtRubro.Text = ArticulosDataGridView.Item(4, fila).Value()
+            ModificarArticulo.txtMarca.Text = ArticulosDataGridView.Item(5, fila).Value()
+
+            ModificarArticulo.Show()
+
+        End If
+    End Sub
 End Class

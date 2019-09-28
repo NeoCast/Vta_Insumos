@@ -62,4 +62,9 @@
         Me.TableAdapterManager.UpdateAll(Me.BaseBellezaDataSet)
 
     End Sub
+
+    Private Sub ClienteToolStripMenuItem1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ClienteToolStripMenuItem1.Click
+        Baja_cliente.Show()
+
+    End Sub
 End Class

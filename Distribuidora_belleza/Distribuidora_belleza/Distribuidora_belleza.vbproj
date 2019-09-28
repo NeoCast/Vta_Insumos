@@ -107,6 +107,12 @@
     <Compile Include="Altas\Altaproveedor.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Bajas\Baja_cliente.Designer.vb">
+      <DependentUpon>Baja_cliente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Bajas\Baja_cliente.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="BaseBellezaDataSet.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -148,6 +154,24 @@
     <Compile Include="inicio.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Modificar\ModificarArticulo.Designer.vb">
+      <DependentUpon>ModificarArticulo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modificar\ModificarArticulo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modificar\ModificarCliente.Designer.vb">
+      <DependentUpon>ModificarCliente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modificar\ModificarCliente.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modificar\ModificarEmpleado.Designer.vb">
+      <DependentUpon>ModificarEmpleado.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modificar\ModificarEmpleado.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Modificar\ModificarProveedor.Designer.vb">
       <DependentUpon>ModificarProveedor.vb</DependentUpon>
     </Compile>
@@ -183,6 +207,9 @@
     <EmbeddedResource Include="Altas\Altaproveedor.resx">
       <DependentUpon>Altaproveedor.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Bajas\Baja_cliente.resx">
+      <DependentUpon>Baja_cliente.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="consulta\consulta_articulo.resx">
       <DependentUpon>consulta_articulo.vb</DependentUpon>
     </EmbeddedResource>
@@ -197,6 +224,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="inicio.resx">
       <DependentUpon>inicio.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modificar\ModificarArticulo.resx">
+      <DependentUpon>ModificarArticulo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modificar\ModificarCliente.resx">
+      <DependentUpon>ModificarCliente.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modificar\ModificarEmpleado.resx">
+      <DependentUpon>ModificarEmpleado.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modificar\ModificarProveedor.resx">
       <DependentUpon>ModificarProveedor.vb</DependentUpon>

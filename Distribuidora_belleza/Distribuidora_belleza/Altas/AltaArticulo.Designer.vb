@@ -29,6 +29,8 @@ Partial Class AltaArticulo
         Dim RubroLabel As System.Windows.Forms.Label
         Dim MarcaLabel As System.Windows.Forms.Label
         Me.DescripcionTextBox = New System.Windows.Forms.TextBox()
+        Me.ArticulosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.BaseBellezaDataSet = New form1.BaseBellezaDataSet()
         Me.Cantidad_stockTextBox = New System.Windows.Forms.TextBox()
         Me.PrecioTextBox = New System.Windows.Forms.TextBox()
         Me.RubroTextBox = New System.Windows.Forms.TextBox()
@@ -42,8 +44,6 @@ Partial Class AltaArticulo
         Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ArticulosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.BaseBellezaDataSet = New form1.BaseBellezaDataSet()
         Me.ArticulosTableAdapter = New form1.BaseBellezaDataSetTableAdapters.articulosTableAdapter()
         Me.TableAdapterManager = New form1.BaseBellezaDataSetTableAdapters.TableAdapterManager()
         DescripcionLabel = New System.Windows.Forms.Label()
@@ -51,9 +51,9 @@ Partial Class AltaArticulo
         PrecioLabel = New System.Windows.Forms.Label()
         RubroLabel = New System.Windows.Forms.Label()
         MarcaLabel = New System.Windows.Forms.Label()
-        CType(Me.ArticulosDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ArticulosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BaseBellezaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ArticulosDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'DescripcionLabel
@@ -108,6 +108,16 @@ Partial Class AltaArticulo
         Me.DescripcionTextBox.Name = "DescripcionTextBox"
         Me.DescripcionTextBox.Size = New System.Drawing.Size(100, 20)
         Me.DescripcionTextBox.TabIndex = 4
+        '
+        'ArticulosBindingSource
+        '
+        Me.ArticulosBindingSource.DataMember = "articulos"
+        Me.ArticulosBindingSource.DataSource = Me.BaseBellezaDataSet
+        '
+        'BaseBellezaDataSet
+        '
+        Me.BaseBellezaDataSet.DataSetName = "BaseBellezaDataSet"
+        Me.BaseBellezaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'Cantidad_stockTextBox
         '
@@ -207,16 +217,6 @@ Partial Class AltaArticulo
         Me.DataGridViewTextBoxColumn6.HeaderText = "marca"
         Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
         '
-        'ArticulosBindingSource
-        '
-        Me.ArticulosBindingSource.DataMember = "articulos"
-        Me.ArticulosBindingSource.DataSource = Me.BaseBellezaDataSet
-        '
-        'BaseBellezaDataSet
-        '
-        Me.BaseBellezaDataSet.DataSetName = "BaseBellezaDataSet"
-        Me.BaseBellezaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
         'ArticulosTableAdapter
         '
         Me.ArticulosTableAdapter.ClearBeforeFill = True
@@ -249,10 +249,10 @@ Partial Class AltaArticulo
         Me.Controls.Add(MarcaLabel)
         Me.Controls.Add(Me.MarcaTextBox)
         Me.Name = "AltaArticulo"
-        Me.Text = "Form2"
-        CType(Me.ArticulosDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Text = "ALTA DE ARTICULO"
         CType(Me.ArticulosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BaseBellezaDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ArticulosDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class consulta_articulo
+Partial Class ModificarArticulo
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
@@ -23,6 +23,19 @@ Partial Class consulta_articulo
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.txtId_articulo = New System.Windows.Forms.TextBox()
+        Me.txtDescripcion = New System.Windows.Forms.TextBox()
+        Me.txtCantidad_de_stock = New System.Windows.Forms.TextBox()
+        Me.txtPrecio = New System.Windows.Forms.TextBox()
+        Me.txtRubro = New System.Windows.Forms.TextBox()
+        Me.txtMarca = New System.Windows.Forms.TextBox()
         Me.BaseBellezaDataSet = New form1.BaseBellezaDataSet()
         Me.ArticulosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ArticulosTableAdapter = New form1.BaseBellezaDataSetTableAdapters.articulosTableAdapter()
@@ -34,14 +47,115 @@ Partial Class consulta_articulo
         Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
         CType(Me.BaseBellezaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ArticulosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ArticulosDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(79, 306)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 0
+        Me.Button1.Text = "modificar"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(34, 30)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(52, 13)
+        Me.Label1.TabIndex = 1
+        Me.Label1.Text = "id articulo"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(34, 62)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(61, 13)
+        Me.Label2.TabIndex = 2
+        Me.Label2.Text = "descripción"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(34, 94)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(92, 13)
+        Me.Label3.TabIndex = 3
+        Me.Label3.Text = "cantidad de stock"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(34, 128)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(36, 13)
+        Me.Label4.TabIndex = 4
+        Me.Label4.Text = "precio"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(34, 158)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(31, 13)
+        Me.Label5.TabIndex = 5
+        Me.Label5.Text = "rubro"
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(34, 193)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(36, 13)
+        Me.Label6.TabIndex = 6
+        Me.Label6.Text = "marca"
+        '
+        'txtId_articulo
+        '
+        Me.txtId_articulo.Location = New System.Drawing.Point(125, 30)
+        Me.txtId_articulo.Name = "txtId_articulo"
+        Me.txtId_articulo.Size = New System.Drawing.Size(100, 20)
+        Me.txtId_articulo.TabIndex = 7
+        '
+        'txtDescripcion
+        '
+        Me.txtDescripcion.Location = New System.Drawing.Point(125, 59)
+        Me.txtDescripcion.Name = "txtDescripcion"
+        Me.txtDescripcion.Size = New System.Drawing.Size(100, 20)
+        Me.txtDescripcion.TabIndex = 8
+        '
+        'txtCantidad_de_stock
+        '
+        Me.txtCantidad_de_stock.Location = New System.Drawing.Point(125, 91)
+        Me.txtCantidad_de_stock.Name = "txtCantidad_de_stock"
+        Me.txtCantidad_de_stock.Size = New System.Drawing.Size(100, 20)
+        Me.txtCantidad_de_stock.TabIndex = 9
+        '
+        'txtPrecio
+        '
+        Me.txtPrecio.Location = New System.Drawing.Point(125, 125)
+        Me.txtPrecio.Name = "txtPrecio"
+        Me.txtPrecio.Size = New System.Drawing.Size(100, 20)
+        Me.txtPrecio.TabIndex = 10
+        '
+        'txtRubro
+        '
+        Me.txtRubro.Location = New System.Drawing.Point(125, 158)
+        Me.txtRubro.Name = "txtRubro"
+        Me.txtRubro.Size = New System.Drawing.Size(100, 20)
+        Me.txtRubro.TabIndex = 11
+        '
+        'txtMarca
+        '
+        Me.txtMarca.Location = New System.Drawing.Point(125, 193)
+        Me.txtMarca.Name = "txtMarca"
+        Me.txtMarca.Size = New System.Drawing.Size(100, 20)
+        Me.txtMarca.TabIndex = 12
         '
         'BaseBellezaDataSet
         '
@@ -72,10 +186,10 @@ Partial Class consulta_articulo
         Me.ArticulosDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.ArticulosDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6})
         Me.ArticulosDataGridView.DataSource = Me.ArticulosBindingSource
-        Me.ArticulosDataGridView.Location = New System.Drawing.Point(26, 69)
+        Me.ArticulosDataGridView.Location = New System.Drawing.Point(231, 95)
         Me.ArticulosDataGridView.Name = "ArticulosDataGridView"
-        Me.ArticulosDataGridView.Size = New System.Drawing.Size(654, 287)
-        Me.ArticulosDataGridView.TabIndex = 1
+        Me.ArticulosDataGridView.Size = New System.Drawing.Size(524, 220)
+        Me.ArticulosDataGridView.TabIndex = 14
         '
         'DataGridViewTextBoxColumn1
         '
@@ -114,52 +228,27 @@ Partial Class consulta_articulo
         Me.DataGridViewTextBoxColumn6.HeaderText = "marca"
         Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
         '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(489, 25)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox1.TabIndex = 2
-        '
-        'ComboBox1
-        '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"id_articulo", "descripcion", "rubro", "marca"})
-        Me.ComboBox1.Location = New System.Drawing.Point(158, 24)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(121, 21)
-        Me.ComboBox1.TabIndex = 3
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(70, 27)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(82, 13)
-        Me.Label1.TabIndex = 4
-        Me.Label1.Text = "Elija una opción"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(350, 27)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(123, 13)
-        Me.Label2.TabIndex = 5
-        Me.Label2.Text = "Parametro de busqueda "
-        '
-        'consulta_articulo
+        'ModificarArticulo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(692, 401)
+        Me.ClientSize = New System.Drawing.Size(767, 371)
+        Me.Controls.Add(Me.ArticulosDataGridView)
+        Me.Controls.Add(Me.txtMarca)
+        Me.Controls.Add(Me.txtRubro)
+        Me.Controls.Add(Me.txtPrecio)
+        Me.Controls.Add(Me.txtCantidad_de_stock)
+        Me.Controls.Add(Me.txtDescripcion)
+        Me.Controls.Add(Me.txtId_articulo)
+        Me.Controls.Add(Me.Label6)
+        Me.Controls.Add(Me.Label5)
+        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.ComboBox1)
-        Me.Controls.Add(Me.TextBox1)
-        Me.Controls.Add(Me.ArticulosDataGridView)
-        Me.Name = "consulta_articulo"
-        Me.Text = "consulta_articulo"
+        Me.Controls.Add(Me.Button1)
+        Me.Name = "ModificarArticulo"
+        Me.Text = "ModificarArticulo"
         CType(Me.BaseBellezaDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ArticulosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ArticulosDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
@@ -167,6 +256,19 @@ Partial Class consulta_articulo
         Me.PerformLayout()
 
     End Sub
+    Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents Label5 As System.Windows.Forms.Label
+    Friend WithEvents Label6 As System.Windows.Forms.Label
+    Friend WithEvents txtId_articulo As System.Windows.Forms.TextBox
+    Friend WithEvents txtDescripcion As System.Windows.Forms.TextBox
+    Friend WithEvents txtCantidad_de_stock As System.Windows.Forms.TextBox
+    Friend WithEvents txtPrecio As System.Windows.Forms.TextBox
+    Friend WithEvents txtRubro As System.Windows.Forms.TextBox
+    Friend WithEvents txtMarca As System.Windows.Forms.TextBox
     Friend WithEvents BaseBellezaDataSet As form1.BaseBellezaDataSet
     Friend WithEvents ArticulosBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents ArticulosTableAdapter As form1.BaseBellezaDataSetTableAdapters.articulosTableAdapter
@@ -178,8 +280,4 @@ Partial Class consulta_articulo
     Friend WithEvents DataGridViewTextBoxColumn4 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn5 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn6 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
-    Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
-    Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents Label2 As System.Windows.Forms.Label
 End Class

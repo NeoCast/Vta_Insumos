@@ -21,4 +21,23 @@
             ClienteTableAdapter.consultarNombre((Me.BaseBellezaDataSet.cliente), TextBox1.Text)
         End If
     End Sub
+
+
+    Private Sub ClienteDataGridView_CellContentDoubleClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles ClienteDataGridView.CellContentDoubleClick
+
+        Dim fila As Integer
+        fila = ClienteDataGridView.CurrentCellAddress.Y
+        If ClienteDataGridView.Item(0, fila).Value Is DBNull.Value Then
+            Exit Sub
+        Else
+
+            ModificarCliente.txtId_cliente.Text = ClienteDataGridView.Item(0, fila).Value()
+            ModificarCliente.txtNombre.Text = ClienteDataGridView.Item(1, fila).Value()
+            ModificarCliente.txtTelefono.Text = ClienteDataGridView.Item(2, fila).Value()
+            ModificarCliente.txtMail.Text = ClienteDataGridView.Item(3, fila).Value()
+           
+            ModificarCliente.Show()
+
+        End If
+    End Sub
 End Class

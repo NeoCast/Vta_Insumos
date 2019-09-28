@@ -22,12 +22,20 @@
 
                 If MailTextBox.Text <> "" Then
 
+                    Me.ClienteBindingSource.Current("nombre") = NombreTextBox.Text
+                    Me.ClienteBindingSource.Current("telefono") = TelefonoTextBox.Text
+                    Me.ClienteBindingSource.Current("mail") = MailTextBox.Text
+                    
+
                     Me.Validate()
                     Me.ClienteBindingSource.EndEdit()
                     Me.TableAdapterManager.UpdateAll(Me.BaseBellezaDataSet)
 
                     MsgBox("se cargo con exito")
                     Me.ClienteTableAdapter.Fill(Me.BaseBellezaDataSet.cliente)
+                    inicio.ArticulosTableAdapter.Fill(inicio.BaseBellezaDataSet.articulos)
+
+                    Me.ClienteBindingSource.AddNew()
                     NombreTextBox.Focus()
 
                 Else

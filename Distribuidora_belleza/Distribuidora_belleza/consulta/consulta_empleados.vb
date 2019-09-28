@@ -21,4 +21,25 @@
             EmpleadoTableAdapter.consultaDni((Me.BaseBellezaDataSet.empleado), dni)
         End If
     End Sub
+
+
+    Private Sub EmpleadoDataGridView_CellDoubleClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles EmpleadoDataGridView.CellDoubleClick
+        Dim fila As Integer
+        fila = EmpleadoDataGridView.CurrentCellAddress.Y
+        If EmpleadoDataGridView.Item(0, fila).Value Is DBNull.Value Then
+            Exit Sub
+        Else
+            ModificarEmpleado.txtId_empleado.Text = EmpleadoDataGridView.Item(0, fila).Value()
+            ModificarEmpleado.txtNombre.Text = EmpleadoDataGridView.Item(1, fila).Value()
+            ModificarEmpleado.txtApellido.Text = EmpleadoDataGridView.Item(2, fila).Value()
+            ModificarEmpleado.txtDni.Text = EmpleadoDataGridView.Item(3, fila).Value()
+            ModificarEmpleado.txtTelefono.Text = EmpleadoDataGridView.Item(4, fila).Value()
+            ModificarEmpleado.txtLocalidad.Text = EmpleadoDataGridView.Item(5, fila).Value()
+            ModificarEmpleado.txtDireccion.Text = EmpleadoDataGridView.Item(6, fila).Value()
+            ModificarEmpleado.txtCp.Text = EmpleadoDataGridView.Item(7, fila).Value()
+
+            ModificarEmpleado.Show()
+
+        End If
+    End Sub
 End Class
