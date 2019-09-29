@@ -14,9 +14,16 @@
     End Sub
 
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
-        Me.ClienteTableAdapter.modificarCliente(txtNombre.Text, txtTelefono.Text, txtMail.Text, txtId_cliente.Text)
-        Me.TableAdapterManager.UpdateAll(Me.BaseBellezaDataSet)
-        consulta_cliente.ClienteTableAdapter.Fill(consulta_cliente.BaseBellezaDataSet.cliente)
-        Me.Close()
+        Dim consulta As Integer
+
+        consulta = MsgBox("Esta seguro de realizar la modificación, los cambios son permanentes", 32 + 1)
+        If consulta = 1 Then
+
+
+            Me.ClienteTableAdapter.modificarCliente(txtNombre.Text, txtTelefono.Text, txtMail.Text, txtId_cliente.Text)
+            Me.TableAdapterManager.UpdateAll(Me.BaseBellezaDataSet)
+            consulta_cliente.ClienteTableAdapter.Fill(consulta_cliente.BaseBellezaDataSet.cliente)
+            Me.Close()
+        End If
     End Sub
 End Class

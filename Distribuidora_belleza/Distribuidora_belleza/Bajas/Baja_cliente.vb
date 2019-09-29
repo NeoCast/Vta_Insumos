@@ -13,7 +13,7 @@
 
     End Sub
 
-    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnBuscar.Click
         If TextBox1.Text = "" Then
             MsgBox("Ingrese un Id de cliente")
         Else
@@ -22,7 +22,7 @@
         End If
     End Sub
 
-    Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
+    Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnEliminar.Click
         Dim consulta As Integer
         consulta = MsgBox("Desea eliminar cliente", 32 + 1)
         If consulta = 1 Then

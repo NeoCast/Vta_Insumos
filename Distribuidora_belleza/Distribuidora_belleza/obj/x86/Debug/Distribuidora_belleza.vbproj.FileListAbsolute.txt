@@ -45,3 +45,6 @@ C:\Users\Usuario\Documents\github\Vta_Insumos\Distribuidora_belleza\Distribuidor
 C:\Users\Usuario\Documents\github\Vta_Insumos\Distribuidora_belleza\Distribuidora_belleza\obj\x86\Debug\form1.ModificarProveedor.resources
 C:\Users\Usuario\Documents\github\Vta_Insumos\Distribuidora_belleza\Distribuidora_belleza\obj\x86\Debug\form1.Resources.resources
 C:\Users\Usuario\Documents\github\Vta_Insumos\Distribuidora_belleza\Distribuidora_belleza\obj\x86\Debug\Distribuidora_belleza.vbproj.GenerateResource.Cache
+C:\Users\Usuario\Documents\github\Vta_Insumos\Distribuidora_belleza\Distribuidora_belleza\obj\x86\Debug\form1.Baja_articulo.resources
+C:\Users\Usuario\Documents\github\Vta_Insumos\Distribuidora_belleza\Distribuidora_belleza\obj\x86\Debug\form1.Baja_empleados.resources
+C:\Users\Usuario\Documents\github\Vta_Insumos\Distribuidora_belleza\Distribuidora_belleza\obj\x86\Debug\form1.Baja_proveedores.resources

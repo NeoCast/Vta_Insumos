@@ -67,4 +67,22 @@
         Baja_cliente.Show()
 
     End Sub
+
+    
+   
+    Private Sub ArticuloToolStripMenuItem1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ArticuloToolStripMenuItem1.Click
+        Baja_articulo.Show()
+
+    End Sub
+
+    Private Sub ClienteToolStripMenuItem2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ClienteToolStripMenuItem2.Click
+        Baja_empleados.Show()
+    End Sub
+
+    Private Sub ProveedorToolStripMenuItem1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ProveedorToolStripMenuItem1.Click
+        Baja_proveedores.Show()
+
+    End Sub
+
+   
 End Class

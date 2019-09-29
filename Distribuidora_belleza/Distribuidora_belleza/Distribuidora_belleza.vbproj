@@ -107,10 +107,28 @@
     <Compile Include="Altas\Altaproveedor.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Bajas\Baja_articulo.Designer.vb">
+      <DependentUpon>Baja_articulo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Bajas\Baja_articulo.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Bajas\Baja_cliente.Designer.vb">
       <DependentUpon>Baja_cliente.vb</DependentUpon>
     </Compile>
     <Compile Include="Bajas\Baja_cliente.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bajas\Baja_empleados.Designer.vb">
+      <DependentUpon>Baja_empleados.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Bajas\Baja_empleados.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bajas\Baja_proveedores.Designer.vb">
+      <DependentUpon>Baja_proveedores.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Bajas\Baja_proveedores.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="BaseBellezaDataSet.Designer.vb">
@@ -207,8 +225,17 @@
     <EmbeddedResource Include="Altas\Altaproveedor.resx">
       <DependentUpon>Altaproveedor.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Bajas\Baja_articulo.resx">
+      <DependentUpon>Baja_articulo.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Bajas\Baja_cliente.resx">
       <DependentUpon>Baja_cliente.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bajas\Baja_empleados.resx">
+      <DependentUpon>Baja_empleados.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bajas\Baja_proveedores.resx">
+      <DependentUpon>Baja_proveedores.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="consulta\consulta_articulo.resx">
       <DependentUpon>consulta_articulo.vb</DependentUpon>
