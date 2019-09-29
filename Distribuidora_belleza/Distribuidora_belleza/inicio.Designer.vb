@@ -56,6 +56,7 @@ Partial Class inicio
         Me.EmpleadoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ProveedorBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ArticulosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.NuevaVentaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.BaseBellezaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ClienteBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -156,38 +157,38 @@ Partial Class inicio
         'BuscarToolStripMenuItem
         '
         Me.BuscarToolStripMenuItem.Name = "BuscarToolStripMenuItem"
-        Me.BuscarToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.BuscarToolStripMenuItem.Size = New System.Drawing.Size(117, 22)
         Me.BuscarToolStripMenuItem.Text = "Buscar"
         '
         'EliminarToolStripMenuItem
         '
         Me.EliminarToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ClienteToolStripMenuItem1, Me.ArticuloToolStripMenuItem1, Me.ClienteToolStripMenuItem2, Me.ProveedorToolStripMenuItem1})
         Me.EliminarToolStripMenuItem.Name = "EliminarToolStripMenuItem"
-        Me.EliminarToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.EliminarToolStripMenuItem.Size = New System.Drawing.Size(117, 22)
         Me.EliminarToolStripMenuItem.Text = "Eliminar"
         '
         'ClienteToolStripMenuItem1
         '
         Me.ClienteToolStripMenuItem1.Name = "ClienteToolStripMenuItem1"
-        Me.ClienteToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
+        Me.ClienteToolStripMenuItem1.Size = New System.Drawing.Size(128, 22)
         Me.ClienteToolStripMenuItem1.Text = "Cliente"
         '
         'ArticuloToolStripMenuItem1
         '
         Me.ArticuloToolStripMenuItem1.Name = "ArticuloToolStripMenuItem1"
-        Me.ArticuloToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
+        Me.ArticuloToolStripMenuItem1.Size = New System.Drawing.Size(128, 22)
         Me.ArticuloToolStripMenuItem1.Text = "Articulo"
         '
         'ClienteToolStripMenuItem2
         '
         Me.ClienteToolStripMenuItem2.Name = "ClienteToolStripMenuItem2"
-        Me.ClienteToolStripMenuItem2.Size = New System.Drawing.Size(152, 22)
+        Me.ClienteToolStripMenuItem2.Size = New System.Drawing.Size(128, 22)
         Me.ClienteToolStripMenuItem2.Text = "Empleado"
         '
         'ProveedorToolStripMenuItem1
         '
         Me.ProveedorToolStripMenuItem1.Name = "ProveedorToolStripMenuItem1"
-        Me.ProveedorToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
+        Me.ProveedorToolStripMenuItem1.Size = New System.Drawing.Size(128, 22)
         Me.ProveedorToolStripMenuItem1.Text = "Proveedor"
         '
         'CajaToolStripMenuItem
@@ -198,6 +199,7 @@ Partial Class inicio
         '
         'ConfiguracionToolStripMenuItem
         '
+        Me.ConfiguracionToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NuevaVentaToolStripMenuItem})
         Me.ConfiguracionToolStripMenuItem.Name = "ConfiguracionToolStripMenuItem"
         Me.ConfiguracionToolStripMenuItem.Size = New System.Drawing.Size(54, 20)
         Me.ConfiguracionToolStripMenuItem.Text = "Ventas"
@@ -274,6 +276,12 @@ Partial Class inicio
         Me.ArticulosBindingSource.DataMember = "articulos"
         Me.ArticulosBindingSource.DataSource = Me.BaseBellezaDataSet
         '
+        'NuevaVentaToolStripMenuItem
+        '
+        Me.NuevaVentaToolStripMenuItem.Name = "NuevaVentaToolStripMenuItem"
+        Me.NuevaVentaToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.NuevaVentaToolStripMenuItem.Text = "Nueva Venta"
+        '
         'inicio
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -332,4 +340,5 @@ Partial Class inicio
     Friend WithEvents ArticuloToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ClienteToolStripMenuItem2 As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ProveedorToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents NuevaVentaToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 End Class

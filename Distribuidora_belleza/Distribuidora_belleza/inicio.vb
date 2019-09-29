@@ -85,4 +85,8 @@
     End Sub
 
    
+    Private Sub NuevaVentaToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NuevaVentaToolStripMenuItem.Click
+        ventas.Show()
+
+    End Sub
 End Class

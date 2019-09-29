@@ -24,13 +24,25 @@
     End Sub
 
     Private Sub BtnEliminar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnEliminar.Click
-        Dim consulta As Integer
-        consulta = MsgBox("Desea eliminar articulo", 32 + 1)
-        If consulta = 1 Then
-            Me.ArticulosTableAdapter.eliminarArticulo(TextBox1.Text)
-            Me.ArticulosTableAdapter.Fill(Me.BaseBellezaDataSet.articulos)
-            consulta_articulo.ArticulosTableAdapter.Fill(Me.BaseBellezaDataSet.articulos)
+        Dim consulta, codconsulta, fila As Integer
+        codconsulta = TextBox1.Text
+        fila = Me.ArticulosBindingSource.Find("id_articulo", codconsulta)
+        If fila = -1 Then
+            MsgBox("No se encontro")
+        Else
 
+            consulta = MsgBox("Desea eliminar articulo", 32 + 1)
+
+            If consulta = 1 Then
+                Me.ArticulosTableAdapter.eliminarArticulo(TextBox1.Text)
+                Me.ArticulosBindingSource.EndEdit()
+
+                Me.TableAdapterManager.UpdateAll(Me.BaseBellezaDataSet)
+
+                Me.ArticulosTableAdapter.Fill(Me.BaseBellezaDataSet.articulos)
+                consulta_articulo.ArticulosTableAdapter.Fill(Me.BaseBellezaDataSet.articulos)
+
+            End If
         End If
     End Sub
 End Class

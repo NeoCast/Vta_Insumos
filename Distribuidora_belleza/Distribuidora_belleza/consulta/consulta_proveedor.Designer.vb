@@ -28,6 +28,8 @@ Partial Class consulta_proveedor
         Me.ProveedorTableAdapter = New form1.BaseBellezaDataSetTableAdapters.proveedorTableAdapter()
         Me.TableAdapterManager = New form1.BaseBellezaDataSetTableAdapters.TableAdapterManager()
         Me.ProveedorDataGridView = New System.Windows.Forms.DataGridView()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.id_proveedor = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -35,8 +37,6 @@ Partial Class consulta_proveedor
         Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
         CType(Me.BaseBellezaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ProveedorBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ProveedorDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -64,6 +64,7 @@ Partial Class consulta_proveedor
         Me.TableAdapterManager.empleadoTableAdapter = Nothing
         Me.TableAdapterManager.proveedorTableAdapter = Me.ProveedorTableAdapter
         Me.TableAdapterManager.UpdateOrder = form1.BaseBellezaDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        Me.TableAdapterManager.ventasTableAdapter = Nothing
         '
         'ProveedorDataGridView
         '
@@ -73,8 +74,24 @@ Partial Class consulta_proveedor
         Me.ProveedorDataGridView.DataSource = Me.ProveedorBindingSource
         Me.ProveedorDataGridView.Location = New System.Drawing.Point(23, 51)
         Me.ProveedorDataGridView.Name = "ProveedorDataGridView"
-        Me.ProveedorDataGridView.Size = New System.Drawing.Size(760, 220)
+        Me.ProveedorDataGridView.Size = New System.Drawing.Size(780, 220)
         Me.ProveedorDataGridView.TabIndex = 1
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(173, 28)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(94, 13)
+        Me.Label1.TabIndex = 2
+        Me.Label1.Text = "ingrese un nombre"
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(273, 25)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox1.TabIndex = 3
         '
         'id_proveedor
         '
@@ -118,22 +135,6 @@ Partial Class consulta_proveedor
         Me.DataGridViewTextBoxColumn7.DataPropertyName = "c_p"
         Me.DataGridViewTextBoxColumn7.HeaderText = "c_p"
         Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(173, 28)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(94, 13)
-        Me.Label1.TabIndex = 2
-        Me.Label1.Text = "ingrese un nombre"
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(273, 25)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox1.TabIndex = 3
         '
         'consulta_proveedor
         '

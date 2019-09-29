@@ -25,7 +25,6 @@ C:\Users\Usuario\Documents\github\Vta_Insumos\Distribuidora_belleza\Distribuidor
 C:\Users\Usuario\Documents\github\Vta_Insumos\Distribuidora_belleza\Distribuidora_belleza\obj\x86\Debug\Distribuidora_belleza.exe
 C:\Users\Usuario\Documents\github\Vta_Insumos\Distribuidora_belleza\Distribuidora_belleza\obj\x86\Debug\Distribuidora_belleza.xml
 C:\Users\Usuario\Documents\github\Vta_Insumos\Distribuidora_belleza\Distribuidora_belleza\obj\x86\Debug\Distribuidora_belleza.pdb
-C:\Users\Usuario\Documents\github\Vta_Insumos\Distribuidora_belleza\Distribuidora_belleza\bin\Debug\BaseBelleza.sdf
 C:\Users\Usuario\Documents\github\Vta_Insumos\Distribuidora_belleza\Distribuidora_belleza\bin\Debug\Distribuidora_belleza.exe
 C:\Users\Usuario\Documents\github\Vta_Insumos\Distribuidora_belleza\Distribuidora_belleza\bin\Debug\Distribuidora_belleza.pdb
 C:\Users\Usuario\Documents\github\Vta_Insumos\Distribuidora_belleza\Distribuidora_belleza\bin\Debug\Distribuidora_belleza.xml
@@ -48,3 +47,4 @@ C:\Users\Usuario\Documents\github\Vta_Insumos\Distribuidora_belleza\Distribuidor
 C:\Users\Usuario\Documents\github\Vta_Insumos\Distribuidora_belleza\Distribuidora_belleza\obj\x86\Debug\form1.Baja_articulo.resources
 C:\Users\Usuario\Documents\github\Vta_Insumos\Distribuidora_belleza\Distribuidora_belleza\obj\x86\Debug\form1.Baja_empleados.resources
 C:\Users\Usuario\Documents\github\Vta_Insumos\Distribuidora_belleza\Distribuidora_belleza\obj\x86\Debug\form1.Baja_proveedores.resources
+C:\Users\Usuario\Documents\github\Vta_Insumos\Distribuidora_belleza\Distribuidora_belleza\obj\x86\Debug\form1.ventas.resources
