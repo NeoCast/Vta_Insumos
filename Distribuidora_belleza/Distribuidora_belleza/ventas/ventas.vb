@@ -1,11 +1,19 @@
-﻿Public Class ventas
+﻿Imports System.Data.SqlServerCe
+
+
+Public Class ventas
 
 
     Private Sub ventas_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        'TODO: esta línea de código carga datos en la tabla 'BaseBellezaDataSet.ventas' Puede moverla o quitarla según sea necesario.
+        Me.VentasTableAdapter.Fill(Me.BaseBellezaDataSet.ventas)
         'TODO: esta línea de código carga datos en la tabla 'BaseBellezaDataSet.articulos' Puede moverla o quitarla según sea necesario.
         Me.ArticulosTableAdapter.Fill(Me.BaseBellezaDataSet.articulos)
         DateTimePicker1.Value = Now
-
+        Button2.Enabled = False
+        Button3.Enabled = False
+        Button4.Enabled = False
+        Button5.Enabled = False
     End Sub
 
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
@@ -20,6 +28,8 @@
 
             Me.txtDescripcion.Text = Me.ArticulosBindingSource.Current("descripcion")
             Me.txtPrecio.Text = Me.ArticulosBindingSource.Current("precio")
+            Button3.Enabled = True
+
 
         End If
 
@@ -46,8 +56,9 @@
     Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button3.Click
         DataGridView1.Rows.Add(TextBox1.Text, txtDescripcion.Text, txtPrecio.Text, NumericUpDown1.Value, txtTotal.Text)
 
-
-
+        Button2.Enabled = True
+        Button4.Enabled = True
+        Button5.Enabled = True
 
 
         TextBox1.Clear()
@@ -76,5 +87,33 @@
 
     Private Sub Button4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button4.Click
 
+        Dim conexion As New SqlCeConnection("Data Source= C:\Users\thoma\Documents\GitKraken\Vta_Insumos\Distribuidora_belleza\Distribuidora_belleza\BaseBelleza.sdf")
+
+
+        Dim fila As DataGridViewRow = New DataGridViewRow
+        'Try
+
+
+        For Each fila In DataGridView1.Rows
+            Dim cmd As New SqlCeCommand("insert into ventas(Id_articulo,fecha,precio_unitario,cantidad,total,descripcion) values (@p1, @p2, @p3, @p4, @p5, @p6)", conexion)
+            conexion.Open()
+
+            'Me.VentasBindingSource.Current("id_articulo") = fila.Cells("")
+            cmd.Parameters.Add("@p1", SqlDbType.Int).Value = Convert.ToInt32(fila.Cells("Id_Articulo").Value)
+            cmd.Parameters.Add("@p2", SqlDbType.DateTime).Value = Convert.ToDateTime(DateTimePicker1.Value)
+            cmd.Parameters.Add("@p3", SqlDbType.Float).Value = Convert.ToDouble(fila.Cells("Precio").Value)
+            cmd.Parameters.Add("@p4", SqlDbType.Int).Value = Convert.ToInt32(fila.Cells("Cantidad").Value)
+            cmd.Parameters.Add("@p5", SqlDbType.Float).Value = Convert.ToDouble(fila.Cells("Total").Value)
+            cmd.Parameters.Add("@p6", SqlDbType.NVarChar).Value = Convert.ToString(fila.Cells("Descripcion").Value)
+            cmd.ExecuteNonQuery()
+
+
+            conexion.Close()
+
+        Next fila
+        MsgBox("se ha cargado con exito")
+        'Catch ex As Exception
+        '    MsgBox(ex.ToString)
+        'End Try
     End Sub
 End Class

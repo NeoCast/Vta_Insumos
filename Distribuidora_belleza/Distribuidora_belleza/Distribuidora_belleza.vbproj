@@ -166,6 +166,12 @@
     <Compile Include="consulta\consulta_proveedor.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="consulta\consulta_vta.Designer.vb">
+      <DependentUpon>consulta_vta.vb</DependentUpon>
+    </Compile>
+    <Compile Include="consulta\consulta_vta.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="inicio.Designer.vb">
       <DependentUpon>inicio.vb</DependentUpon>
     </Compile>
@@ -254,6 +260,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="consulta\consulta_proveedor.resx">
       <DependentUpon>consulta_proveedor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="consulta\consulta_vta.resx">
+      <DependentUpon>consulta_vta.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="inicio.resx">
       <DependentUpon>inicio.vb</DependentUpon>

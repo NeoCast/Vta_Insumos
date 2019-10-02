@@ -24,11 +24,6 @@ Partial Class ventas
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Id_Articulo = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Descripion = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Precio = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Cantidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Total = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -46,55 +41,38 @@ Partial Class ventas
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
-        Me.BaseBellezaDataSet = New form1.BaseBellezaDataSet()
-        Me.ArticulosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.ArticulosTableAdapter = New form1.BaseBellezaDataSetTableAdapters.articulosTableAdapter()
-        Me.TableAdapterManager = New form1.BaseBellezaDataSetTableAdapters.TableAdapterManager()
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.Button5 = New System.Windows.Forms.Button()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
+        Me.BaseBellezaDataSet = New form1.BaseBellezaDataSet()
+        Me.ArticulosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ArticulosTableAdapter = New form1.BaseBellezaDataSetTableAdapters.articulosTableAdapter()
+        Me.TableAdapterManager = New form1.BaseBellezaDataSetTableAdapters.TableAdapterManager()
+        Me.VentasBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.VentasTableAdapter = New form1.BaseBellezaDataSetTableAdapters.ventasTableAdapter()
+        Me.Id_Articulo = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Descripcion = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Precio = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Cantidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Total = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BaseBellezaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ArticulosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.VentasBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'DataGridView1
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Id_Articulo, Me.Descripion, Me.Precio, Me.Cantidad, Me.Total})
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Id_Articulo, Me.Descripcion, Me.Precio, Me.Cantidad, Me.Total})
         Me.DataGridView1.Location = New System.Drawing.Point(228, 23)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.Size = New System.Drawing.Size(549, 309)
         Me.DataGridView1.TabIndex = 0
-        '
-        'Id_Articulo
-        '
-        Me.Id_Articulo.HeaderText = "Id de Articulo"
-        Me.Id_Articulo.Name = "Id_Articulo"
-        '
-        'Descripion
-        '
-        Me.Descripion.HeaderText = "Descripción"
-        Me.Descripion.Name = "Descripion"
-        '
-        'Precio
-        '
-        Me.Precio.HeaderText = "Precio"
-        Me.Precio.Name = "Precio"
-        '
-        'Cantidad
-        '
-        Me.Cantidad.HeaderText = "Cantidad"
-        Me.Cantidad.Name = "Cantidad"
-        '
-        'Total
-        '
-        Me.Total.HeaderText = "Total"
-        Me.Total.Name = "Total"
         '
         'Label1
         '
@@ -237,30 +215,6 @@ Partial Class ventas
         Me.Button4.Text = "VENDER"
         Me.Button4.UseVisualStyleBackColor = True
         '
-        'BaseBellezaDataSet
-        '
-        Me.BaseBellezaDataSet.DataSetName = "BaseBellezaDataSet"
-        Me.BaseBellezaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'ArticulosBindingSource
-        '
-        Me.ArticulosBindingSource.DataMember = "articulos"
-        Me.ArticulosBindingSource.DataSource = Me.BaseBellezaDataSet
-        '
-        'ArticulosTableAdapter
-        '
-        Me.ArticulosTableAdapter.ClearBeforeFill = True
-        '
-        'TableAdapterManager
-        '
-        Me.TableAdapterManager.articulosTableAdapter = Me.ArticulosTableAdapter
-        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
-        Me.TableAdapterManager.clienteTableAdapter = Nothing
-        Me.TableAdapterManager.empleadoTableAdapter = Nothing
-        Me.TableAdapterManager.proveedorTableAdapter = Nothing
-        Me.TableAdapterManager.UpdateOrder = form1.BaseBellezaDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
-        Me.TableAdapterManager.ventasTableAdapter = Nothing
-        '
         'DateTimePicker1
         '
         Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
@@ -310,6 +264,64 @@ Partial Class ventas
         Me.Label9.TabIndex = 24
         Me.Label9.Text = "Stock minimo"
         '
+        'BaseBellezaDataSet
+        '
+        Me.BaseBellezaDataSet.DataSetName = "BaseBellezaDataSet"
+        Me.BaseBellezaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'ArticulosBindingSource
+        '
+        Me.ArticulosBindingSource.DataMember = "articulos"
+        Me.ArticulosBindingSource.DataSource = Me.BaseBellezaDataSet
+        '
+        'ArticulosTableAdapter
+        '
+        Me.ArticulosTableAdapter.ClearBeforeFill = True
+        '
+        'TableAdapterManager
+        '
+        Me.TableAdapterManager.articulosTableAdapter = Me.ArticulosTableAdapter
+        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.clienteTableAdapter = Nothing
+        Me.TableAdapterManager.empleadoTableAdapter = Nothing
+        Me.TableAdapterManager.proveedorTableAdapter = Nothing
+        Me.TableAdapterManager.UpdateOrder = form1.BaseBellezaDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        Me.TableAdapterManager.ventasTableAdapter = Nothing
+        '
+        'VentasBindingSource
+        '
+        Me.VentasBindingSource.DataMember = "ventas"
+        Me.VentasBindingSource.DataSource = Me.BaseBellezaDataSet
+        '
+        'VentasTableAdapter
+        '
+        Me.VentasTableAdapter.ClearBeforeFill = True
+        '
+        'Id_Articulo
+        '
+        Me.Id_Articulo.HeaderText = "Id de Articulo"
+        Me.Id_Articulo.Name = "Id_Articulo"
+        '
+        'Descripcion
+        '
+        Me.Descripcion.HeaderText = "Descripción"
+        Me.Descripcion.Name = "Descripcion"
+        '
+        'Precio
+        '
+        Me.Precio.HeaderText = "Precio"
+        Me.Precio.Name = "Precio"
+        '
+        'Cantidad
+        '
+        Me.Cantidad.HeaderText = "Cantidad"
+        Me.Cantidad.Name = "Cantidad"
+        '
+        'Total
+        '
+        Me.Total.HeaderText = "Total"
+        Me.Total.Name = "Total"
+        '
         'ventas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -345,6 +357,7 @@ Partial Class ventas
         CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BaseBellezaDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ArticulosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.VentasBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -367,11 +380,6 @@ Partial Class ventas
     Friend WithEvents Button2 As System.Windows.Forms.Button
     Friend WithEvents Button3 As System.Windows.Forms.Button
     Friend WithEvents Button4 As System.Windows.Forms.Button
-    Friend WithEvents Id_Articulo As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Descripion As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Precio As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Cantidad As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Total As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents BaseBellezaDataSet As form1.BaseBellezaDataSet
     Friend WithEvents ArticulosBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents ArticulosTableAdapter As form1.BaseBellezaDataSetTableAdapters.articulosTableAdapter
@@ -382,4 +390,11 @@ Partial Class ventas
     Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
     Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
     Friend WithEvents Label9 As System.Windows.Forms.Label
+    Friend WithEvents VentasBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents VentasTableAdapter As form1.BaseBellezaDataSetTableAdapters.ventasTableAdapter
+    Friend WithEvents Id_Articulo As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Descripcion As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Precio As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Cantidad As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Total As System.Windows.Forms.DataGridViewTextBoxColumn
 End Class
