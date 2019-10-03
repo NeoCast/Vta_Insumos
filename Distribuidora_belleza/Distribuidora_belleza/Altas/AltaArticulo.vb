@@ -27,6 +27,8 @@
                         Me.ArticulosBindingSource.Current("precio") = PrecioTextBox.Text
                         Me.ArticulosBindingSource.Current("rubro") = RubroTextBox.Text
                         Me.ArticulosBindingSource.Current("marca") = MarcaTextBox.Text
+                        Me.ArticulosBindingSource.Current("stock_minimo") = Stock_minimoTextBox.Text
+
                         Me.Validate()
                         Me.ArticulosBindingSource.EndEdit()
                         Me.TableAdapterManager.UpdateAll(Me.BaseBellezaDataSet)
@@ -63,6 +65,10 @@
 
     Private Sub btnfin_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnfin.Click
         Me.Close()
+
+    End Sub
+
+    Private Sub ArticulosDataGridView_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs)
 
     End Sub
 End Class

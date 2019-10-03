@@ -28,15 +28,19 @@ Partial Class AltaArticulo
         Dim PrecioLabel As System.Windows.Forms.Label
         Dim RubroLabel As System.Windows.Forms.Label
         Dim MarcaLabel As System.Windows.Forms.Label
+        Dim Stock_minimoLabel As System.Windows.Forms.Label
         Me.DescripcionTextBox = New System.Windows.Forms.TextBox()
-        Me.ArticulosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.BaseBellezaDataSet = New form1.BaseBellezaDataSet()
         Me.Cantidad_stockTextBox = New System.Windows.Forms.TextBox()
         Me.PrecioTextBox = New System.Windows.Forms.TextBox()
         Me.RubroTextBox = New System.Windows.Forms.TextBox()
         Me.MarcaTextBox = New System.Windows.Forms.TextBox()
         Me.btnagregar = New System.Windows.Forms.Button()
         Me.btnfin = New System.Windows.Forms.Button()
+        Me.Stock_minimoTextBox = New System.Windows.Forms.TextBox()
+        Me.ArticulosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.BaseBellezaDataSet = New form1.BaseBellezaDataSet()
+        Me.ArticulosTableAdapter = New form1.BaseBellezaDataSetTableAdapters.articulosTableAdapter()
+        Me.TableAdapterManager = New form1.BaseBellezaDataSetTableAdapters.TableAdapterManager()
         Me.ArticulosDataGridView = New System.Windows.Forms.DataGridView()
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -44,13 +48,14 @@ Partial Class AltaArticulo
         Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ArticulosTableAdapter = New form1.BaseBellezaDataSetTableAdapters.articulosTableAdapter()
-        Me.TableAdapterManager = New form1.BaseBellezaDataSetTableAdapters.TableAdapterManager()
+        Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         DescripcionLabel = New System.Windows.Forms.Label()
         Cantidad_stockLabel = New System.Windows.Forms.Label()
         PrecioLabel = New System.Windows.Forms.Label()
         RubroLabel = New System.Windows.Forms.Label()
         MarcaLabel = New System.Windows.Forms.Label()
+        Stock_minimoLabel = New System.Windows.Forms.Label()
         CType(Me.ArticulosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BaseBellezaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ArticulosDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -101,6 +106,15 @@ Partial Class AltaArticulo
         MarcaLabel.TabIndex = 11
         MarcaLabel.Text = "marca:"
         '
+        'Stock_minimoLabel
+        '
+        Stock_minimoLabel.AutoSize = True
+        Stock_minimoLabel.Location = New System.Drawing.Point(105, 270)
+        Stock_minimoLabel.Name = "Stock_minimoLabel"
+        Stock_minimoLabel.Size = New System.Drawing.Size(71, 13)
+        Stock_minimoLabel.TabIndex = 14
+        Stock_minimoLabel.Text = "stock minimo:"
+        '
         'DescripcionTextBox
         '
         Me.DescripcionTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ArticulosBindingSource, "descripcion", True))
@@ -108,16 +122,6 @@ Partial Class AltaArticulo
         Me.DescripcionTextBox.Name = "DescripcionTextBox"
         Me.DescripcionTextBox.Size = New System.Drawing.Size(100, 20)
         Me.DescripcionTextBox.TabIndex = 4
-        '
-        'ArticulosBindingSource
-        '
-        Me.ArticulosBindingSource.DataMember = "articulos"
-        Me.ArticulosBindingSource.DataSource = Me.BaseBellezaDataSet
-        '
-        'BaseBellezaDataSet
-        '
-        Me.BaseBellezaDataSet.DataSetName = "BaseBellezaDataSet"
-        Me.BaseBellezaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'Cantidad_stockTextBox
         '
@@ -153,7 +157,7 @@ Partial Class AltaArticulo
         '
         'btnagregar
         '
-        Me.btnagregar.Location = New System.Drawing.Point(99, 276)
+        Me.btnagregar.Location = New System.Drawing.Point(101, 314)
         Me.btnagregar.Name = "btnagregar"
         Me.btnagregar.Size = New System.Drawing.Size(75, 23)
         Me.btnagregar.TabIndex = 13
@@ -162,23 +166,55 @@ Partial Class AltaArticulo
         '
         'btnfin
         '
-        Me.btnfin.Location = New System.Drawing.Point(230, 276)
+        Me.btnfin.Location = New System.Drawing.Point(223, 314)
         Me.btnfin.Name = "btnfin"
         Me.btnfin.Size = New System.Drawing.Size(75, 23)
         Me.btnfin.TabIndex = 14
         Me.btnfin.Text = "fin"
         Me.btnfin.UseVisualStyleBackColor = True
         '
+        'Stock_minimoTextBox
+        '
+        Me.Stock_minimoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ArticulosBindingSource, "stock_minimo", True))
+        Me.Stock_minimoTextBox.Location = New System.Drawing.Point(182, 267)
+        Me.Stock_minimoTextBox.Name = "Stock_minimoTextBox"
+        Me.Stock_minimoTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.Stock_minimoTextBox.TabIndex = 15
+        '
+        'ArticulosBindingSource
+        '
+        Me.ArticulosBindingSource.DataMember = "articulos"
+        Me.ArticulosBindingSource.DataSource = Me.BaseBellezaDataSet
+        '
+        'BaseBellezaDataSet
+        '
+        Me.BaseBellezaDataSet.DataSetName = "BaseBellezaDataSet"
+        Me.BaseBellezaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'ArticulosTableAdapter
+        '
+        Me.ArticulosTableAdapter.ClearBeforeFill = True
+        '
+        'TableAdapterManager
+        '
+        Me.TableAdapterManager.articulosTableAdapter = Me.ArticulosTableAdapter
+        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.clienteTableAdapter = Nothing
+        Me.TableAdapterManager.empleadoTableAdapter = Nothing
+        Me.TableAdapterManager.proveedorTableAdapter = Nothing
+        Me.TableAdapterManager.UpdateOrder = form1.BaseBellezaDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        Me.TableAdapterManager.ventasTableAdapter = Nothing
+        '
         'ArticulosDataGridView
         '
         Me.ArticulosDataGridView.AutoGenerateColumns = False
         Me.ArticulosDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.ArticulosDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6})
+        Me.ArticulosDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6, Me.DataGridViewTextBoxColumn7, Me.DataGridViewTextBoxColumn8})
         Me.ArticulosDataGridView.DataSource = Me.ArticulosBindingSource
-        Me.ArticulosDataGridView.Location = New System.Drawing.Point(306, 37)
+        Me.ArticulosDataGridView.Location = New System.Drawing.Point(333, 61)
         Me.ArticulosDataGridView.Name = "ArticulosDataGridView"
-        Me.ArticulosDataGridView.Size = New System.Drawing.Size(447, 204)
-        Me.ArticulosDataGridView.TabIndex = 14
+        Me.ArticulosDataGridView.Size = New System.Drawing.Size(428, 220)
+        Me.ArticulosDataGridView.TabIndex = 15
         '
         'DataGridViewTextBoxColumn1
         '
@@ -217,25 +253,26 @@ Partial Class AltaArticulo
         Me.DataGridViewTextBoxColumn6.HeaderText = "marca"
         Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
         '
-        'ArticulosTableAdapter
+        'DataGridViewTextBoxColumn7
         '
-        Me.ArticulosTableAdapter.ClearBeforeFill = True
+        Me.DataGridViewTextBoxColumn7.DataPropertyName = "id_proveedor"
+        Me.DataGridViewTextBoxColumn7.HeaderText = "id_proveedor"
+        Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
         '
-        'TableAdapterManager
+        'DataGridViewTextBoxColumn8
         '
-        Me.TableAdapterManager.articulosTableAdapter = Me.ArticulosTableAdapter
-        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
-        Me.TableAdapterManager.clienteTableAdapter = Nothing
-        Me.TableAdapterManager.empleadoTableAdapter = Nothing
-        Me.TableAdapterManager.proveedorTableAdapter = Nothing
-        Me.TableAdapterManager.UpdateOrder = form1.BaseBellezaDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        Me.DataGridViewTextBoxColumn8.DataPropertyName = "stock_minimo"
+        Me.DataGridViewTextBoxColumn8.HeaderText = "stock_minimo"
+        Me.DataGridViewTextBoxColumn8.Name = "DataGridViewTextBoxColumn8"
         '
         'AltaArticulo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(765, 349)
+        Me.ClientSize = New System.Drawing.Size(773, 357)
         Me.Controls.Add(Me.ArticulosDataGridView)
+        Me.Controls.Add(Stock_minimoLabel)
+        Me.Controls.Add(Me.Stock_minimoTextBox)
         Me.Controls.Add(Me.btnfin)
         Me.Controls.Add(Me.btnagregar)
         Me.Controls.Add(DescripcionLabel)
@@ -268,6 +305,7 @@ Partial Class AltaArticulo
     Friend WithEvents MarcaTextBox As System.Windows.Forms.TextBox
     Friend WithEvents btnagregar As System.Windows.Forms.Button
     Friend WithEvents btnfin As System.Windows.Forms.Button
+    Friend WithEvents Stock_minimoTextBox As System.Windows.Forms.TextBox
     Friend WithEvents ArticulosDataGridView As System.Windows.Forms.DataGridView
     Friend WithEvents DataGridViewTextBoxColumn1 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn2 As System.Windows.Forms.DataGridViewTextBoxColumn
@@ -275,4 +313,6 @@ Partial Class AltaArticulo
     Friend WithEvents DataGridViewTextBoxColumn4 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn5 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn6 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn7 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn8 As System.Windows.Forms.DataGridViewTextBoxColumn
 End Class

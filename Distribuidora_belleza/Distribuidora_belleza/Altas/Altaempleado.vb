@@ -24,8 +24,12 @@
                         Me.TableAdapterManager.UpdateAll(Me.BaseBellezaDataSet)
 
                         MsgBox("se cargo con exito")
-                        Me.EmpleadoTableAdapter.Fill(Me.BaseBellezaDataSet.empleado)
+                        consulta_empleados.EmpleadoTableAdapter.Fill(Me.BaseBellezaDataSet.empleado)
                         NombreTextBox.Focus()
+                        Me.EmpleadoBindingSource.AddNew()
+
+
+
                     Else
                         MsgBox("el campo del telefono es incorrecto")
                         Exit Sub

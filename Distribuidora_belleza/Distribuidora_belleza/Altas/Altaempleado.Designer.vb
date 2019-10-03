@@ -34,16 +34,16 @@ Partial Class Altaempleado
         Me.EmpleadoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.EmpleadoTableAdapter = New form1.BaseBellezaDataSetTableAdapters.empleadoTableAdapter()
         Me.TableAdapterManager = New form1.BaseBellezaDataSetTableAdapters.TableAdapterManager()
-        Me.NombreTextBox = New System.Windows.Forms.TextBox()
-        Me.ApellidoTextBox = New System.Windows.Forms.TextBox()
-        Me.DniTextBox = New System.Windows.Forms.TextBox()
-        Me.TelefonoTextBox = New System.Windows.Forms.TextBox()
-        Me.LocalidadTextBox = New System.Windows.Forms.TextBox()
-        Me.DireccionTextBox = New System.Windows.Forms.TextBox()
-        Me.C_pTextBox = New System.Windows.Forms.TextBox()
         Me.btnagregar = New System.Windows.Forms.Button()
         Me.btnfin = New System.Windows.Forms.Button()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
+        Me.C_pTextBox = New System.Windows.Forms.TextBox()
+        Me.DireccionTextBox = New System.Windows.Forms.TextBox()
+        Me.LocalidadTextBox = New System.Windows.Forms.TextBox()
+        Me.TelefonoTextBox = New System.Windows.Forms.TextBox()
+        Me.DniTextBox = New System.Windows.Forms.TextBox()
+        Me.ApellidoTextBox = New System.Windows.Forms.TextBox()
+        Me.NombreTextBox = New System.Windows.Forms.TextBox()
         NombreLabel = New System.Windows.Forms.Label()
         ApellidoLabel = New System.Windows.Forms.Label()
         DniLabel = New System.Windows.Forms.Label()
@@ -140,63 +140,7 @@ Partial Class Altaempleado
         Me.TableAdapterManager.empleadoTableAdapter = Me.EmpleadoTableAdapter
         Me.TableAdapterManager.proveedorTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = form1.BaseBellezaDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
-        '
-        'NombreTextBox
-        '
-        Me.NombreTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EmpleadoBindingSource, "nombre", True))
-        Me.NombreTextBox.Location = New System.Drawing.Point(130, 31)
-        Me.NombreTextBox.Name = "NombreTextBox"
-        Me.NombreTextBox.Size = New System.Drawing.Size(100, 20)
-        Me.NombreTextBox.TabIndex = 4
-        '
-        'ApellidoTextBox
-        '
-        Me.ApellidoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EmpleadoBindingSource, "apellido", True))
-        Me.ApellidoTextBox.Location = New System.Drawing.Point(130, 66)
-        Me.ApellidoTextBox.Name = "ApellidoTextBox"
-        Me.ApellidoTextBox.Size = New System.Drawing.Size(100, 20)
-        Me.ApellidoTextBox.TabIndex = 6
-        '
-        'DniTextBox
-        '
-        Me.DniTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EmpleadoBindingSource, "dni", True))
-        Me.DniTextBox.Location = New System.Drawing.Point(130, 100)
-        Me.DniTextBox.Name = "DniTextBox"
-        Me.DniTextBox.Size = New System.Drawing.Size(100, 20)
-        Me.DniTextBox.TabIndex = 8
-        Me.ToolTip1.SetToolTip(Me.DniTextBox, " ")
-        '
-        'TelefonoTextBox
-        '
-        Me.TelefonoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EmpleadoBindingSource, "telefono", True))
-        Me.TelefonoTextBox.Location = New System.Drawing.Point(130, 132)
-        Me.TelefonoTextBox.Name = "TelefonoTextBox"
-        Me.TelefonoTextBox.Size = New System.Drawing.Size(100, 20)
-        Me.TelefonoTextBox.TabIndex = 10
-        '
-        'LocalidadTextBox
-        '
-        Me.LocalidadTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EmpleadoBindingSource, "localidad", True))
-        Me.LocalidadTextBox.Location = New System.Drawing.Point(130, 164)
-        Me.LocalidadTextBox.Name = "LocalidadTextBox"
-        Me.LocalidadTextBox.Size = New System.Drawing.Size(100, 20)
-        Me.LocalidadTextBox.TabIndex = 12
-        '
-        'DireccionTextBox
-        '
-        Me.DireccionTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EmpleadoBindingSource, "direccion", True))
-        Me.DireccionTextBox.Location = New System.Drawing.Point(130, 196)
-        Me.DireccionTextBox.Name = "DireccionTextBox"
-        Me.DireccionTextBox.Size = New System.Drawing.Size(100, 20)
-        Me.DireccionTextBox.TabIndex = 14
-        '
-        'C_pTextBox
-        '
-        Me.C_pTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EmpleadoBindingSource, "c_p", True))
-        Me.C_pTextBox.Location = New System.Drawing.Point(130, 227)
-        Me.C_pTextBox.Name = "C_pTextBox"
-        Me.C_pTextBox.Size = New System.Drawing.Size(100, 20)
-        Me.C_pTextBox.TabIndex = 16
+        Me.TableAdapterManager.ventasTableAdapter = Nothing
         '
         'btnagregar
         '
@@ -215,6 +159,63 @@ Partial Class Altaempleado
         Me.btnfin.TabIndex = 18
         Me.btnfin.Text = "fin"
         Me.btnfin.UseVisualStyleBackColor = True
+        '
+        'C_pTextBox
+        '
+        Me.C_pTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EmpleadoBindingSource, "c_p", True))
+        Me.C_pTextBox.Location = New System.Drawing.Point(129, 223)
+        Me.C_pTextBox.Name = "C_pTextBox"
+        Me.C_pTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.C_pTextBox.TabIndex = 16
+        '
+        'DireccionTextBox
+        '
+        Me.DireccionTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EmpleadoBindingSource, "direccion", True))
+        Me.DireccionTextBox.Location = New System.Drawing.Point(129, 192)
+        Me.DireccionTextBox.Name = "DireccionTextBox"
+        Me.DireccionTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.DireccionTextBox.TabIndex = 14
+        '
+        'LocalidadTextBox
+        '
+        Me.LocalidadTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EmpleadoBindingSource, "localidad", True))
+        Me.LocalidadTextBox.Location = New System.Drawing.Point(129, 160)
+        Me.LocalidadTextBox.Name = "LocalidadTextBox"
+        Me.LocalidadTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.LocalidadTextBox.TabIndex = 12
+        '
+        'TelefonoTextBox
+        '
+        Me.TelefonoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EmpleadoBindingSource, "telefono", True))
+        Me.TelefonoTextBox.Location = New System.Drawing.Point(129, 128)
+        Me.TelefonoTextBox.Name = "TelefonoTextBox"
+        Me.TelefonoTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.TelefonoTextBox.TabIndex = 10
+        '
+        'DniTextBox
+        '
+        Me.DniTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EmpleadoBindingSource, "dni", True))
+        Me.DniTextBox.Location = New System.Drawing.Point(129, 96)
+        Me.DniTextBox.Name = "DniTextBox"
+        Me.DniTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.DniTextBox.TabIndex = 8
+        Me.ToolTip1.SetToolTip(Me.DniTextBox, " ")
+        '
+        'ApellidoTextBox
+        '
+        Me.ApellidoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EmpleadoBindingSource, "apellido", True))
+        Me.ApellidoTextBox.Location = New System.Drawing.Point(129, 62)
+        Me.ApellidoTextBox.Name = "ApellidoTextBox"
+        Me.ApellidoTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.ApellidoTextBox.TabIndex = 6
+        '
+        'NombreTextBox
+        '
+        Me.NombreTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EmpleadoBindingSource, "nombre", True))
+        Me.NombreTextBox.Location = New System.Drawing.Point(129, 27)
+        Me.NombreTextBox.Name = "NombreTextBox"
+        Me.NombreTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.NombreTextBox.TabIndex = 4
         '
         'Altaempleado
         '
@@ -249,14 +250,14 @@ Partial Class Altaempleado
     Friend WithEvents EmpleadoBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents EmpleadoTableAdapter As form1.BaseBellezaDataSetTableAdapters.empleadoTableAdapter
     Friend WithEvents TableAdapterManager As form1.BaseBellezaDataSetTableAdapters.TableAdapterManager
-    Friend WithEvents NombreTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents ApellidoTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents DniTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents TelefonoTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents LocalidadTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents DireccionTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents C_pTextBox As System.Windows.Forms.TextBox
     Friend WithEvents btnagregar As System.Windows.Forms.Button
     Friend WithEvents btnfin As System.Windows.Forms.Button
     Friend WithEvents ToolTip1 As System.Windows.Forms.ToolTip
+    Friend WithEvents C_pTextBox As System.Windows.Forms.TextBox
+    Friend WithEvents DireccionTextBox As System.Windows.Forms.TextBox
+    Friend WithEvents LocalidadTextBox As System.Windows.Forms.TextBox
+    Friend WithEvents TelefonoTextBox As System.Windows.Forms.TextBox
+    Friend WithEvents DniTextBox As System.Windows.Forms.TextBox
+    Friend WithEvents ApellidoTextBox As System.Windows.Forms.TextBox
+    Friend WithEvents NombreTextBox As System.Windows.Forms.TextBox
 End Class

@@ -87,7 +87,7 @@ Public Class ventas
 
     Private Sub Button4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button4.Click
 
-        Dim conexion As New SqlCeConnection("Data Source= C:\Users\thoma\Documents\GitKraken\Vta_Insumos\Distribuidora_belleza\Distribuidora_belleza\BaseBelleza.sdf")
+        Dim conexion As New SqlCeConnection("Data Source= C:\Users\Usuario\Documents\github\Vta_Insumos\Distribuidora_belleza\Distribuidora_belleza\BaseBelleza.sdf")
 
 
         Dim fila As DataGridViewRow = New DataGridViewRow

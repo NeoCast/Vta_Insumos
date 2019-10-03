@@ -76,3 +76,5 @@ C:\Users\thoma\Documents\GitKraken\Vta_Insumos\Distribuidora_belleza\Distribuido
 C:\Users\thoma\Documents\GitKraken\Vta_Insumos\Distribuidora_belleza\Distribuidora_belleza\obj\x86\Debug\form1.Resources.resources
 C:\Users\thoma\Documents\GitKraken\Vta_Insumos\Distribuidora_belleza\Distribuidora_belleza\obj\x86\Debug\form1.ventas.resources
 C:\Users\thoma\Documents\GitKraken\Vta_Insumos\Distribuidora_belleza\Distribuidora_belleza\obj\x86\Debug\Distribuidora_belleza.vbproj.GenerateResource.Cache
+C:\Users\Usuario\Documents\github\Vta_Insumos\Distribuidora_belleza\Distribuidora_belleza\obj\x86\Debug\Distribuidora_belleza.vbprojResolveAssemblyReference.cache
+C:\Users\Usuario\Documents\github\Vta_Insumos\Distribuidora_belleza\Distribuidora_belleza\obj\x86\Debug\form1.consulta_vta.resources
