@@ -29,7 +29,10 @@ Partial Class AltaArticulo
         Dim RubroLabel As System.Windows.Forms.Label
         Dim MarcaLabel As System.Windows.Forms.Label
         Dim Stock_minimoLabel As System.Windows.Forms.Label
+        Dim Id_proveedorLabel As System.Windows.Forms.Label
         Me.DescripcionTextBox = New System.Windows.Forms.TextBox()
+        Me.ArticulosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.BaseBellezaDataSet = New form1.BaseBellezaDataSet()
         Me.Cantidad_stockTextBox = New System.Windows.Forms.TextBox()
         Me.PrecioTextBox = New System.Windows.Forms.TextBox()
         Me.RubroTextBox = New System.Windows.Forms.TextBox()
@@ -37,8 +40,6 @@ Partial Class AltaArticulo
         Me.btnagregar = New System.Windows.Forms.Button()
         Me.btnfin = New System.Windows.Forms.Button()
         Me.Stock_minimoTextBox = New System.Windows.Forms.TextBox()
-        Me.ArticulosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.BaseBellezaDataSet = New form1.BaseBellezaDataSet()
         Me.ArticulosTableAdapter = New form1.BaseBellezaDataSetTableAdapters.articulosTableAdapter()
         Me.TableAdapterManager = New form1.BaseBellezaDataSetTableAdapters.TableAdapterManager()
         Me.ArticulosDataGridView = New System.Windows.Forms.DataGridView()
@@ -50,21 +51,26 @@ Partial Class AltaArticulo
         Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ProveedorBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ProveedorTableAdapter = New form1.BaseBellezaDataSetTableAdapters.proveedorTableAdapter()
+        Me.Id_proveedorComboBox = New System.Windows.Forms.ComboBox()
         DescripcionLabel = New System.Windows.Forms.Label()
         Cantidad_stockLabel = New System.Windows.Forms.Label()
         PrecioLabel = New System.Windows.Forms.Label()
         RubroLabel = New System.Windows.Forms.Label()
         MarcaLabel = New System.Windows.Forms.Label()
         Stock_minimoLabel = New System.Windows.Forms.Label()
+        Id_proveedorLabel = New System.Windows.Forms.Label()
         CType(Me.ArticulosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BaseBellezaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ArticulosDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ProveedorBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'DescripcionLabel
         '
         DescripcionLabel.AutoSize = True
-        DescripcionLabel.Location = New System.Drawing.Point(96, 52)
+        DescripcionLabel.Location = New System.Drawing.Point(75, 37)
         DescripcionLabel.Name = "DescripcionLabel"
         DescripcionLabel.Size = New System.Drawing.Size(64, 13)
         DescripcionLabel.TabIndex = 3
@@ -73,7 +79,7 @@ Partial Class AltaArticulo
         'Cantidad_stockLabel
         '
         Cantidad_stockLabel.AutoSize = True
-        Cantidad_stockLabel.Location = New System.Drawing.Point(96, 98)
+        Cantidad_stockLabel.Location = New System.Drawing.Point(75, 83)
         Cantidad_stockLabel.Name = "Cantidad_stockLabel"
         Cantidad_stockLabel.Size = New System.Drawing.Size(80, 13)
         Cantidad_stockLabel.TabIndex = 5
@@ -82,7 +88,7 @@ Partial Class AltaArticulo
         'PrecioLabel
         '
         PrecioLabel.AutoSize = True
-        PrecioLabel.Location = New System.Drawing.Point(96, 139)
+        PrecioLabel.Location = New System.Drawing.Point(75, 124)
         PrecioLabel.Name = "PrecioLabel"
         PrecioLabel.Size = New System.Drawing.Size(39, 13)
         PrecioLabel.TabIndex = 7
@@ -91,7 +97,7 @@ Partial Class AltaArticulo
         'RubroLabel
         '
         RubroLabel.AutoSize = True
-        RubroLabel.Location = New System.Drawing.Point(96, 182)
+        RubroLabel.Location = New System.Drawing.Point(75, 167)
         RubroLabel.Name = "RubroLabel"
         RubroLabel.Size = New System.Drawing.Size(34, 13)
         RubroLabel.TabIndex = 9
@@ -100,7 +106,7 @@ Partial Class AltaArticulo
         'MarcaLabel
         '
         MarcaLabel.AutoSize = True
-        MarcaLabel.Location = New System.Drawing.Point(96, 224)
+        MarcaLabel.Location = New System.Drawing.Point(75, 209)
         MarcaLabel.Name = "MarcaLabel"
         MarcaLabel.Size = New System.Drawing.Size(39, 13)
         MarcaLabel.TabIndex = 11
@@ -109,77 +115,28 @@ Partial Class AltaArticulo
         'Stock_minimoLabel
         '
         Stock_minimoLabel.AutoSize = True
-        Stock_minimoLabel.Location = New System.Drawing.Point(105, 270)
+        Stock_minimoLabel.Location = New System.Drawing.Point(75, 248)
         Stock_minimoLabel.Name = "Stock_minimoLabel"
         Stock_minimoLabel.Size = New System.Drawing.Size(71, 13)
         Stock_minimoLabel.TabIndex = 14
         Stock_minimoLabel.Text = "stock minimo:"
         '
+        'Id_proveedorLabel
+        '
+        Id_proveedorLabel.AutoSize = True
+        Id_proveedorLabel.Location = New System.Drawing.Point(75, 293)
+        Id_proveedorLabel.Name = "Id_proveedorLabel"
+        Id_proveedorLabel.Size = New System.Drawing.Size(69, 13)
+        Id_proveedorLabel.TabIndex = 15
+        Id_proveedorLabel.Text = "id proveedor:"
+        '
         'DescripcionTextBox
         '
         Me.DescripcionTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ArticulosBindingSource, "descripcion", True))
-        Me.DescripcionTextBox.Location = New System.Drawing.Point(182, 49)
+        Me.DescripcionTextBox.Location = New System.Drawing.Point(161, 34)
         Me.DescripcionTextBox.Name = "DescripcionTextBox"
         Me.DescripcionTextBox.Size = New System.Drawing.Size(100, 20)
         Me.DescripcionTextBox.TabIndex = 4
-        '
-        'Cantidad_stockTextBox
-        '
-        Me.Cantidad_stockTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ArticulosBindingSource, "cantidad_stock", True))
-        Me.Cantidad_stockTextBox.Location = New System.Drawing.Point(182, 95)
-        Me.Cantidad_stockTextBox.Name = "Cantidad_stockTextBox"
-        Me.Cantidad_stockTextBox.Size = New System.Drawing.Size(100, 20)
-        Me.Cantidad_stockTextBox.TabIndex = 6
-        '
-        'PrecioTextBox
-        '
-        Me.PrecioTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ArticulosBindingSource, "precio", True))
-        Me.PrecioTextBox.Location = New System.Drawing.Point(182, 136)
-        Me.PrecioTextBox.Name = "PrecioTextBox"
-        Me.PrecioTextBox.Size = New System.Drawing.Size(100, 20)
-        Me.PrecioTextBox.TabIndex = 8
-        '
-        'RubroTextBox
-        '
-        Me.RubroTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ArticulosBindingSource, "rubro", True))
-        Me.RubroTextBox.Location = New System.Drawing.Point(182, 179)
-        Me.RubroTextBox.Name = "RubroTextBox"
-        Me.RubroTextBox.Size = New System.Drawing.Size(100, 20)
-        Me.RubroTextBox.TabIndex = 10
-        '
-        'MarcaTextBox
-        '
-        Me.MarcaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ArticulosBindingSource, "marca", True))
-        Me.MarcaTextBox.Location = New System.Drawing.Point(182, 221)
-        Me.MarcaTextBox.Name = "MarcaTextBox"
-        Me.MarcaTextBox.Size = New System.Drawing.Size(100, 20)
-        Me.MarcaTextBox.TabIndex = 12
-        '
-        'btnagregar
-        '
-        Me.btnagregar.Location = New System.Drawing.Point(101, 314)
-        Me.btnagregar.Name = "btnagregar"
-        Me.btnagregar.Size = New System.Drawing.Size(75, 23)
-        Me.btnagregar.TabIndex = 13
-        Me.btnagregar.Text = "Agregar"
-        Me.btnagregar.UseVisualStyleBackColor = True
-        '
-        'btnfin
-        '
-        Me.btnfin.Location = New System.Drawing.Point(223, 314)
-        Me.btnfin.Name = "btnfin"
-        Me.btnfin.Size = New System.Drawing.Size(75, 23)
-        Me.btnfin.TabIndex = 14
-        Me.btnfin.Text = "fin"
-        Me.btnfin.UseVisualStyleBackColor = True
-        '
-        'Stock_minimoTextBox
-        '
-        Me.Stock_minimoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ArticulosBindingSource, "stock_minimo", True))
-        Me.Stock_minimoTextBox.Location = New System.Drawing.Point(182, 267)
-        Me.Stock_minimoTextBox.Name = "Stock_minimoTextBox"
-        Me.Stock_minimoTextBox.Size = New System.Drawing.Size(100, 20)
-        Me.Stock_minimoTextBox.TabIndex = 15
         '
         'ArticulosBindingSource
         '
@@ -191,6 +148,64 @@ Partial Class AltaArticulo
         Me.BaseBellezaDataSet.DataSetName = "BaseBellezaDataSet"
         Me.BaseBellezaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
+        'Cantidad_stockTextBox
+        '
+        Me.Cantidad_stockTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ArticulosBindingSource, "cantidad_stock", True))
+        Me.Cantidad_stockTextBox.Location = New System.Drawing.Point(161, 80)
+        Me.Cantidad_stockTextBox.Name = "Cantidad_stockTextBox"
+        Me.Cantidad_stockTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.Cantidad_stockTextBox.TabIndex = 6
+        '
+        'PrecioTextBox
+        '
+        Me.PrecioTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ArticulosBindingSource, "precio", True))
+        Me.PrecioTextBox.Location = New System.Drawing.Point(161, 121)
+        Me.PrecioTextBox.Name = "PrecioTextBox"
+        Me.PrecioTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.PrecioTextBox.TabIndex = 8
+        '
+        'RubroTextBox
+        '
+        Me.RubroTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ArticulosBindingSource, "rubro", True))
+        Me.RubroTextBox.Location = New System.Drawing.Point(161, 164)
+        Me.RubroTextBox.Name = "RubroTextBox"
+        Me.RubroTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.RubroTextBox.TabIndex = 10
+        '
+        'MarcaTextBox
+        '
+        Me.MarcaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ArticulosBindingSource, "marca", True))
+        Me.MarcaTextBox.Location = New System.Drawing.Point(161, 206)
+        Me.MarcaTextBox.Name = "MarcaTextBox"
+        Me.MarcaTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.MarcaTextBox.TabIndex = 12
+        '
+        'btnagregar
+        '
+        Me.btnagregar.Location = New System.Drawing.Point(101, 336)
+        Me.btnagregar.Name = "btnagregar"
+        Me.btnagregar.Size = New System.Drawing.Size(75, 23)
+        Me.btnagregar.TabIndex = 13
+        Me.btnagregar.Text = "Agregar"
+        Me.btnagregar.UseVisualStyleBackColor = True
+        '
+        'btnfin
+        '
+        Me.btnfin.Location = New System.Drawing.Point(223, 336)
+        Me.btnfin.Name = "btnfin"
+        Me.btnfin.Size = New System.Drawing.Size(75, 23)
+        Me.btnfin.TabIndex = 14
+        Me.btnfin.Text = "fin"
+        Me.btnfin.UseVisualStyleBackColor = True
+        '
+        'Stock_minimoTextBox
+        '
+        Me.Stock_minimoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ArticulosBindingSource, "stock_minimo", True))
+        Me.Stock_minimoTextBox.Location = New System.Drawing.Point(161, 248)
+        Me.Stock_minimoTextBox.Name = "Stock_minimoTextBox"
+        Me.Stock_minimoTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.Stock_minimoTextBox.TabIndex = 15
+        '
         'ArticulosTableAdapter
         '
         Me.ArticulosTableAdapter.ClearBeforeFill = True
@@ -200,6 +215,7 @@ Partial Class AltaArticulo
         Me.TableAdapterManager.articulosTableAdapter = Me.ArticulosTableAdapter
         Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
         Me.TableAdapterManager.clienteTableAdapter = Nothing
+        Me.TableAdapterManager.detalle_vtaTableAdapter = Nothing
         Me.TableAdapterManager.empleadoTableAdapter = Nothing
         Me.TableAdapterManager.proveedorTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = form1.BaseBellezaDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
@@ -265,11 +281,31 @@ Partial Class AltaArticulo
         Me.DataGridViewTextBoxColumn8.HeaderText = "stock_minimo"
         Me.DataGridViewTextBoxColumn8.Name = "DataGridViewTextBoxColumn8"
         '
+        'ProveedorBindingSource
+        '
+        Me.ProveedorBindingSource.DataMember = "proveedor"
+        Me.ProveedorBindingSource.DataSource = Me.BaseBellezaDataSet
+        '
+        'ProveedorTableAdapter
+        '
+        Me.ProveedorTableAdapter.ClearBeforeFill = True
+        '
+        'Id_proveedorComboBox
+        '
+        Me.Id_proveedorComboBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ProveedorBindingSource, "id_proveedor", True))
+        Me.Id_proveedorComboBox.FormattingEnabled = True
+        Me.Id_proveedorComboBox.Location = New System.Drawing.Point(150, 290)
+        Me.Id_proveedorComboBox.Name = "Id_proveedorComboBox"
+        Me.Id_proveedorComboBox.Size = New System.Drawing.Size(121, 21)
+        Me.Id_proveedorComboBox.TabIndex = 16
+        '
         'AltaArticulo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(773, 357)
+        Me.ClientSize = New System.Drawing.Size(781, 399)
+        Me.Controls.Add(Id_proveedorLabel)
+        Me.Controls.Add(Me.Id_proveedorComboBox)
         Me.Controls.Add(Me.ArticulosDataGridView)
         Me.Controls.Add(Stock_minimoLabel)
         Me.Controls.Add(Me.Stock_minimoTextBox)
@@ -290,6 +326,7 @@ Partial Class AltaArticulo
         CType(Me.ArticulosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BaseBellezaDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ArticulosDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ProveedorBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -315,4 +352,7 @@ Partial Class AltaArticulo
     Friend WithEvents DataGridViewTextBoxColumn6 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn7 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn8 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents ProveedorBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents ProveedorTableAdapter As form1.BaseBellezaDataSetTableAdapters.proveedorTableAdapter
+    Friend WithEvents Id_proveedorComboBox As System.Windows.Forms.ComboBox
 End Class

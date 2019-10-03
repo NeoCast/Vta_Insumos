@@ -8,6 +8,8 @@
     End Sub
 
     Private Sub AltaArticulo_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        'TODO: esta línea de código carga datos en la tabla 'BaseBellezaDataSet.proveedor' Puede moverla o quitarla según sea necesario.
+        Me.ProveedorTableAdapter.Fill(Me.BaseBellezaDataSet.proveedor)
         'TODO: esta línea de código carga datos en la tabla 'BaseBellezaDataSet.articulos' Puede moverla o quitarla según sea necesario.
         Me.ArticulosTableAdapter.Fill(Me.BaseBellezaDataSet.articulos)
         Me.ArticulosBindingSource.AddNew()
@@ -65,10 +67,6 @@
 
     Private Sub btnfin_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnfin.Click
         Me.Close()
-
-    End Sub
-
-    Private Sub ArticulosDataGridView_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs)
 
     End Sub
 End Class

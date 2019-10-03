@@ -116,4 +116,11 @@ Public Class ventas
         '    MsgBox(ex.ToString)
         'End Try
     End Sub
+
+    Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
+        Dim i As Integer
+        i = DataGridView1.CurrentRow.Index
+        DataGridView1.Rows.RemoveAt(i)
+
+    End Sub
 End Class

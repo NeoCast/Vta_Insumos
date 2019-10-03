@@ -12,4 +12,8 @@
         Me.VentasTableAdapter.Fill(Me.BaseBellezaDataSet.ventas)
 
     End Sub
+
+    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+        Me.VentasTableAdapter.resumen_venta((Me.BaseBellezaDataSet.ventas), CDate(DateTimePicker1.Value), CDate(DateTimePicker2.Value))
+    End Sub
 End Class

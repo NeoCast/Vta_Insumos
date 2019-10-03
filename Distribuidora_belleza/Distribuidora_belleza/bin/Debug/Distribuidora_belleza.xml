@@ -39,6 +39,10 @@ Represents the strongly named DataTable class.
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
+</member><member name="T:form1.BaseBellezaDataSet.detalle_vtaDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
 </member><member name="T:form1.BaseBellezaDataSet.articulosRow">
 	<summary>
 Represents strongly named DataRow class.
@@ -59,6 +63,10 @@ Represents strongly named DataRow class.
 	<summary>
 Represents strongly named DataRow class.
 </summary>
+</member><member name="T:form1.BaseBellezaDataSet.detalle_vtaRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
 </member><member name="T:form1.BaseBellezaDataSet.articulosRowChangeEvent">
 	<summary>
 Row event argument class
@@ -76,6 +84,10 @@ Row event argument class
 Row event argument class
 </summary>
 </member><member name="T:form1.BaseBellezaDataSet.ventasRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:form1.BaseBellezaDataSet.detalle_vtaRowChangeEvent">
 	<summary>
 Row event argument class
 </summary>
@@ -100,6 +112,10 @@ Represents the connection and commands used to retrieve and save data.
 Represents the connection and commands used to retrieve and save data.
 </summary>
 </member><member name="T:form1.BaseBellezaDataSetTableAdapters.ventasTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:form1.BaseBellezaDataSetTableAdapters.detalle_vtaTableAdapter">
 	<summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>

@@ -154,6 +154,12 @@
     <Compile Include="consulta\consulta_cliente.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="consulta\consulta_detalle.Designer.vb">
+      <DependentUpon>consulta_detalle.vb</DependentUpon>
+    </Compile>
+    <Compile Include="consulta\consulta_detalle.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="consulta\consulta_empleados.Designer.vb">
       <DependentUpon>consulta_empleados.vb</DependentUpon>
     </Compile>
@@ -254,6 +260,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="consulta\consulta_cliente.resx">
       <DependentUpon>consulta_cliente.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="consulta\consulta_detalle.resx">
+      <DependentUpon>consulta_detalle.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="consulta\consulta_empleados.resx">
       <DependentUpon>consulta_empleados.vb</DependentUpon>

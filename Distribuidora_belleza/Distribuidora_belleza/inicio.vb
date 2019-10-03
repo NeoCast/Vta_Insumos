@@ -89,4 +89,14 @@
         ventas.Show()
 
     End Sub
+
+    Private Sub VentaToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles VentaToolStripMenuItem.Click
+        consulta_vta.Show()
+
+    End Sub
+
+    Private Sub DetalleToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DetalleToolStripMenuItem.Click
+        consulta_detalle.Show()
+
+    End Sub
 End Class
