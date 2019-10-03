@@ -62,9 +62,11 @@ Partial Class consulta_empleados
         Me.TableAdapterManager.articulosTableAdapter = Nothing
         Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
         Me.TableAdapterManager.clienteTableAdapter = Nothing
+        Me.TableAdapterManager.detalle_vtaTableAdapter = Nothing
         Me.TableAdapterManager.empleadoTableAdapter = Me.EmpleadoTableAdapter
         Me.TableAdapterManager.proveedorTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = form1.BaseBellezaDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        Me.TableAdapterManager.ventasTableAdapter = Nothing
         '
         'EmpleadoDataGridView
         '
@@ -72,7 +74,7 @@ Partial Class consulta_empleados
         Me.EmpleadoDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.EmpleadoDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6, Me.DataGridViewTextBoxColumn7, Me.DataGridViewTextBoxColumn8})
         Me.EmpleadoDataGridView.DataSource = Me.EmpleadoBindingSource
-        Me.EmpleadoDataGridView.Location = New System.Drawing.Point(42, 240)
+        Me.EmpleadoDataGridView.Location = New System.Drawing.Point(36, 191)
         Me.EmpleadoDataGridView.Name = "EmpleadoDataGridView"
         Me.EmpleadoDataGridView.Size = New System.Drawing.Size(818, 220)
         Me.EmpleadoDataGridView.TabIndex = 1
@@ -138,9 +140,9 @@ Partial Class consulta_empleados
         Me.Label1.AutoSize = True
         Me.Label1.Location = New System.Drawing.Point(83, 76)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(73, 13)
+        Me.Label1.Size = New System.Drawing.Size(94, 13)
         Me.Label1.TabIndex = 3
-        Me.Label1.Text = "ingrese un dni"
+        Me.Label1.Text = "ingrese un nombre"
         '
         'consulta_empleados
         '

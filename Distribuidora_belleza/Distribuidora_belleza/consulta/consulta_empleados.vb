@@ -18,7 +18,7 @@
         If TextBox1.Text = "" Then
             EmpleadoTableAdapter.Fill(Me.BaseBellezaDataSet.empleado)
         Else
-            EmpleadoTableAdapter.consultaDni((Me.BaseBellezaDataSet.empleado), dni)
+            EmpleadoTableAdapter.consultaNombre((Me.BaseBellezaDataSet.empleado), TextBox1.Text)
         End If
     End Sub
 

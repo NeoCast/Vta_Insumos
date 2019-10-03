@@ -23,13 +23,21 @@
     End Sub
 
     Private Sub BtnEliminar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnEliminar.Click
-        Dim consulta As Integer
-        consulta = MsgBox("Desea eliminar empleado", 32 + 1)
-        If consulta = 1 Then
-            Me.EmpleadoTableAdapter.eliminarEmpleado(TextBox1.Text)
-            Me.EmpleadoTableAdapter.Fill(Me.BaseBellezaDataSet.empleado)
-            consulta_empleados.EmpleadoTableAdapter.Fill(Me.BaseBellezaDataSet.empleado)
+        Dim consulta, codconsulta, fila As Integer
+        codconsulta = TextBox1.Text
+        fila = Me.EmpleadoBindingSource.Find("id_empleado", codconsulta)
+        If fila = -1 Then
+            MsgBox("no se encontro")
+        Else
 
+            consulta = MsgBox("Desea eliminar empleado", 32 + 1)
+            If consulta = 1 Then
+                Me.EmpleadoTableAdapter.eliminarEmpleado(TextBox1.Text)
+                Me.EmpleadoBindingSource.EndEdit()
+                Me.TableAdapterManager.UpdateAll(Me.BaseBellezaDataSet)
+                Me.EmpleadoTableAdapter.Fill(Me.BaseBellezaDataSet.empleado)
+                consulta_empleados.EmpleadoTableAdapter.Fill(Me.BaseBellezaDataSet.empleado)
+            End If
         End If
     End Sub
 End Class

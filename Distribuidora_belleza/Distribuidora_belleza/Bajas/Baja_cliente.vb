@@ -23,14 +23,22 @@
     End Sub
 
     Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnEliminar.Click
-        Dim consulta As Integer
-        consulta = MsgBox("Desea eliminar cliente", 32 + 1)
-        If consulta = 1 Then
-            Me.ClienteTableAdapter.eliminarCliente(TextBox1.Text)
-            Me.ClienteTableAdapter.Fill(Me.BaseBellezaDataSet.cliente)
-            consulta_cliente.ClienteTableAdapter.Fill(Me.BaseBellezaDataSet.cliente)
+        Dim consulta, codconsulta, fila As Integer
+        codconsulta = TextBox1.Text
+        fila = Me.ClienteBindingSource.Find("id_cliente", codconsulta)
+        If fila = -1 Then
+            MsgBox("no se encontro")
+        Else
 
+            consulta = MsgBox("Desea eliminar cliente", 32 + 1)
+            If consulta = 1 Then
+                Me.ClienteTableAdapter.eliminarCliente(TextBox1.Text)
+                Me.ClienteBindingSource.EndEdit()
+                Me.TableAdapterManager.UpdateAll(Me.BaseBellezaDataSet)
+                Me.ClienteTableAdapter.Fill(Me.BaseBellezaDataSet.cliente)
+                consulta_cliente.ClienteTableAdapter.Fill(Me.BaseBellezaDataSet.cliente)
+
+            End If
         End If
-
     End Sub
 End Class
