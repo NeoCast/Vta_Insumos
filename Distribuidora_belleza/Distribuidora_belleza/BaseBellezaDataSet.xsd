@@ -330,7 +330,7 @@ WHERE        (id_empleado LIKE @id + '%')</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="BaseBellezaConnectionString (MySettings)" DbObjectName="empleado" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="consultaNombre" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="consultaNombre" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy5" UserSourceName="consultaNombre">
+              <DbSource ConnectionRef="BaseBellezaConnectionString (MySettings)" DbObjectName="empleado" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="consultaNombre" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="consultaNombre" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy3" UserSourceName="consultaNombre">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        id_empleado, nombre, apellido, dni, telefono, localidad, direccion, [c.p]
@@ -342,7 +342,7 @@ WHERE        (nombre LIKE '%' + @nombre + '%')</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="BaseBellezaConnectionString (MySettings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="eliminarEmpleado" Modifier="Public" Name="eliminarEmpleado" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy3" UserSourceName="eliminarEmpleado">
+              <DbSource ConnectionRef="BaseBellezaConnectionString (MySettings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="eliminarEmpleado" Modifier="Public" Name="eliminarEmpleado" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy4" UserSourceName="eliminarEmpleado">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>DELETE FROM empleado
@@ -353,7 +353,7 @@ WHERE        (id_empleado = @p1)</CommandText>
                   </DbCommand>
                 </DeleteCommand>
               </DbSource>
-              <DbSource ConnectionRef="BaseBellezaConnectionString (MySettings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="modificarEmpleado" Modifier="Public" Name="modificarEmpleado" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy4" UserSourceName="modificarEmpleado">
+              <DbSource ConnectionRef="BaseBellezaConnectionString (MySettings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="modificarEmpleado" Modifier="Public" Name="modificarEmpleado" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy5" UserSourceName="modificarEmpleado">
                 <UpdateCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>UPDATE [empleado]
@@ -638,6 +638,56 @@ WHERE        (id_venta = @Id)</CommandText>
               </DbSource>
             </Sources>
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Registro_usuarioTableAdapter" GeneratorDataComponentClassName="Registro_usuarioTableAdapter" Name="Registro_usuario" UserDataComponentName="Registro_usuarioTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="BaseBellezaConnectionString (MySettings)" DbObjectName="Registro_usuario" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [Registro_usuario] WHERE (([usuario] = @p1))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p1" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="usuario" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [Registro_usuario] ([usuario], [contraseña], [tipo], [id_empleado]) VALUES (@p1, @p2, @p3, @p4)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p1" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="usuario" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p2" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="contraseña" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p3" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="tipo" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p4" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="id_empleado" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT usuario, contraseña, tipo, id_empleado FROM Registro_usuario</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [Registro_usuario] SET [usuario] = @p1, [contraseña] = @p2, [tipo] = @p3, [id_empleado] = @p4 WHERE (([usuario] = @p5))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p1" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="usuario" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p2" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="contraseña" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p3" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="tipo" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p4" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="id_empleado" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p5" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="usuario" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="usuario" DataSetColumn="usuario" />
+              <Mapping SourceColumn="contraseña" DataSetColumn="contraseña" />
+              <Mapping SourceColumn="tipo" DataSetColumn="tipo" />
+              <Mapping SourceColumn="id_empleado" DataSetColumn="id_empleado" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
@@ -646,7 +696,7 @@ WHERE        (id_venta = @Id)</CommandText>
   <xs:element name="BaseBellezaDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="BaseBellezaDataSet" msprop:Generator_UserDSName="BaseBellezaDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="articulos" msprop:Generator_TableClassName="articulosDataTable" msprop:Generator_TableVarName="tablearticulos" msprop:Generator_RowChangedName="articulosRowChanged" msprop:Generator_TablePropName="articulos" msprop:Generator_RowDeletingName="articulosRowDeleting" msprop:Generator_RowChangingName="articulosRowChanging" msprop:Generator_RowEvHandlerName="articulosRowChangeEventHandler" msprop:Generator_RowDeletedName="articulosRowDeleted" msprop:Generator_RowClassName="articulosRow" msprop:Generator_UserTableName="articulos" msprop:Generator_RowEvArgName="articulosRowChangeEvent">
+        <xs:element name="articulos" msprop:Generator_TableClassName="articulosDataTable" msprop:Generator_TableVarName="tablearticulos" msprop:Generator_TablePropName="articulos" msprop:Generator_RowDeletingName="articulosRowDeleting" msprop:Generator_RowChangingName="articulosRowChanging" msprop:Generator_RowEvHandlerName="articulosRowChangeEventHandler" msprop:Generator_RowDeletedName="articulosRowDeleted" msprop:Generator_UserTableName="articulos" msprop:Generator_RowChangedName="articulosRowChanged" msprop:Generator_RowEvArgName="articulosRowChangeEvent" msprop:Generator_RowClassName="articulosRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id_articulo" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid_articulo" msprop:Generator_ColumnPropNameInRow="id_articulo" msprop:Generator_ColumnPropNameInTable="id_articuloColumn" msprop:Generator_UserColumnName="id_articulo" type="xs:int" />
@@ -678,7 +728,7 @@ WHERE        (id_venta = @Id)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="cliente" msprop:Generator_TableClassName="clienteDataTable" msprop:Generator_TableVarName="tablecliente" msprop:Generator_TablePropName="cliente" msprop:Generator_RowDeletingName="clienteRowDeleting" msprop:Generator_RowChangingName="clienteRowChanging" msprop:Generator_RowEvHandlerName="clienteRowChangeEventHandler" msprop:Generator_RowDeletedName="clienteRowDeleted" msprop:Generator_UserTableName="cliente" msprop:Generator_RowChangedName="clienteRowChanged" msprop:Generator_RowEvArgName="clienteRowChangeEvent" msprop:Generator_RowClassName="clienteRow">
+        <xs:element name="cliente" msprop:Generator_TableClassName="clienteDataTable" msprop:Generator_TableVarName="tablecliente" msprop:Generator_RowChangedName="clienteRowChanged" msprop:Generator_TablePropName="cliente" msprop:Generator_RowDeletingName="clienteRowDeleting" msprop:Generator_RowChangingName="clienteRowChanging" msprop:Generator_RowEvHandlerName="clienteRowChangeEventHandler" msprop:Generator_RowDeletedName="clienteRowDeleted" msprop:Generator_RowClassName="clienteRow" msprop:Generator_UserTableName="cliente" msprop:Generator_RowEvArgName="clienteRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id_cliente" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid_cliente" msprop:Generator_ColumnPropNameInRow="id_cliente" msprop:Generator_ColumnPropNameInTable="id_clienteColumn" msprop:Generator_UserColumnName="id_cliente" type="xs:int" />
@@ -700,7 +750,7 @@ WHERE        (id_venta = @Id)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="empleado" msprop:Generator_TableClassName="empleadoDataTable" msprop:Generator_TableVarName="tableempleado" msprop:Generator_TablePropName="empleado" msprop:Generator_RowDeletingName="empleadoRowDeleting" msprop:Generator_RowChangingName="empleadoRowChanging" msprop:Generator_RowEvHandlerName="empleadoRowChangeEventHandler" msprop:Generator_RowDeletedName="empleadoRowDeleted" msprop:Generator_UserTableName="empleado" msprop:Generator_RowChangedName="empleadoRowChanged" msprop:Generator_RowEvArgName="empleadoRowChangeEvent" msprop:Generator_RowClassName="empleadoRow">
+        <xs:element name="empleado" msprop:Generator_TableClassName="empleadoDataTable" msprop:Generator_TableVarName="tableempleado" msprop:Generator_RowChangedName="empleadoRowChanged" msprop:Generator_TablePropName="empleado" msprop:Generator_RowDeletingName="empleadoRowDeleting" msprop:Generator_RowChangingName="empleadoRowChanging" msprop:Generator_RowEvHandlerName="empleadoRowChangeEventHandler" msprop:Generator_RowDeletedName="empleadoRowDeleted" msprop:Generator_RowClassName="empleadoRow" msprop:Generator_UserTableName="empleado" msprop:Generator_RowEvArgName="empleadoRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id_empleado" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid_empleado" msprop:Generator_ColumnPropNameInRow="id_empleado" msprop:Generator_ColumnPropNameInTable="id_empleadoColumn" msprop:Generator_UserColumnName="id_empleado" type="xs:int" />
@@ -738,7 +788,7 @@ WHERE        (id_venta = @Id)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="proveedor" msprop:Generator_TableClassName="proveedorDataTable" msprop:Generator_TableVarName="tableproveedor" msprop:Generator_TablePropName="proveedor" msprop:Generator_RowDeletingName="proveedorRowDeleting" msprop:Generator_RowChangingName="proveedorRowChanging" msprop:Generator_RowEvHandlerName="proveedorRowChangeEventHandler" msprop:Generator_RowDeletedName="proveedorRowDeleted" msprop:Generator_UserTableName="proveedor" msprop:Generator_RowChangedName="proveedorRowChanged" msprop:Generator_RowEvArgName="proveedorRowChangeEvent" msprop:Generator_RowClassName="proveedorRow">
+        <xs:element name="proveedor" msprop:Generator_TableClassName="proveedorDataTable" msprop:Generator_TableVarName="tableproveedor" msprop:Generator_RowChangedName="proveedorRowChanged" msprop:Generator_TablePropName="proveedor" msprop:Generator_RowDeletingName="proveedorRowDeleting" msprop:Generator_RowChangingName="proveedorRowChanging" msprop:Generator_RowEvHandlerName="proveedorRowChangeEventHandler" msprop:Generator_RowDeletedName="proveedorRowDeleted" msprop:Generator_RowClassName="proveedorRow" msprop:Generator_UserTableName="proveedor" msprop:Generator_RowEvArgName="proveedorRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id_proveedor" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid_proveedor" msprop:Generator_ColumnPropNameInRow="id_proveedor" msprop:Generator_ColumnPropNameInTable="id_proveedorColumn" msprop:Generator_UserColumnName="id_proveedor" type="xs:int" />
@@ -775,7 +825,7 @@ WHERE        (id_venta = @Id)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="ventas" msprop:Generator_TableClassName="ventasDataTable" msprop:Generator_TableVarName="tableventas" msprop:Generator_RowChangedName="ventasRowChanged" msprop:Generator_TablePropName="ventas" msprop:Generator_RowDeletingName="ventasRowDeleting" msprop:Generator_RowChangingName="ventasRowChanging" msprop:Generator_RowEvHandlerName="ventasRowChangeEventHandler" msprop:Generator_RowDeletedName="ventasRowDeleted" msprop:Generator_RowClassName="ventasRow" msprop:Generator_UserTableName="ventas" msprop:Generator_RowEvArgName="ventasRowChangeEvent">
+        <xs:element name="ventas" msprop:Generator_TableClassName="ventasDataTable" msprop:Generator_TableVarName="tableventas" msprop:Generator_TablePropName="ventas" msprop:Generator_RowDeletingName="ventasRowDeleting" msprop:Generator_RowChangingName="ventasRowChanging" msprop:Generator_RowEvHandlerName="ventasRowChangeEventHandler" msprop:Generator_RowDeletedName="ventasRowDeleted" msprop:Generator_UserTableName="ventas" msprop:Generator_RowChangedName="ventasRowChanged" msprop:Generator_RowEvArgName="ventasRowChangeEvent" msprop:Generator_RowClassName="ventasRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Id_ventas" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnId_ventas" msprop:Generator_ColumnPropNameInRow="Id_ventas" msprop:Generator_ColumnPropNameInTable="Id_ventasColumn" msprop:Generator_UserColumnName="Id_ventas" type="xs:int" />
@@ -786,7 +836,7 @@ WHERE        (id_venta = @Id)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="detalle_vta" msprop:Generator_TableClassName="detalle_vtaDataTable" msprop:Generator_TableVarName="tabledetalle_vta" msprop:Generator_RowChangedName="detalle_vtaRowChanged" msprop:Generator_TablePropName="detalle_vta" msprop:Generator_RowDeletingName="detalle_vtaRowDeleting" msprop:Generator_RowChangingName="detalle_vtaRowChanging" msprop:Generator_RowEvHandlerName="detalle_vtaRowChangeEventHandler" msprop:Generator_RowDeletedName="detalle_vtaRowDeleted" msprop:Generator_RowClassName="detalle_vtaRow" msprop:Generator_UserTableName="detalle_vta" msprop:Generator_RowEvArgName="detalle_vtaRowChangeEvent">
+        <xs:element name="detalle_vta" msprop:Generator_TableClassName="detalle_vtaDataTable" msprop:Generator_TableVarName="tabledetalle_vta" msprop:Generator_TablePropName="detalle_vta" msprop:Generator_RowDeletingName="detalle_vtaRowDeleting" msprop:Generator_RowChangingName="detalle_vtaRowChanging" msprop:Generator_RowEvHandlerName="detalle_vtaRowChangeEventHandler" msprop:Generator_RowDeletedName="detalle_vtaRowDeleted" msprop:Generator_UserTableName="detalle_vta" msprop:Generator_RowChangedName="detalle_vtaRowChanged" msprop:Generator_RowEvArgName="detalle_vtaRowChangeEvent" msprop:Generator_RowClassName="detalle_vtaRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id_detalle" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid_detalle" msprop:Generator_ColumnPropNameInRow="id_detalle" msprop:Generator_ColumnPropNameInTable="id_detalleColumn" msprop:Generator_UserColumnName="id_detalle" type="xs:int" />
@@ -804,6 +854,34 @@ WHERE        (id_venta = @Id)</CommandText>
               <xs:element name="precio" msprop:Generator_ColumnVarNameInTable="columnprecio" msprop:Generator_ColumnPropNameInRow="precio" msprop:Generator_ColumnPropNameInTable="precioColumn" msprop:Generator_UserColumnName="precio" type="xs:double" minOccurs="0" />
               <xs:element name="cantidad" msprop:Generator_ColumnVarNameInTable="columncantidad" msprop:Generator_ColumnPropNameInRow="cantidad" msprop:Generator_ColumnPropNameInTable="cantidadColumn" msprop:Generator_UserColumnName="cantidad" type="xs:int" minOccurs="0" />
               <xs:element name="total_articulo" msprop:Generator_ColumnVarNameInTable="columntotal_articulo" msprop:Generator_ColumnPropNameInRow="total_articulo" msprop:Generator_ColumnPropNameInTable="total_articuloColumn" msprop:Generator_UserColumnName="total_articulo" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Registro_usuario" msprop:Generator_TableClassName="Registro_usuarioDataTable" msprop:Generator_TableVarName="tableRegistro_usuario" msprop:Generator_TablePropName="Registro_usuario" msprop:Generator_RowDeletingName="Registro_usuarioRowDeleting" msprop:Generator_RowChangingName="Registro_usuarioRowChanging" msprop:Generator_RowEvHandlerName="Registro_usuarioRowChangeEventHandler" msprop:Generator_RowDeletedName="Registro_usuarioRowDeleted" msprop:Generator_UserTableName="Registro_usuario" msprop:Generator_RowChangedName="Registro_usuarioRowChanged" msprop:Generator_RowEvArgName="Registro_usuarioRowChangeEvent" msprop:Generator_RowClassName="Registro_usuarioRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="usuario" msprop:Generator_ColumnVarNameInTable="columnusuario" msprop:Generator_ColumnPropNameInRow="usuario" msprop:Generator_ColumnPropNameInTable="usuarioColumn" msprop:Generator_UserColumnName="usuario">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="contraseña" msprop:Generator_ColumnVarNameInTable="columncontraseña" msprop:Generator_ColumnPropNameInRow="contraseña" msprop:Generator_ColumnPropNameInTable="contraseñaColumn" msprop:Generator_UserColumnName="contraseña" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="tipo" msprop:Generator_ColumnVarNameInTable="columntipo" msprop:Generator_ColumnPropNameInRow="tipo" msprop:Generator_ColumnPropNameInTable="tipoColumn" msprop:Generator_UserColumnName="tipo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="id_empleado" msprop:Generator_ColumnVarNameInTable="columnid_empleado" msprop:Generator_ColumnPropNameInRow="id_empleado" msprop:Generator_ColumnPropNameInTable="id_empleadoColumn" msprop:Generator_UserColumnName="id_empleado" type="xs:int" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -833,6 +911,10 @@ WHERE        (id_venta = @Id)</CommandText>
       <xs:selector xpath=".//mstns:detalle_vta" />
       <xs:field xpath="mstns:id_detalle" />
       <xs:field xpath="mstns:id_venta" />
+    </xs:unique>
+    <xs:unique name="Registro_usuario_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Registro_usuario" />
+      <xs:field xpath="mstns:usuario" />
     </xs:unique>
   </xs:element>
 </xs:schema>

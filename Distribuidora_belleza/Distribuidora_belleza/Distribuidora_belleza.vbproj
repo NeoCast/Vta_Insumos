@@ -184,6 +184,24 @@
     <Compile Include="inicio.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Loggin\Consulta_usuarios.Designer.vb">
+      <DependentUpon>Consulta_usuarios.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Loggin\Consulta_usuarios.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Loggin\CrearUsuario.Designer.vb">
+      <DependentUpon>CrearUsuario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Loggin\CrearUsuario.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Loggin\Loggin.Designer.vb">
+      <DependentUpon>Loggin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Loggin\Loggin.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Modificar\ModificarArticulo.Designer.vb">
       <DependentUpon>ModificarArticulo.vb</DependentUpon>
     </Compile>
@@ -208,6 +226,7 @@
     <Compile Include="Modificar\ModificarProveedor.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Module1.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -275,6 +294,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="inicio.resx">
       <DependentUpon>inicio.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Loggin\Consulta_usuarios.resx">
+      <DependentUpon>Consulta_usuarios.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Loggin\CrearUsuario.resx">
+      <DependentUpon>CrearUsuario.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Loggin\Loggin.resx">
+      <DependentUpon>Loggin.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modificar\ModificarArticulo.resx">
       <DependentUpon>ModificarArticulo.vb</DependentUpon>

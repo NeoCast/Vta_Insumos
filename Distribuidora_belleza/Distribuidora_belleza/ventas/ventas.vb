@@ -1,7 +1,10 @@
 ﻿Imports System.Data.SqlServerCe
-
+Imports System.Data
 
 Public Class ventas
+    Public cn As SqlCeConnection
+    Public cmd As SqlCeCommand
+    Public dr As SqlCeDataReader
 
 
     Private Sub ventas_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
@@ -54,18 +57,25 @@ Public Class ventas
     End Sub
 
     Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button3.Click
-        DataGridView1.Rows.Add(TextBox1.Text, txtDescripcion.Text, txtPrecio.Text, NumericUpDown1.Value, txtTotal.Text)
+        If NumericUpDown1.Value = 0 Then
+            MsgBox("por favor ingrese una cantidad valida")
+            Exit Sub
+        Else
+            DataGridView1.Rows.Add(TextBox1.Text, txtDescripcion.Text, txtPrecio.Text, NumericUpDown1.Value, txtTotal.Text)
 
-        Button2.Enabled = True
-        Button4.Enabled = True
-        Button5.Enabled = True
+            Button2.Enabled = True
+            Button4.Enabled = True
+            Button5.Enabled = True
 
 
-        TextBox1.Clear()
-        txtDescripcion.Clear()
-        txtPrecio.Clear()
-        NumericUpDown1.Value = 0
-        txtTotal.Clear()
+            TextBox1.Clear()
+            txtDescripcion.Clear()
+            txtPrecio.Clear()
+            NumericUpDown1.Value = 0
+            txtTotal.Clear()
+        End If
+
+     
 
 
 
@@ -87,24 +97,24 @@ Public Class ventas
 
     Private Sub Button4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button4.Click
 
-        Dim conexion As New SqlCeConnection("Data Source= C:\Users\Usuario\Documents\github\Vta_Insumos\Distribuidora_belleza\Distribuidora_belleza\BaseBelleza.sdf")
-
+        Dim conexion As New SqlCeConnection("Data Source= C:\Users\thoma\Documents\GitKraken\Vta_Insumos\Distribuidora_belleza\Distribuidora_belleza\BaseBelleza.sdf")
+        Dim cmd As New SqlCeCommand("insert into ventas(fecha,total,cod_vendedor,cod_cliente) values (@fecha, @total, @cod_vendedor, @cod_cliente)")
 
         Dim fila As DataGridViewRow = New DataGridViewRow
         'Try
 
 
         For Each fila In DataGridView1.Rows
-            Dim cmd As New SqlCeCommand("insert into ventas(Id_articulo,fecha,precio_unitario,cantidad,total,descripcion) values (@p1, @p2, @p3, @p4, @p5, @p6)", conexion)
+            cmd = New SqlCeCommand("insert into detalle_vta(Id_articulo,fecha,precio_unitario,cantidad,total,descripcion) values (@id_art, @fecha, @precio, @cantidad, @total, @descripcion)", conexion)
             conexion.Open()
 
             'Me.VentasBindingSource.Current("id_articulo") = fila.Cells("")
-            cmd.Parameters.Add("@p1", SqlDbType.Int).Value = Convert.ToInt32(fila.Cells("Id_Articulo").Value)
-            cmd.Parameters.Add("@p2", SqlDbType.DateTime).Value = Convert.ToDateTime(DateTimePicker1.Value)
-            cmd.Parameters.Add("@p3", SqlDbType.Float).Value = Convert.ToDouble(fila.Cells("Precio").Value)
-            cmd.Parameters.Add("@p4", SqlDbType.Int).Value = Convert.ToInt32(fila.Cells("Cantidad").Value)
-            cmd.Parameters.Add("@p5", SqlDbType.Float).Value = Convert.ToDouble(fila.Cells("Total").Value)
-            cmd.Parameters.Add("@p6", SqlDbType.NVarChar).Value = Convert.ToString(fila.Cells("Descripcion").Value)
+            cmd.Parameters.Add("@id_art", SqlDbType.Int).Value = Convert.ToInt32(fila.Cells("Id_Articulo").Value)
+            cmd.Parameters.Add("@fecha", SqlDbType.DateTime).Value = Convert.ToDateTime(DateTimePicker1.Value)
+            cmd.Parameters.Add("@precio", SqlDbType.Float).Value = Convert.ToDouble(fila.Cells("Precio").Value)
+            cmd.Parameters.Add("@cantidad", SqlDbType.Int).Value = Convert.ToInt32(fila.Cells("Cantidad").Value)
+            cmd.Parameters.Add("@total", SqlDbType.Float).Value = Convert.ToDouble(fila.Cells("Total").Value)
+            cmd.Parameters.Add("@descripcion", SqlDbType.NVarChar).Value = Convert.ToString(fila.Cells("Descripcion").Value)
             cmd.ExecuteNonQuery()
 
 
@@ -123,4 +133,33 @@ Public Class ventas
         DataGridView1.Rows.RemoveAt(i)
 
     End Sub
+
+
+    Private Sub BtnConsulta_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnConsulta.Click
+        If txtCliente.Text <> "" Then
+            If consultarPersona(txtCliente.Text) = True Then
+                MsgBox("el usuario esta registrado")
+            Else
+                MsgBox("no se encontro el usuario")
+            End If
+        End If
+    End Sub
+
+
+    Function consultarPersona(ByVal id As String) As Boolean
+        Dim resultado As Boolean = False
+
+        Try
+            cmd = New SqlCeCommand("select * from cliente where id_cliente= '" & id & "'", cn)
+            dr = cmd.ExecuteReader
+            If dr.Read = True Then
+                resultado = True
+            End If
+        Catch ex As Exception
+            MsgBox("Error: " + ex.ToString)
+        End Try
+        Return resultado
+
+    End Function
+
 End Class

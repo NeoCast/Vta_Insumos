@@ -6,20 +6,7 @@ Distribuidora_belleza
 </name>
 </assembly>
 <members>
-<member name="P:form1.My.Resources.Resources.ResourceManager">
-	<summary>
-  Returns the cached ResourceManager instance used by this class.
-</summary>
-</member><member name="P:form1.My.Resources.Resources.Culture">
-	<summary>
-  Overrides the current thread's CurrentUICulture property for all
-  resource lookups using this strongly typed resource class.
-</summary>
-</member><member name="T:form1.My.Resources.Resources">
-	<summary>
-  A strongly-typed resource class, for looking up localized strings, etc.
-</summary>
-</member><member name="T:form1.BaseBellezaDataSet.articulosDataTable">
+<member name="T:form1.BaseBellezaDataSet.articulosDataTable">
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
@@ -40,6 +27,10 @@ Represents the strongly named DataTable class.
 Represents the strongly named DataTable class.
 </summary>
 </member><member name="T:form1.BaseBellezaDataSet.detalle_vtaDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:form1.BaseBellezaDataSet.Registro_usuarioDataTable">
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
@@ -67,6 +58,10 @@ Represents strongly named DataRow class.
 	<summary>
 Represents strongly named DataRow class.
 </summary>
+</member><member name="T:form1.BaseBellezaDataSet.Registro_usuarioRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
 </member><member name="T:form1.BaseBellezaDataSet.articulosRowChangeEvent">
 	<summary>
 Row event argument class
@@ -88,6 +83,10 @@ Row event argument class
 Row event argument class
 </summary>
 </member><member name="T:form1.BaseBellezaDataSet.detalle_vtaRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:form1.BaseBellezaDataSet.Registro_usuarioRowChangeEvent">
 	<summary>
 Row event argument class
 </summary>
@@ -116,6 +115,10 @@ Represents the connection and commands used to retrieve and save data.
 Represents the connection and commands used to retrieve and save data.
 </summary>
 </member><member name="T:form1.BaseBellezaDataSetTableAdapters.detalle_vtaTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:form1.BaseBellezaDataSetTableAdapters.Registro_usuarioTableAdapter">
 	<summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
@@ -150,6 +153,19 @@ Used to sort self-referenced table's rows
 </member><member name="T:form1.BaseBellezaDataSetTableAdapters.TableAdapterManager">
 	<summary>
 TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member><member name="P:form1.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:form1.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:form1.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
 </summary>
 </member>
 </members>

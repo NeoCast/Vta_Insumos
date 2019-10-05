@@ -294,9 +294,9 @@ Partial Class AltaArticulo
         '
         Me.Id_proveedorComboBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ProveedorBindingSource, "id_proveedor", True))
         Me.Id_proveedorComboBox.FormattingEnabled = True
-        Me.Id_proveedorComboBox.Location = New System.Drawing.Point(150, 290)
+        Me.Id_proveedorComboBox.Location = New System.Drawing.Point(161, 290)
         Me.Id_proveedorComboBox.Name = "Id_proveedorComboBox"
-        Me.Id_proveedorComboBox.Size = New System.Drawing.Size(121, 21)
+        Me.Id_proveedorComboBox.Size = New System.Drawing.Size(100, 21)
         Me.Id_proveedorComboBox.TabIndex = 16
         '
         'AltaArticulo
