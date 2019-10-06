@@ -61,9 +61,11 @@ Partial Class ventas
         Me.Label10 = New System.Windows.Forms.Label()
         Me.txtCliente = New System.Windows.Forms.TextBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.BtnConsulta = New System.Windows.Forms.Button()
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.Label11 = New System.Windows.Forms.Label()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BaseBellezaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -71,6 +73,7 @@ Partial Class ventas
         CType(Me.VentasBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
+        Me.GroupBox3.SuspendLayout()
         Me.SuspendLayout()
         '
         'DataGridView1
@@ -251,7 +254,7 @@ Partial Class ventas
         'DateTimePicker1
         '
         Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateTimePicker1.Location = New System.Drawing.Point(97, 154)
+        Me.DateTimePicker1.Location = New System.Drawing.Point(97, 161)
         Me.DateTimePicker1.Name = "DateTimePicker1"
         Me.DateTimePicker1.Size = New System.Drawing.Size(100, 20)
         Me.DateTimePicker1.TabIndex = 19
@@ -319,6 +322,7 @@ Partial Class ventas
         Me.TableAdapterManager.detalle_vtaTableAdapter = Nothing
         Me.TableAdapterManager.empleadoTableAdapter = Nothing
         Me.TableAdapterManager.proveedorTableAdapter = Nothing
+        Me.TableAdapterManager.Registro_usuarioTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = form1.BaseBellezaDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         Me.TableAdapterManager.ventasTableAdapter = Nothing
         '
@@ -359,6 +363,15 @@ Partial Class ventas
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Cliente"
         '
+        'BtnConsulta
+        '
+        Me.BtnConsulta.Location = New System.Drawing.Point(59, 70)
+        Me.BtnConsulta.Name = "BtnConsulta"
+        Me.BtnConsulta.Size = New System.Drawing.Size(75, 23)
+        Me.BtnConsulta.TabIndex = 29
+        Me.BtnConsulta.Text = "Consultar"
+        Me.BtnConsulta.UseVisualStyleBackColor = True
+        '
         'GroupBox2
         '
         Me.GroupBox2.Controls.Add(Me.TextBox1)
@@ -384,23 +397,34 @@ Partial Class ventas
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Articulo"
         '
-        'BtnConsulta
-        '
-        Me.BtnConsulta.Location = New System.Drawing.Point(59, 70)
-        Me.BtnConsulta.Name = "BtnConsulta"
-        Me.BtnConsulta.Size = New System.Drawing.Size(75, 23)
-        Me.BtnConsulta.TabIndex = 29
-        Me.BtnConsulta.Text = "Consultar"
-        Me.BtnConsulta.UseVisualStyleBackColor = True
-        '
         'GroupBox3
         '
+        Me.GroupBox3.Controls.Add(Me.Label12)
+        Me.GroupBox3.Controls.Add(Me.Label11)
         Me.GroupBox3.Location = New System.Drawing.Point(857, 24)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(258, 171)
+        Me.GroupBox3.Size = New System.Drawing.Size(258, 210)
         Me.GroupBox3.TabIndex = 29
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Cajero"
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Location = New System.Drawing.Point(76, 118)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(30, 13)
+        Me.Label12.TabIndex = 1
+        Me.Label12.Text = "aaas"
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Location = New System.Drawing.Point(76, 61)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(23, 13)
+        Me.Label11.TabIndex = 0
+        Me.Label11.Text = "ssa"
         '
         'ventas
         '
@@ -429,6 +453,8 @@ Partial Class ventas
         Me.GroupBox1.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
+        Me.GroupBox3.ResumeLayout(False)
+        Me.GroupBox3.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -474,4 +500,6 @@ Partial Class ventas
     Friend WithEvents BtnConsulta As System.Windows.Forms.Button
     Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
     Friend WithEvents GroupBox3 As System.Windows.Forms.GroupBox
+    Friend WithEvents Label12 As System.Windows.Forms.Label
+    Friend WithEvents Label11 As System.Windows.Forms.Label
 End Class

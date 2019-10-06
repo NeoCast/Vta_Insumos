@@ -29,7 +29,8 @@
                 If ComboBox1.Text = "" Then
                     If ComboBox1.SelectedIndex = 0 And Id_empleadoComboBox.Text = "" Then
                         MsgBox("Por favor seleccione el codigo correspondiente del empleado", vbCritical, "error")
-                    Else
+                    ElseIf ComboBox1.SelectedIndex = 0 Then
+
                         Me.Registro_usuarioBindingSource.Current("usuario") = UsuarioTextBox.Text
                         Me.Registro_usuarioBindingSource.Current("contraseña") = ContraseñaTextBox.Text
                         Me.Registro_usuarioBindingSource.Current("tipo") = Convert.ToString(ComboBox1.SelectedItem)

@@ -3,9 +3,10 @@ Imports System.Data
 
 Public Class ventas
     Public cn As SqlCeConnection
-    Public cmd As SqlCeCommand
-    Public dr As SqlCeDataReader
+    Public comando As SqlCeCommand
+    Public registro As SqlCeDataReader
 
+    Public conexion As New SqlCeConnection("Data Source=C:\Users\Usuario\Documents\github\Vta_Insumos\Distribuidora_belleza\Distribuidora_belleza\BaseBelleza.sdf")
 
     Private Sub ventas_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         'TODO: esta línea de código carga datos en la tabla 'BaseBellezaDataSet.ventas' Puede moverla o quitarla según sea necesario.
@@ -17,6 +18,16 @@ Public Class ventas
         Button3.Enabled = False
         Button4.Enabled = False
         Button5.Enabled = False
+        Label12.Text = Loggin.Registro_usuarioBindingSource.Current("id_empledo")
+        comando = New SqlCeCommand("select nombre from empleado where id_empleado= @id", conexion)
+        comando.Parameters.AddWithValue("@id", Label12.Text)
+        conexion.Open()
+        registro = comando.ExecuteReader()
+        If registro.Read() Then
+            Label11.Text = Convert.ToString(registro("nombre").value)
+        End If
+
+
     End Sub
 
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
@@ -97,7 +108,6 @@ Public Class ventas
 
     Private Sub Button4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button4.Click
 
-        Dim conexion As New SqlCeConnection("Data Source= C:\Users\thoma\Documents\GitKraken\Vta_Insumos\Distribuidora_belleza\Distribuidora_belleza\BaseBelleza.sdf")
         Dim cmd As New SqlCeCommand("insert into ventas(fecha,total,cod_vendedor,cod_cliente) values (@fecha, @total, @cod_vendedor, @cod_cliente)")
 
         Dim fila As DataGridViewRow = New DataGridViewRow
@@ -150,9 +160,9 @@ Public Class ventas
         Dim resultado As Boolean = False
 
         Try
-            cmd = New SqlCeCommand("select * from cliente where id_cliente= '" & id & "'", cn)
-            dr = cmd.ExecuteReader
-            If dr.Read = True Then
+            comando = New SqlCeCommand("select * from cliente where id_cliente= '" & id & "'", conexion)
+            registro = comando.ExecuteReader
+            If registro.Read = True Then
                 resultado = True
             End If
         Catch ex As Exception
