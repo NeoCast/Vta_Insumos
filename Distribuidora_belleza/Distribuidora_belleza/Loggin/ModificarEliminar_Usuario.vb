@@ -26,4 +26,27 @@
 
         End If
     End Sub
+
+    Private Sub btnEliminar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnEliminar.Click
+        Dim consulta, codconsulta, fila As Integer
+        codconsulta = TextBox1.Text
+        fila = Me.Registro_usuarioBindingSource.Find("usuario", codconsulta)
+        If fila = -1 Then
+            MsgBox("No se encontro")
+        Else
+
+            consulta = MsgBox("Desea eliminar el usuario", 32 + 1)
+
+            If consulta = 1 Then
+                Me.Registro_usuarioTableAdapter.(TextBox1.Text)
+                Me.Registro_usuarioBindingSource.EndEdit()
+
+                Me.TableAdapterManager.UpdateAll(Me.BaseBellezaDataSet)
+
+                Me.Registro_usuarioTableAdapter.Fill(Me.BaseBellezaDataSet.Registro_usuario)
+                Consulta_usuarios.Registro_usuarioTableAdapter.Fill(Me.BaseBellezaDataSet.Registro_usuario)
+
+            End If
+        End If
+    End Sub
 End Class
