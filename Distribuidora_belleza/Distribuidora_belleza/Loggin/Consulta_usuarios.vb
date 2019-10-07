@@ -19,7 +19,7 @@
         If TextBox1.Text = "" Then
             Registro_usuarioTableAdapter.Fill(Me.BaseBellezaDataSet.Registro_usuario)
         Else
-            Registro_usuarioTableAdapter.consultaUsuario(Me.BaseBellezaDataSet.Registro_usuario),TextBox1.text)
+            'Registro_usuarioTableAdapter.consultaUsuario(Me.BaseBellezaDataSet.Registro_usuario),TextBox1.text)
 
 
         End If
@@ -27,21 +27,21 @@
 
    
     Private Sub Registro_usuarioDataGridView_CellContentClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles Registro_usuarioDataGridView.CellContentClick
-        Dim fila As Integer
-        fila = Registro_usuarioDataGridView.CurrentCellAddress.Y
-        If Registro_usuarioDataGridView.Item(0, fila).Value Is DBNull.Value Then
+        'Dim fila As Integer
+        'fila = Registro_usuarioDataGridView.CurrentCellAddress.Y
+        'If Registro_usuarioDataGridView.Item(0, fila).Value Is DBNull.Value Then
 
-            Exit Sub
-        Else
+        '    Exit Sub
+        'Else
 
-            ActualizarUsuario.txtUsuario.text = Registro_usuarioDataGridView.Item(0, fila).Value()
-            ActualizarUsuario.txtTipo.text = Registro_usuarioDataGridView.Item(1, fila).Value()
-            ActualizarUsuario.txtContraseña.text = Registro_usuarioDataGridView.Item(2, fila).Value()
-            ActualizarUsuario.txtId_empleado.text = Registro_usuarioDataGridView.Item(3, fila).Value()
+        '    ActualizarUsuario.txtUsuario.text = Registro_usuarioDataGridView.Item(0, fila).Value()
+        '    ActualizarUsuario.txtTipo.text = Registro_usuarioDataGridView.Item(1, fila).Value()
+        '    ActualizarUsuario.txtContraseña.text = Registro_usuarioDataGridView.Item(2, fila).Value()
+        '    ActualizarUsuario.txtId_empleado.text = Registro_usuarioDataGridView.Item(3, fila).Value()
 
-            ModificarEliminar_Usuario.Show()
+        ModificarEliminar_Usuario.Show()
 
-        End If
+        'End If
 
 
     End Sub

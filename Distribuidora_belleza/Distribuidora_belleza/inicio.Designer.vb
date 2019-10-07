@@ -47,6 +47,7 @@ Partial Class inicio
         Me.ConfiguracionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.NuevaVentaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ConfiguracionToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.UsuariosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AyudaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Button5 = New System.Windows.Forms.Button()
         Me.BaseBellezaDataSet = New form1.BaseBellezaDataSet()
@@ -59,7 +60,6 @@ Partial Class inicio
         Me.EmpleadoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ProveedorBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ArticulosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.UsuariosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.BaseBellezaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ClienteBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -233,6 +233,12 @@ Partial Class inicio
         Me.ConfiguracionToolStripMenuItem1.Size = New System.Drawing.Size(95, 20)
         Me.ConfiguracionToolStripMenuItem1.Text = "Configuracion"
         '
+        'UsuariosToolStripMenuItem
+        '
+        Me.UsuariosToolStripMenuItem.Name = "UsuariosToolStripMenuItem"
+        Me.UsuariosToolStripMenuItem.Size = New System.Drawing.Size(119, 22)
+        Me.UsuariosToolStripMenuItem.Text = "Usuarios"
+        '
         'AyudaToolStripMenuItem
         '
         Me.AyudaToolStripMenuItem.Name = "AyudaToolStripMenuItem"
@@ -241,7 +247,7 @@ Partial Class inicio
         '
         'Button5
         '
-        Me.Button5.Location = New System.Drawing.Point(584, 294)
+        Me.Button5.Location = New System.Drawing.Point(257, 294)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(75, 23)
         Me.Button5.TabIndex = 5
@@ -300,12 +306,6 @@ Partial Class inicio
         '
         Me.ArticulosBindingSource.DataMember = "articulos"
         Me.ArticulosBindingSource.DataSource = Me.BaseBellezaDataSet
-        '
-        'UsuariosToolStripMenuItem
-        '
-        Me.UsuariosToolStripMenuItem.Name = "UsuariosToolStripMenuItem"
-        Me.UsuariosToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.UsuariosToolStripMenuItem.Text = "Usuarios"
         '
         'inicio
         '

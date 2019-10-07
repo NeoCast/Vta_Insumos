@@ -2,13 +2,18 @@
 Imports System.Data
 
 Public Class ventas
-    Public cn As SqlCeConnection
+
     Public comando As SqlCeCommand
     Public registro As SqlCeDataReader
+    Public fecha As Date = Date.Now
 
-    Public conexion As New SqlCeConnection("Data Source=C:\Users\Usuario\Documents\github\Vta_Insumos\Distribuidora_belleza\Distribuidora_belleza\BaseBelleza.sdf")
+
+
+    Public conexion As New SqlCeConnection("Data Source=C:\Users\thoma\Documents\GitKraken\Vta_Insumos\Distribuidora_belleza\Distribuidora_belleza\BaseBelleza.sdf")
 
     Private Sub ventas_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        'TODO: esta línea de código carga datos en la tabla 'BaseBellezaDataSet.Registro_usuario' Puede moverla o quitarla según sea necesario.
+        Me.Registro_usuarioTableAdapter.Fill(Me.BaseBellezaDataSet.Registro_usuario)
         'TODO: esta línea de código carga datos en la tabla 'BaseBellezaDataSet.ventas' Puede moverla o quitarla según sea necesario.
         Me.VentasTableAdapter.Fill(Me.BaseBellezaDataSet.ventas)
         'TODO: esta línea de código carga datos en la tabla 'BaseBellezaDataSet.articulos' Puede moverla o quitarla según sea necesario.
@@ -18,14 +23,17 @@ Public Class ventas
         Button3.Enabled = False
         Button4.Enabled = False
         Button5.Enabled = False
-        Label12.Text = Loggin.Registro_usuarioBindingSource.Current("id_empledo")
+
+
+        lblCodEmp.Text = cod_empleado
         comando = New SqlCeCommand("select nombre from empleado where id_empleado= @id", conexion)
-        comando.Parameters.AddWithValue("@id", Label12.Text)
+        comando.Parameters.AddWithValue("@id", lblCodEmp.Text)
         conexion.Open()
         registro = comando.ExecuteReader()
         If registro.Read() Then
-            Label11.Text = Convert.ToString(registro("nombre").value)
+            lblNombreEmp.Text = Convert.ToString(registro("nombre"))
         End If
+        conexion.Close()
 
 
     End Sub
@@ -108,27 +116,62 @@ Public Class ventas
 
     Private Sub Button4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button4.Click
 
-        Dim cmd As New SqlCeCommand("insert into ventas(fecha,total,cod_vendedor,cod_cliente) values (@fecha, @total, @cod_vendedor, @cod_cliente)")
+        'armo el insert con sus parametros correspondientes
+        Dim cmdVentas As New SqlCeCommand("insert into ventas(fecha,total,cod_vendedor,cod_cliente) values (@fecha, @total, @cod_vendedor, @cod_cliente)", conexion)
+        Dim ultimaVenta As Integer
+        'agrego los parametros para el insert
+        With cmdVentas.Parameters
+            .Add("@fecha", SqlDbType.DateTime).Value = fecha
+            .Add("@total", SqlDbType.Float).Value = Val(txtVentaTotal.Text)
+            .Add("@cod_vendedor", SqlDbType.Int).Value = lblCodEmp.Text
+            .Add("@cod_cliente", SqlDbType.Int).Value = txtCliente.Text
 
-        Dim fila As DataGridViewRow = New DataGridViewRow
+        End With
+        conexion.Open() 'abro la conexion a la base
+
+
+        cmdVentas.ExecuteNonQuery() ' ejecuto el insert
+        MsgBox("venta realizada con exito")
+
+        conexion.Close() 'cierro la conexion a la base
+        Dim ultimoRegistro As New SqlCeCommand("SELECT TOP 1 Id_ventas FROM ventas order by id_ventas desc", conexion)
+        Dim reader As SqlCeDataReader
+        reader = ultimoRegistro.ExecuteReader
+        If reader.Read Then
+            ultimaVenta = reader.GetInt32("Id_ventas")
+            reader.Close()
+
+        End If
+
+        Dim fila As New DataGridViewRow
         'Try
 
 
         For Each fila In DataGridView1.Rows
-            cmd = New SqlCeCommand("insert into detalle_vta(Id_articulo,fecha,precio_unitario,cantidad,total,descripcion) values (@id_art, @fecha, @precio, @cantidad, @total, @descripcion)", conexion)
-            conexion.Open()
-
-            'Me.VentasBindingSource.Current("id_articulo") = fila.Cells("")
-            cmd.Parameters.Add("@id_art", SqlDbType.Int).Value = Convert.ToInt32(fila.Cells("Id_Articulo").Value)
-            cmd.Parameters.Add("@fecha", SqlDbType.DateTime).Value = Convert.ToDateTime(DateTimePicker1.Value)
-            cmd.Parameters.Add("@precio", SqlDbType.Float).Value = Convert.ToDouble(fila.Cells("Precio").Value)
-            cmd.Parameters.Add("@cantidad", SqlDbType.Int).Value = Convert.ToInt32(fila.Cells("Cantidad").Value)
-            cmd.Parameters.Add("@total", SqlDbType.Float).Value = Convert.ToDouble(fila.Cells("Total").Value)
-            cmd.Parameters.Add("@descripcion", SqlDbType.NVarChar).Value = Convert.ToString(fila.Cells("Descripcion").Value)
-            cmd.ExecuteNonQuery()
+            If IsDBNull(fila.Cells) Then
+                MsgBox("carga finalizada")
+                Exit Sub
+            Else
+                Dim cmd As New SqlCeCommand("insert into detalle_vta(id_venta,id_articulo,fecha,precio_unitario,cantidad,total,descripcion) values (@id_venta,@id_art, @fecha, @precio, @cantidad, @total, @descripcion)", conexion)
 
 
-            conexion.Close()
+                'agrego los parametros para el insert
+                cmd.Parameters.Add("@id_venta", SqlDbType.Int).Value = ultimaVenta
+                cmd.Parameters.Add("@id_art", SqlDbType.Int).Value = Convert.ToInt32(fila.Cells("Id_Articulo").Value)
+                cmd.Parameters.Add("@fecha", SqlDbType.DateTime).Value = fecha
+                cmd.Parameters.Add("@precio", SqlDbType.Float).Value = Convert.ToDouble(fila.Cells("Precio").Value)
+                cmd.Parameters.Add("@cantidad", SqlDbType.Int).Value = Convert.ToInt32(fila.Cells("Cantidad").Value)
+                cmd.Parameters.Add("@total", SqlDbType.Float).Value = Convert.ToDouble(fila.Cells("Total").Value)
+                cmd.Parameters.Add("@descripcion", SqlDbType.NVarChar).Value = Convert.ToString(fila.Cells("Descripcion").Value)
+
+                conexion.Open() 'abro la conexion
+
+                cmd.ExecuteNonQuery() ' ejecuto el insert
+
+
+                conexion.Close()    'cierro la conexion
+            End If
+
 
         Next fila
         MsgBox("se ha cargado con exito")
@@ -172,4 +215,15 @@ Public Class ventas
 
     End Function
 
+
+    Private Sub Timer1_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Timer1.Tick
+        lbltiempo.Text = Date.Now.ToLongTimeString
+
+
+    End Sub
+
+    Private Sub Timer2_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Timer2.Tick
+        lblfecha.Text = Date.Now.ToShortDateString
+
+    End Sub
 End Class

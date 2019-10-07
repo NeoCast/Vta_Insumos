@@ -64,8 +64,16 @@ Partial Class ventas
         Me.BtnConsulta = New System.Windows.Forms.Button()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
-        Me.Label12 = New System.Windows.Forms.Label()
-        Me.Label11 = New System.Windows.Forms.Label()
+        Me.lblCodEmp = New System.Windows.Forms.Label()
+        Me.lblNombreEmp = New System.Windows.Forms.Label()
+        Me.Registro_usuarioBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Registro_usuarioTableAdapter = New form1.BaseBellezaDataSetTableAdapters.Registro_usuarioTableAdapter()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.lbltiempo = New System.Windows.Forms.Label()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.lblfecha = New System.Windows.Forms.Label()
+        Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BaseBellezaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -74,6 +82,7 @@ Partial Class ventas
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
+        CType(Me.Registro_usuarioBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'DataGridView1
@@ -158,7 +167,7 @@ Partial Class ventas
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(621, 512)
+        Me.Label6.Location = New System.Drawing.Point(622, 543)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(62, 13)
         Me.Label6.TabIndex = 6
@@ -210,7 +219,7 @@ Partial Class ventas
         '
         'txtVentaTotal
         '
-        Me.txtVentaTotal.Location = New System.Drawing.Point(689, 509)
+        Me.txtVentaTotal.Location = New System.Drawing.Point(690, 540)
         Me.txtVentaTotal.Name = "txtVentaTotal"
         Me.txtVentaTotal.Size = New System.Drawing.Size(100, 20)
         Me.txtVentaTotal.TabIndex = 14
@@ -244,7 +253,7 @@ Partial Class ventas
         '
         'Button4
         '
-        Me.Button4.Location = New System.Drawing.Point(608, 565)
+        Me.Button4.Location = New System.Drawing.Point(609, 596)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(75, 23)
         Me.Button4.TabIndex = 18
@@ -399,38 +408,95 @@ Partial Class ventas
         '
         'GroupBox3
         '
-        Me.GroupBox3.Controls.Add(Me.Label12)
-        Me.GroupBox3.Controls.Add(Me.Label11)
+        Me.GroupBox3.Controls.Add(Me.Label14)
+        Me.GroupBox3.Controls.Add(Me.Label13)
+        Me.GroupBox3.Controls.Add(Me.lblCodEmp)
+        Me.GroupBox3.Controls.Add(Me.lblNombreEmp)
         Me.GroupBox3.Location = New System.Drawing.Point(857, 24)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(258, 210)
+        Me.GroupBox3.Size = New System.Drawing.Size(262, 186)
         Me.GroupBox3.TabIndex = 29
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Cajero"
         '
-        'Label12
+        'lblCodEmp
         '
-        Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(76, 118)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(30, 13)
-        Me.Label12.TabIndex = 1
-        Me.Label12.Text = "aaas"
+        Me.lblCodEmp.AutoSize = True
+        Me.lblCodEmp.Location = New System.Drawing.Point(99, 54)
+        Me.lblCodEmp.Name = "lblCodEmp"
+        Me.lblCodEmp.Size = New System.Drawing.Size(81, 13)
+        Me.lblCodEmp.TabIndex = 1
+        Me.lblCodEmp.Text = "id del empleado"
         '
-        'Label11
+        'lblNombreEmp
         '
-        Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(76, 61)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(23, 13)
-        Me.Label11.TabIndex = 0
-        Me.Label11.Text = "ssa"
+        Me.lblNombreEmp.AutoSize = True
+        Me.lblNombreEmp.Location = New System.Drawing.Point(99, 104)
+        Me.lblNombreEmp.Name = "lblNombreEmp"
+        Me.lblNombreEmp.Size = New System.Drawing.Size(110, 13)
+        Me.lblNombreEmp.TabIndex = 0
+        Me.lblNombreEmp.Text = "Nombre del empleado"
+        '
+        'Registro_usuarioBindingSource
+        '
+        Me.Registro_usuarioBindingSource.DataMember = "Registro_usuario"
+        Me.Registro_usuarioBindingSource.DataSource = Me.BaseBellezaDataSet
+        '
+        'Registro_usuarioTableAdapter
+        '
+        Me.Registro_usuarioTableAdapter.ClearBeforeFill = True
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.Location = New System.Drawing.Point(36, 54)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(43, 13)
+        Me.Label13.TabIndex = 2
+        Me.Label13.Text = "Cajero: "
+        '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.Location = New System.Drawing.Point(36, 104)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(50, 13)
+        Me.Label14.TabIndex = 3
+        Me.Label14.Text = "Nombre: "
+        '
+        'lbltiempo
+        '
+        Me.lbltiempo.AutoSize = True
+        Me.lbltiempo.Location = New System.Drawing.Point(935, 399)
+        Me.lbltiempo.Name = "lbltiempo"
+        Me.lbltiempo.Size = New System.Drawing.Size(45, 13)
+        Me.lbltiempo.TabIndex = 30
+        Me.lbltiempo.Text = "Label15"
+        '
+        'Timer1
+        '
+        Me.Timer1.Enabled = True
+        '
+        'lblfecha
+        '
+        Me.lblfecha.AutoSize = True
+        Me.lblfecha.Location = New System.Drawing.Point(935, 369)
+        Me.lblfecha.Name = "lblfecha"
+        Me.lblfecha.Size = New System.Drawing.Size(45, 13)
+        Me.lblfecha.TabIndex = 31
+        Me.lblfecha.Text = "Label15"
+        '
+        'Timer2
+        '
+        Me.Timer2.Enabled = True
         '
         'ventas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1152, 684)
+        Me.ClientSize = New System.Drawing.Size(1145, 684)
+        Me.Controls.Add(Me.lblfecha)
+        Me.Controls.Add(Me.lbltiempo)
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
@@ -455,6 +521,7 @@ Partial Class ventas
         Me.GroupBox2.PerformLayout()
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox3.PerformLayout()
+        CType(Me.Registro_usuarioBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -500,6 +567,14 @@ Partial Class ventas
     Friend WithEvents BtnConsulta As System.Windows.Forms.Button
     Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
     Friend WithEvents GroupBox3 As System.Windows.Forms.GroupBox
-    Friend WithEvents Label12 As System.Windows.Forms.Label
-    Friend WithEvents Label11 As System.Windows.Forms.Label
+    Friend WithEvents lblCodEmp As System.Windows.Forms.Label
+    Friend WithEvents lblNombreEmp As System.Windows.Forms.Label
+    Friend WithEvents Registro_usuarioBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents Registro_usuarioTableAdapter As form1.BaseBellezaDataSetTableAdapters.Registro_usuarioTableAdapter
+    Friend WithEvents Label14 As System.Windows.Forms.Label
+    Friend WithEvents Label13 As System.Windows.Forms.Label
+    Friend WithEvents lbltiempo As System.Windows.Forms.Label
+    Friend WithEvents Timer1 As System.Windows.Forms.Timer
+    Friend WithEvents lblfecha As System.Windows.Forms.Label
+    Friend WithEvents Timer2 As System.Windows.Forms.Timer
 End Class

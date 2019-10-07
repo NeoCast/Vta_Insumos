@@ -19,7 +19,7 @@
         consulta = MsgBox("Esta seguro de actualizar los datos, los cambios que realice serán permanente", 32 + 1)
         If consulta = 1 Then
 
-            Me.Registro_usuarioTableAdapter.ActualizarUsuario(txtUsuario, txtTipo, txtContraseña)
+            'Me.Registro_usuarioTableAdapter.ActualizarUsuario(txtUsuario, txtTipo, txtContraseña)
             Me.TableAdapterManager.UpdateAll(Me.BaseBellezaDataSet)
             Consulta_usuarios.Registro_usuarioTableAdapter.Fill(Consulta_usuarios.BaseBellezaDataSet.Registro_usuario)
             Me.Close()
@@ -29,7 +29,7 @@
 
     Private Sub btnEliminar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnEliminar.Click
         Dim consulta, codconsulta, fila As Integer
-        codconsulta = TextBox1.Text
+        'codconsulta = TextBox1.Text
         fila = Me.Registro_usuarioBindingSource.Find("usuario", codconsulta)
         If fila = -1 Then
             MsgBox("No se encontro")
@@ -38,7 +38,7 @@
             consulta = MsgBox("Desea eliminar el usuario", 32 + 1)
 
             If consulta = 1 Then
-                Me.Registro_usuarioTableAdapter.(TextBox1.Text)
+                'Me.Registro_usuarioTableAdapter.(TextBox1.Text)
                 Me.Registro_usuarioBindingSource.EndEdit()
 
                 Me.TableAdapterManager.UpdateAll(Me.BaseBellezaDataSet)
