@@ -202,6 +202,12 @@
     <Compile Include="Loggin\Loggin.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Loggin\ModificarEliminar_Usuario.Designer.vb">
+      <DependentUpon>ModificarEliminar_Usuario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Loggin\ModificarEliminar_Usuario.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Modificar\ModificarArticulo.Designer.vb">
       <DependentUpon>ModificarArticulo.vb</DependentUpon>
     </Compile>
@@ -303,6 +309,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Loggin\Loggin.resx">
       <DependentUpon>Loggin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Loggin\ModificarEliminar_Usuario.resx">
+      <DependentUpon>ModificarEliminar_Usuario.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modificar\ModificarArticulo.resx">
       <DependentUpon>ModificarArticulo.vb</DependentUpon>
