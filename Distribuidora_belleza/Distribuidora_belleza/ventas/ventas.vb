@@ -3,9 +3,10 @@ Imports System.Data
 
 Public Class ventas
 
-    Public comando As SqlCeCommand
-    Public registro As SqlCeDataReader
-    Public fecha As Date = Date.Now
+    Private comando As SqlCeCommand
+    Private registro As SqlCeDataReader
+    Private fecha As Date = Date.Now
+    Private dt As New DataTable
 
 
 
@@ -116,6 +117,7 @@ Public Class ventas
 
     Private Sub Button4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button4.Click
 
+
         'armo el insert con sus parametros correspondientes
         Dim cmdVentas As New SqlCeCommand("insert into ventas(fecha,total,cod_vendedor,cod_cliente) values (@fecha, @total, @cod_vendedor, @cod_cliente)", conexion)
         Dim ultimaVenta As Integer
@@ -134,35 +136,52 @@ Public Class ventas
         MsgBox("venta realizada con exito")
 
         conexion.Close() 'cierro la conexion a la base
-        Dim ultimoRegistro As New SqlCeCommand("SELECT TOP 1 Id_ventas FROM ventas order by id_ventas desc", conexion)
-        Dim reader As SqlCeDataReader
-        reader = ultimoRegistro.ExecuteReader
+        'Try
+        Dim ultimoRegistro As New SqlCeCommand("SELECT MAX(Id_ventas) FROM [ventas]", conexion) 'trae el ultimo registro que se guardo
+        conexion.Open()
+        dt.TableName = "ultimaVenta"
+        dt.Load(ultimoRegistro.ExecuteReader)
+        Dim reader As SqlCeDataReader = ultimoRegistro.ExecuteReader
+
+        'registro = ultimoRegistro.ExecuteReader
+
+
+
         If reader.Read Then
-            ultimaVenta = reader.GetInt32("Id_ventas")
+            ultimaVenta = dt.Rows(0).Item(0).ToString
             reader.Close()
+            MsgBox("busqueda del primero con exito")
+            conexion.Close()
 
         End If
 
-        Dim fila As New DataGridViewRow
+        'Catch ex As Exception
+        '    MsgBox(ex.ToString)
+        'End Try
+
+
+        Dim fila As New DataGridViewRow 'creo el objeto fila de la clase datagridviewRow para poder recorrer todas las filas del datagrid del form
         'Try
 
 
-        For Each fila In DataGridView1.Rows
-            If IsDBNull(fila.Cells) Then
+        For Each fila In DataGridView1.Rows 'recorro todas las filas del datagridview
+            If IsDBNull(fila.Cells) Then    'pregunto si la fila es un dato nulo para la base de datos
                 MsgBox("carga finalizada")
                 Exit Sub
             Else
-                Dim cmd As New SqlCeCommand("insert into detalle_vta(id_venta,id_articulo,fecha,precio_unitario,cantidad,total,descripcion) values (@id_venta,@id_art, @fecha, @precio, @cantidad, @total, @descripcion)", conexion)
+                Dim cmd As New SqlCeCommand("insert into detalle_vta(id_venta,id_cliente,id_vendedor,id_articulo,descripcion,precio,cantidad,total_articulo,fecha) values (@id_venta,@id_cliente,@id_vendedor,@id_art, @descripcion, @precio, @cantidad, @total, @fecha)", conexion)
 
 
                 'agrego los parametros para el insert
                 cmd.Parameters.Add("@id_venta", SqlDbType.Int).Value = ultimaVenta
+                cmd.Parameters.Add("@id_cliente", SqlDbType.Int).Value = Convert.ToInt32(txtCliente.Text)
+                cmd.Parameters.Add("@id_vendedor", SqlDbType.Int).Value = Convert.ToInt32(lblCodEmp.Text)
                 cmd.Parameters.Add("@id_art", SqlDbType.Int).Value = Convert.ToInt32(fila.Cells("Id_Articulo").Value)
-                cmd.Parameters.Add("@fecha", SqlDbType.DateTime).Value = fecha
+                cmd.Parameters.Add("@descripcion", SqlDbType.NVarChar).Value = Convert.ToString(fila.Cells("Descripcion").Value)
                 cmd.Parameters.Add("@precio", SqlDbType.Float).Value = Convert.ToDouble(fila.Cells("Precio").Value)
                 cmd.Parameters.Add("@cantidad", SqlDbType.Int).Value = Convert.ToInt32(fila.Cells("Cantidad").Value)
                 cmd.Parameters.Add("@total", SqlDbType.Float).Value = Convert.ToDouble(fila.Cells("Total").Value)
-                cmd.Parameters.Add("@descripcion", SqlDbType.NVarChar).Value = Convert.ToString(fila.Cells("Descripcion").Value)
+                cmd.Parameters.Add("@fecha", SqlDbType.DateTime).Value = Convert.ToDateTime(fecha)
 
                 conexion.Open() 'abro la conexion
 
@@ -175,6 +194,7 @@ Public Class ventas
 
         Next fila
         MsgBox("se ha cargado con exito")
+        conexion.Close()
         'Catch ex As Exception
         '    MsgBox(ex.ToString)
         'End Try
@@ -204,10 +224,16 @@ Public Class ventas
 
         Try
             comando = New SqlCeCommand("select * from cliente where id_cliente= '" & id & "'", conexion)
+            conexion.Open()
+
             registro = comando.ExecuteReader
             If registro.Read = True Then
+                registro.Close()
+
                 resultado = True
             End If
+            conexion.Close()
+
         Catch ex As Exception
             MsgBox("Error: " + ex.ToString)
         End Try

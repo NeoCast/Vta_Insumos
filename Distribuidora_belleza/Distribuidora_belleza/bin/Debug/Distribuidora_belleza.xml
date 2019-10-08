@@ -1,0 +1,172 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+Distribuidora_belleza
+</name>
+</assembly>
+<members>
+<member name="T:form1.BaseBellezaDataSet.articulosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:form1.BaseBellezaDataSet.clienteDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:form1.BaseBellezaDataSet.empleadoDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:form1.BaseBellezaDataSet.proveedorDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:form1.BaseBellezaDataSet.ventasDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:form1.BaseBellezaDataSet.detalle_vtaDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:form1.BaseBellezaDataSet.Registro_usuarioDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:form1.BaseBellezaDataSet.articulosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:form1.BaseBellezaDataSet.clienteRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:form1.BaseBellezaDataSet.empleadoRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:form1.BaseBellezaDataSet.proveedorRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:form1.BaseBellezaDataSet.ventasRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:form1.BaseBellezaDataSet.detalle_vtaRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:form1.BaseBellezaDataSet.Registro_usuarioRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:form1.BaseBellezaDataSet.articulosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:form1.BaseBellezaDataSet.clienteRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:form1.BaseBellezaDataSet.empleadoRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:form1.BaseBellezaDataSet.proveedorRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:form1.BaseBellezaDataSet.ventasRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:form1.BaseBellezaDataSet.detalle_vtaRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:form1.BaseBellezaDataSet.Registro_usuarioRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:form1.BaseBellezaDataSet">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:form1.BaseBellezaDataSetTableAdapters.articulosTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:form1.BaseBellezaDataSetTableAdapters.clienteTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:form1.BaseBellezaDataSetTableAdapters.empleadoTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:form1.BaseBellezaDataSetTableAdapters.proveedorTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:form1.BaseBellezaDataSetTableAdapters.ventasTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:form1.BaseBellezaDataSetTableAdapters.detalle_vtaTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:form1.BaseBellezaDataSetTableAdapters.Registro_usuarioTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:form1.BaseBellezaDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(form1.BaseBellezaDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:form1.BaseBellezaDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(form1.BaseBellezaDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:form1.BaseBellezaDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(form1.BaseBellezaDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:form1.BaseBellezaDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:form1.BaseBellezaDataSetTableAdapters.TableAdapterManager.UpdateAll(form1.BaseBellezaDataSet)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:form1.BaseBellezaDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:form1.BaseBellezaDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:form1.BaseBellezaDataSetTableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member><member name="P:form1.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:form1.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:form1.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+</members>
+</doc>
