@@ -10,7 +10,7 @@ Public Class ventas
 
 
 
-    Public conexion As New SqlCeConnection("Data Source=C:\Users\Usuario\Documents\github\Vta_Insumos\Distribuidora_belleza\Distribuidora_belleza\BaseBelleza.sdf")
+    Public conexion As New SqlCeConnection("Data Source=C:\Users\thoma\Documents\GitKraken\Vta_Insumos\Distribuidora_belleza\Distribuidora_belleza\BaseBelleza.sdf")
 
     Private Sub ventas_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         'TODO: esta línea de código carga datos en la tabla 'BaseBellezaDataSet.Registro_usuario' Puede moverla o quitarla según sea necesario.
@@ -51,6 +51,12 @@ Public Class ventas
 
             Me.txtDescripcion.Text = Me.ArticulosBindingSource.Current("descripcion")
             Me.txtPrecio.Text = Me.ArticulosBindingSource.Current("precio")
+            Me.txtstock.Text = Me.ArticulosBindingSource.Current("cantidad_stock")
+            Me.txtminimo.Text = Me.ArticulosBindingSource.Current("stock_minimo")
+            If Val(txtstock.Text) < Val(txtminimo.Text) Then
+                MsgBox("Por favor contacte al proveedor del articulo: " + TextBox1.Text + "para rellenar el stock")
+            End If
+
             Button3.Enabled = True
 
 
@@ -116,6 +122,11 @@ Public Class ventas
     End Sub
 
     Private Sub Button4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button4.Click
+        Dim stock, stockMin As Integer
+
+        stock = Val(txtstock.Text)
+        stockMin = Val(txtminimo.Text)
+
 
 
         'armo el insert con sus parametros correspondientes
@@ -138,9 +149,9 @@ Public Class ventas
         conexion.Close() 'cierro la conexion a la base
         'Try
         Dim ultimoRegistro As New SqlCeCommand("SELECT MAX(Id_ventas) FROM [ventas]", conexion) 'trae el ultimo registro que se guardo
-        conexion.Open()
-        dt.TableName = "ultimaVenta"
-        dt.Load(ultimoRegistro.ExecuteReader)
+        conexion.Open() 'abro la conexion
+        dt.TableName = "ultimaVenta"        'a la tabla creada le doy un nombre creo que no es necesario, pero asi estaba en internet
+        dt.Load(ultimoRegistro.ExecuteReader)   'lleno esa tabla declarada anteriormente con los datos que me trae la consulta de ultimoRegistro
         Dim reader As SqlCeDataReader = ultimoRegistro.ExecuteReader
 
         'registro = ultimoRegistro.ExecuteReader
@@ -173,15 +184,18 @@ Public Class ventas
 
 
                 'agrego los parametros para el insert
-                cmd.Parameters.Add("@id_venta", SqlDbType.Int).Value = ultimaVenta
-                cmd.Parameters.Add("@id_cliente", SqlDbType.Int).Value = Convert.ToInt32(txtCliente.Text)
-                cmd.Parameters.Add("@id_vendedor", SqlDbType.Int).Value = Convert.ToInt32(lblCodEmp.Text)
-                cmd.Parameters.Add("@id_art", SqlDbType.Int).Value = Convert.ToInt32(fila.Cells("Id_Articulo").Value)
-                cmd.Parameters.Add("@descripcion", SqlDbType.NVarChar).Value = Convert.ToString(fila.Cells("Descripcion").Value)
-                cmd.Parameters.Add("@precio", SqlDbType.Float).Value = Convert.ToDouble(fila.Cells("Precio").Value)
-                cmd.Parameters.Add("@cantidad", SqlDbType.Int).Value = Convert.ToInt32(fila.Cells("Cantidad").Value)
-                cmd.Parameters.Add("@total", SqlDbType.Float).Value = Convert.ToDouble(fila.Cells("Total").Value)
-                cmd.Parameters.Add("@fecha", SqlDbType.DateTime).Value = Convert.ToDateTime(fecha)
+                With cmd.Parameters
+                    .Add("@id_venta", SqlDbType.Int).Value = ultimaVenta
+                    .Add("@id_cliente", SqlDbType.Int).Value = Convert.ToInt32(txtCliente.Text)
+                    .Add("@id_vendedor", SqlDbType.Int).Value = Convert.ToInt32(lblCodEmp.Text)
+                    .Add("@id_art", SqlDbType.Int).Value = Convert.ToInt32(fila.Cells("Id_Articulo").Value)
+                    .Add("@descripcion", SqlDbType.NVarChar).Value = Convert.ToString(fila.Cells("Descripcion").Value)
+                    .Add("@precio", SqlDbType.Float).Value = Convert.ToDouble(fila.Cells("Precio").Value)
+                    .Add("@cantidad", SqlDbType.Int).Value = Convert.ToInt32(fila.Cells("Cantidad").Value)
+                    .Add("@total", SqlDbType.Float).Value = Convert.ToDouble(fila.Cells("Total").Value)
+                    .Add("@fecha", SqlDbType.DateTime).Value = Convert.ToDateTime(fecha)
+                End With
+                
 
                 conexion.Open() 'abro la conexion
 

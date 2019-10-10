@@ -49,8 +49,8 @@ Partial Class ventas
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.Button5 = New System.Windows.Forms.Button()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.txtstock = New System.Windows.Forms.TextBox()
+        Me.txtminimo = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.BaseBellezaDataSet = New form1.BaseBellezaDataSet()
         Me.ArticulosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
@@ -64,12 +64,12 @@ Partial Class ventas
         Me.BtnConsulta = New System.Windows.Forms.Button()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.Label13 = New System.Windows.Forms.Label()
         Me.lblCodEmp = New System.Windows.Forms.Label()
         Me.lblNombreEmp = New System.Windows.Forms.Label()
         Me.Registro_usuarioBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Registro_usuarioTableAdapter = New form1.BaseBellezaDataSetTableAdapters.Registro_usuarioTableAdapter()
-        Me.Label13 = New System.Windows.Forms.Label()
-        Me.Label14 = New System.Windows.Forms.Label()
         Me.lbltiempo = New System.Windows.Forms.Label()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.lblfecha = New System.Windows.Forms.Label()
@@ -122,140 +122,147 @@ Partial Class ventas
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(0, 45)
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(18, 36)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(71, 13)
+        Me.Label1.Size = New System.Drawing.Size(92, 17)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "ID de Articulo"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(1, 71)
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(18, 72)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(63, 13)
+        Me.Label2.Size = New System.Drawing.Size(82, 17)
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "Descripción"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(3, 193)
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(18, 221)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(37, 13)
+        Me.Label3.Size = New System.Drawing.Size(48, 17)
         Me.Label3.TabIndex = 3
         Me.Label3.Text = "Precio"
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(1, 222)
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(19, 257)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(49, 13)
+        Me.Label4.Size = New System.Drawing.Size(64, 17)
         Me.Label4.TabIndex = 4
         Me.Label4.Text = "Cantidad"
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(1, 246)
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(19, 294)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(31, 13)
+        Me.Label5.Size = New System.Drawing.Size(40, 17)
         Me.Label5.TabIndex = 5
         Me.Label5.Text = "Total"
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(622, 543)
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(552, 540)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(62, 13)
+        Me.Label6.Size = New System.Drawing.Size(108, 22)
         Me.Label6.TabIndex = 6
-        Me.Label6.Text = "Venta Total"
+        Me.Label6.Text = "Venta Total:"
         '
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(3, 161)
+        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(19, 188)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(37, 13)
+        Me.Label7.Size = New System.Drawing.Size(47, 17)
         Me.Label7.TabIndex = 7
         Me.Label7.Text = "Fecha"
         '
         'NumericUpDown1
         '
-        Me.NumericUpDown1.Location = New System.Drawing.Point(97, 220)
+        Me.NumericUpDown1.Location = New System.Drawing.Point(115, 257)
         Me.NumericUpDown1.Name = "NumericUpDown1"
         Me.NumericUpDown1.Size = New System.Drawing.Size(100, 20)
         Me.NumericUpDown1.TabIndex = 8
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(97, 42)
+        Me.TextBox1.Location = New System.Drawing.Point(114, 35)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(100, 20)
         Me.TextBox1.TabIndex = 9
         '
         'txtDescripcion
         '
-        Me.txtDescripcion.Location = New System.Drawing.Point(97, 68)
+        Me.txtDescripcion.Location = New System.Drawing.Point(114, 71)
         Me.txtDescripcion.Name = "txtDescripcion"
         Me.txtDescripcion.Size = New System.Drawing.Size(100, 20)
         Me.txtDescripcion.TabIndex = 10
         '
         'txtPrecio
         '
-        Me.txtPrecio.Location = New System.Drawing.Point(97, 190)
+        Me.txtPrecio.Location = New System.Drawing.Point(116, 220)
         Me.txtPrecio.Name = "txtPrecio"
-        Me.txtPrecio.Size = New System.Drawing.Size(100, 20)
+        Me.txtPrecio.Size = New System.Drawing.Size(99, 20)
         Me.txtPrecio.TabIndex = 12
         '
         'txtTotal
         '
-        Me.txtTotal.Location = New System.Drawing.Point(97, 246)
+        Me.txtTotal.Location = New System.Drawing.Point(115, 296)
         Me.txtTotal.Name = "txtTotal"
         Me.txtTotal.Size = New System.Drawing.Size(100, 20)
         Me.txtTotal.TabIndex = 13
         '
         'txtVentaTotal
         '
-        Me.txtVentaTotal.Location = New System.Drawing.Point(690, 540)
+        Me.txtVentaTotal.Location = New System.Drawing.Point(677, 542)
         Me.txtVentaTotal.Name = "txtVentaTotal"
         Me.txtVentaTotal.Size = New System.Drawing.Size(100, 20)
         Me.txtVentaTotal.TabIndex = 14
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(67, 569)
+        Me.Button1.Location = New System.Drawing.Point(58, 542)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.Size = New System.Drawing.Size(90, 50)
         Me.Button1.TabIndex = 15
         Me.Button1.Text = "BUSCAR"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(66, 618)
+        Me.Button2.Location = New System.Drawing.Point(58, 602)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
+        Me.Button2.Size = New System.Drawing.Size(90, 50)
         Me.Button2.TabIndex = 16
         Me.Button2.Text = "ELIMINAR"
         Me.Button2.UseVisualStyleBackColor = True
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(168, 569)
+        Me.Button3.Location = New System.Drawing.Point(153, 542)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(75, 23)
+        Me.Button3.Size = New System.Drawing.Size(90, 50)
         Me.Button3.TabIndex = 17
         Me.Button3.Text = "AGREGAR"
         Me.Button3.UseVisualStyleBackColor = True
         '
         'Button4
         '
-        Me.Button4.Location = New System.Drawing.Point(609, 596)
+        Me.Button4.Location = New System.Drawing.Point(602, 582)
         Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(75, 23)
+        Me.Button4.Size = New System.Drawing.Size(147, 53)
         Me.Button4.TabIndex = 18
         Me.Button4.Text = "VENDER"
         Me.Button4.UseVisualStyleBackColor = True
@@ -263,16 +270,16 @@ Partial Class ventas
         'DateTimePicker1
         '
         Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateTimePicker1.Location = New System.Drawing.Point(97, 161)
+        Me.DateTimePicker1.Location = New System.Drawing.Point(115, 184)
         Me.DateTimePicker1.Name = "DateTimePicker1"
         Me.DateTimePicker1.Size = New System.Drawing.Size(100, 20)
         Me.DateTimePicker1.TabIndex = 19
         '
         'Button5
         '
-        Me.Button5.Location = New System.Drawing.Point(168, 618)
+        Me.Button5.Location = New System.Drawing.Point(153, 598)
         Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(75, 23)
+        Me.Button5.Size = New System.Drawing.Size(90, 50)
         Me.Button5.TabIndex = 20
         Me.Button5.Text = "CALCULAR"
         Me.Button5.UseVisualStyleBackColor = True
@@ -280,32 +287,34 @@ Partial Class ventas
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(3, 95)
+        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Location = New System.Drawing.Point(18, 109)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(93, 13)
+        Me.Label8.Size = New System.Drawing.Size(43, 17)
         Me.Label8.TabIndex = 21
-        Me.Label8.Text = "Cantidad de stock"
+        Me.Label8.Text = "Stock"
         '
-        'TextBox2
+        'txtstock
         '
-        Me.TextBox2.Location = New System.Drawing.Point(97, 94)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox2.TabIndex = 22
+        Me.txtstock.Location = New System.Drawing.Point(114, 108)
+        Me.txtstock.Name = "txtstock"
+        Me.txtstock.Size = New System.Drawing.Size(100, 20)
+        Me.txtstock.TabIndex = 22
         '
-        'TextBox3
+        'txtminimo
         '
-        Me.TextBox3.Location = New System.Drawing.Point(97, 128)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox3.TabIndex = 23
+        Me.txtminimo.Location = New System.Drawing.Point(115, 147)
+        Me.txtminimo.Name = "txtminimo"
+        Me.txtminimo.Size = New System.Drawing.Size(100, 20)
+        Me.txtminimo.TabIndex = 23
         '
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(3, 131)
+        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.Location = New System.Drawing.Point(19, 148)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(70, 13)
+        Me.Label9.Size = New System.Drawing.Size(91, 17)
         Me.Label9.TabIndex = 24
         Me.Label9.Text = "Stock minimo"
         '
@@ -347,15 +356,16 @@ Partial Class ventas
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(9, 34)
+        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.Location = New System.Drawing.Point(19, 45)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(63, 13)
+        Me.Label10.Size = New System.Drawing.Size(82, 17)
         Me.Label10.TabIndex = 25
         Me.Label10.Text = "Num cliente"
         '
         'txtCliente
         '
-        Me.txtCliente.Location = New System.Drawing.Point(83, 31)
+        Me.txtCliente.Location = New System.Drawing.Point(129, 44)
         Me.txtCliente.Name = "txtCliente"
         Me.txtCliente.Size = New System.Drawing.Size(100, 20)
         Me.txtCliente.TabIndex = 26
@@ -367,16 +377,16 @@ Partial Class ventas
         Me.GroupBox1.Controls.Add(Me.txtCliente)
         Me.GroupBox1.Location = New System.Drawing.Point(24, 24)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(236, 117)
+        Me.GroupBox1.Size = New System.Drawing.Size(251, 142)
         Me.GroupBox1.TabIndex = 27
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Cliente"
         '
         'BtnConsulta
         '
-        Me.BtnConsulta.Location = New System.Drawing.Point(59, 70)
+        Me.BtnConsulta.Location = New System.Drawing.Point(76, 91)
         Me.BtnConsulta.Name = "BtnConsulta"
-        Me.BtnConsulta.Size = New System.Drawing.Size(75, 23)
+        Me.BtnConsulta.Size = New System.Drawing.Size(70, 33)
         Me.BtnConsulta.TabIndex = 29
         Me.BtnConsulta.Text = "Consultar"
         Me.BtnConsulta.UseVisualStyleBackColor = True
@@ -387,21 +397,21 @@ Partial Class ventas
         Me.GroupBox2.Controls.Add(Me.Label1)
         Me.GroupBox2.Controls.Add(Me.Label9)
         Me.GroupBox2.Controls.Add(Me.Label2)
-        Me.GroupBox2.Controls.Add(Me.TextBox3)
+        Me.GroupBox2.Controls.Add(Me.txtminimo)
         Me.GroupBox2.Controls.Add(Me.Label3)
-        Me.GroupBox2.Controls.Add(Me.TextBox2)
+        Me.GroupBox2.Controls.Add(Me.txtstock)
         Me.GroupBox2.Controls.Add(Me.Label4)
         Me.GroupBox2.Controls.Add(Me.Label8)
         Me.GroupBox2.Controls.Add(Me.Label5)
         Me.GroupBox2.Controls.Add(Me.Label7)
         Me.GroupBox2.Controls.Add(Me.DateTimePicker1)
         Me.GroupBox2.Controls.Add(Me.NumericUpDown1)
-        Me.GroupBox2.Controls.Add(Me.txtDescripcion)
         Me.GroupBox2.Controls.Add(Me.txtPrecio)
+        Me.GroupBox2.Controls.Add(Me.txtDescripcion)
         Me.GroupBox2.Controls.Add(Me.txtTotal)
         Me.GroupBox2.Location = New System.Drawing.Point(24, 172)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(236, 298)
+        Me.GroupBox2.Size = New System.Drawing.Size(251, 348)
         Me.GroupBox2.TabIndex = 28
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Articulo"
@@ -419,21 +429,43 @@ Partial Class ventas
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Cajero"
         '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label14.Location = New System.Drawing.Point(20, 107)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(66, 17)
+        Me.Label14.TabIndex = 3
+        Me.Label14.Text = "Nombre: "
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label13.Location = New System.Drawing.Point(20, 57)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(57, 17)
+        Me.Label13.TabIndex = 2
+        Me.Label13.Text = "Cajero: "
+        '
         'lblCodEmp
         '
         Me.lblCodEmp.AutoSize = True
-        Me.lblCodEmp.Location = New System.Drawing.Point(99, 54)
+        Me.lblCodEmp.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCodEmp.Location = New System.Drawing.Point(83, 57)
         Me.lblCodEmp.Name = "lblCodEmp"
-        Me.lblCodEmp.Size = New System.Drawing.Size(81, 13)
+        Me.lblCodEmp.Size = New System.Drawing.Size(120, 20)
         Me.lblCodEmp.TabIndex = 1
         Me.lblCodEmp.Text = "id del empleado"
         '
         'lblNombreEmp
         '
         Me.lblNombreEmp.AutoSize = True
-        Me.lblNombreEmp.Location = New System.Drawing.Point(99, 104)
+        Me.lblNombreEmp.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblNombreEmp.Location = New System.Drawing.Point(83, 107)
         Me.lblNombreEmp.Name = "lblNombreEmp"
-        Me.lblNombreEmp.Size = New System.Drawing.Size(110, 13)
+        Me.lblNombreEmp.Size = New System.Drawing.Size(164, 20)
         Me.lblNombreEmp.TabIndex = 0
         Me.lblNombreEmp.Text = "Nombre del empleado"
         '
@@ -446,30 +478,13 @@ Partial Class ventas
         '
         Me.Registro_usuarioTableAdapter.ClearBeforeFill = True
         '
-        'Label13
-        '
-        Me.Label13.AutoSize = True
-        Me.Label13.Location = New System.Drawing.Point(36, 54)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(43, 13)
-        Me.Label13.TabIndex = 2
-        Me.Label13.Text = "Cajero: "
-        '
-        'Label14
-        '
-        Me.Label14.AutoSize = True
-        Me.Label14.Location = New System.Drawing.Point(36, 104)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(50, 13)
-        Me.Label14.TabIndex = 3
-        Me.Label14.Text = "Nombre: "
-        '
         'lbltiempo
         '
         Me.lbltiempo.AutoSize = True
-        Me.lbltiempo.Location = New System.Drawing.Point(935, 399)
+        Me.lbltiempo.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbltiempo.Location = New System.Drawing.Point(935, 341)
         Me.lbltiempo.Name = "lbltiempo"
-        Me.lbltiempo.Size = New System.Drawing.Size(45, 13)
+        Me.lbltiempo.Size = New System.Drawing.Size(99, 29)
         Me.lbltiempo.TabIndex = 30
         Me.lbltiempo.Text = "Label15"
         '
@@ -480,9 +495,10 @@ Partial Class ventas
         'lblfecha
         '
         Me.lblfecha.AutoSize = True
-        Me.lblfecha.Location = New System.Drawing.Point(935, 369)
+        Me.lblfecha.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblfecha.Location = New System.Drawing.Point(936, 388)
         Me.lblfecha.Name = "lblfecha"
-        Me.lblfecha.Size = New System.Drawing.Size(45, 13)
+        Me.lblfecha.Size = New System.Drawing.Size(74, 22)
         Me.lblfecha.TabIndex = 31
         Me.lblfecha.Text = "Label15"
         '
@@ -551,8 +567,8 @@ Partial Class ventas
     Friend WithEvents DateTimePicker1 As System.Windows.Forms.DateTimePicker
     Friend WithEvents Button5 As System.Windows.Forms.Button
     Friend WithEvents Label8 As System.Windows.Forms.Label
-    Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
+    Friend WithEvents txtstock As System.Windows.Forms.TextBox
+    Friend WithEvents txtminimo As System.Windows.Forms.TextBox
     Friend WithEvents Label9 As System.Windows.Forms.Label
     Friend WithEvents VentasBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents VentasTableAdapter As form1.BaseBellezaDataSetTableAdapters.ventasTableAdapter
