@@ -29,6 +29,7 @@
                         Me.ArticulosBindingSource.Current("precio") = PrecioTextBox.Text
                         Me.ArticulosBindingSource.Current("rubro") = RubroTextBox.Text
                         Me.ArticulosBindingSource.Current("marca") = MarcaTextBox.Text
+                        Me.ArticulosBindingSource.Current("id_proveedor") = Id_proveedorComboBox.SelectedItem
                         Me.ArticulosBindingSource.Current("stock_minimo") = Stock_minimoTextBox.Text
 
                         Me.Validate()

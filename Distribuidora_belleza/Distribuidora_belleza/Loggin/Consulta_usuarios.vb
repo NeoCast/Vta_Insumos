@@ -15,7 +15,19 @@
 
     End Sub
 
+<<<<<<< Updated upstream
    
+=======
+    Private Sub TextBox1_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TextBox1.TextChanged
+        If TextBox1.Text = "" Then
+            Registro_usuarioTableAdapter.Fill(Me.BaseBellezaDataSet.Registro_usuario)
+        Else
+            Registro_usuarioTableAdapter.consultaUsuario((Me.BaseBellezaDataSet.Registro_usuario), TextBox1.Text)
+
+
+        End If
+    End Sub
+>>>>>>> Stashed changes
 
    
     Private Sub Registro_usuarioDataGridView_CellContentClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles Registro_usuarioDataGridView.CellContentClick
