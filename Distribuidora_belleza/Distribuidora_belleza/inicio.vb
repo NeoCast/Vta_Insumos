@@ -6,7 +6,7 @@
         If resultado <> 1 Then
             e.Cancel = True
         Else
-            loggin2.Show()
+            loggin2.ShowDialog()
 
         End If
     End Sub
@@ -24,42 +24,42 @@
     End Sub
 
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
-        consulta_articulo.Show()
+        consulta_articulo.ShowDialog()
 
     End Sub
 
     Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
-        consulta_cliente.Show()
+        consulta_cliente.ShowDialog()
 
     End Sub
 
     Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button3.Click
-        consulta_empleados.Show()
+        consulta_empleados.ShowDialog()
 
     End Sub
 
     Private Sub Button4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button4.Click
-        consulta_proveedor.Show()
+        consulta_proveedor.ShowDialog()
 
     End Sub
 
     Private Sub ArticuloToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ArticuloToolStripMenuItem.Click
-        AltaArticulo.Show()
+        AltaArticulo.ShowDialog()
 
     End Sub
 
     Private Sub ClienteToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ClienteToolStripMenuItem.Click
-        Altacliente.Show()
+        Altacliente.ShowDialog()
 
     End Sub
 
     Private Sub EmpleadoToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles EmpleadoToolStripMenuItem.Click
-        Altaempleado.Show()
+        Altaempleado.ShowDialog()
 
     End Sub
 
     Private Sub ProveedorToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ProveedorToolStripMenuItem.Click
-        Altaproveedor.Show()
+        Altaproveedor.ShowDialog()
 
     End Sub
 
@@ -75,39 +75,41 @@
     End Sub
 
     Private Sub ClienteToolStripMenuItem1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ClienteToolStripMenuItem1.Click
-        Baja_cliente.Show()
+        Baja_cliente.ShowDialog()
 
     End Sub
 
 
 
     Private Sub ArticuloToolStripMenuItem1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ArticuloToolStripMenuItem1.Click
-        Baja_articulo.Show()
+        Baja_articulo.ShowDialog()
 
     End Sub
 
     Private Sub ClienteToolStripMenuItem2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ClienteToolStripMenuItem2.Click
-        Baja_empleados.Show()
+        Baja_empleados.ShowDialog()
     End Sub
 
     Private Sub ProveedorToolStripMenuItem1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ProveedorToolStripMenuItem1.Click
-        Baja_proveedores.Show()
+        Baja_proveedores.ShowDialog()
 
     End Sub
 
 
     Private Sub NuevaVentaToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NuevaVentaToolStripMenuItem.Click
-        ventas.Show()
+        ventas.ShowDialog()
+
 
     End Sub
 
     Private Sub VentaToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles VentaToolStripMenuItem.Click
-        consulta_vta.Show()
+        consulta_vta.ShowDialog()
 
     End Sub
 
     Private Sub DetalleToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DetalleToolStripMenuItem.Click
-        consulta_detalle.Show()
+        consulta_detalle.ShowDialog()
+
 
     End Sub
 
@@ -116,6 +118,29 @@
             frm.Close()
 
         Next frm
+
+    End Sub
+
+    
+    
+    Private Sub AyudaToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles AyudaToolStripMenuItem.Click
+        Ayuda.ShowDialog()
+
+    End Sub
+
+   
+
+    Private Sub CrearUsuarioToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CrearUsuarioToolStripMenuItem.Click
+        CrearUsuario.ShowDialog()
+
+    End Sub
+
+    Private Sub ConsultarYEliminarToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ConsultarYEliminarToolStripMenuItem.Click
+        Consulta_usuarios.ShowDialog()
+    End Sub
+
+    Private Sub ModificarUsuarioToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ModificarUsuarioToolStripMenuItem.Click
+        ModificarEliminar_Usuario.ShowDialog()
 
     End Sub
 End Class

@@ -108,6 +108,12 @@
     <Compile Include="Altas\Altaproveedor.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Ayuda.Designer.vb">
+      <DependentUpon>Ayuda.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ayuda.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Bajas\Baja_articulo.Designer.vb">
       <DependentUpon>Baja_articulo.vb</DependentUpon>
     </Compile>
@@ -268,6 +274,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Altas\Altaproveedor.resx">
       <DependentUpon>Altaproveedor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ayuda.resx">
+      <DependentUpon>Ayuda.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Bajas\Baja_articulo.resx">
       <DependentUpon>Baja_articulo.vb</DependentUpon>

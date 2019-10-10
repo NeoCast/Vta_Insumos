@@ -77,6 +77,24 @@ Partial Class CrearUsuario
         TipoLabel.TabIndex = 5
         TipoLabel.Text = "tipo:"
         '
+        'Id_empleadoLabel
+        '
+        Id_empleadoLabel.AutoSize = True
+        Id_empleadoLabel.Location = New System.Drawing.Point(34, 164)
+        Id_empleadoLabel.Name = "Id_empleadoLabel"
+        Id_empleadoLabel.Size = New System.Drawing.Size(67, 13)
+        Id_empleadoLabel.TabIndex = 7
+        Id_empleadoLabel.Text = "id empleado:"
+        '
+        'NombreLabel
+        '
+        NombreLabel.AutoSize = True
+        NombreLabel.Location = New System.Drawing.Point(167, 164)
+        NombreLabel.Name = "NombreLabel"
+        NombreLabel.Size = New System.Drawing.Size(45, 13)
+        NombreLabel.TabIndex = 9
+        NombreLabel.Text = "nombre:"
+        '
         'BaseBellezaDataSet
         '
         Me.BaseBellezaDataSet.DataSetName = "BaseBellezaDataSet"
@@ -122,6 +140,7 @@ Partial Class CrearUsuario
         'ComboBox1
         '
         Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Items.AddRange(New Object() {"cajero", "admin"})
         Me.ComboBox1.Location = New System.Drawing.Point(163, 110)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(100, 21)
@@ -145,32 +164,17 @@ Partial Class CrearUsuario
         '
         Me.EmpleadoTableAdapter.ClearBeforeFill = True
         '
-        'Id_empleadoLabel
-        '
-        Id_empleadoLabel.AutoSize = True
-        Id_empleadoLabel.Location = New System.Drawing.Point(34, 164)
-        Id_empleadoLabel.Name = "Id_empleadoLabel"
-        Id_empleadoLabel.Size = New System.Drawing.Size(67, 13)
-        Id_empleadoLabel.TabIndex = 7
-        Id_empleadoLabel.Text = "id empleado:"
-        '
         'Id_empleadoComboBox
         '
         Me.Id_empleadoComboBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EmpleadoBindingSource, "id_empleado", True))
+        Me.Id_empleadoComboBox.DataSource = Me.EmpleadoBindingSource
+        Me.Id_empleadoComboBox.DisplayMember = "id_empleado"
         Me.Id_empleadoComboBox.FormattingEnabled = True
         Me.Id_empleadoComboBox.Location = New System.Drawing.Point(107, 161)
         Me.Id_empleadoComboBox.Name = "Id_empleadoComboBox"
         Me.Id_empleadoComboBox.Size = New System.Drawing.Size(45, 21)
         Me.Id_empleadoComboBox.TabIndex = 8
-        '
-        'NombreLabel
-        '
-        NombreLabel.AutoSize = True
-        NombreLabel.Location = New System.Drawing.Point(167, 164)
-        NombreLabel.Name = "NombreLabel"
-        NombreLabel.Size = New System.Drawing.Size(45, 13)
-        NombreLabel.TabIndex = 9
-        NombreLabel.Text = "nombre:"
+        Me.Id_empleadoComboBox.ValueMember = "id_empleado"
         '
         'NombreTextBox
         '

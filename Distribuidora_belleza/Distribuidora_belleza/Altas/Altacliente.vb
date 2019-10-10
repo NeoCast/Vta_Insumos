@@ -1,4 +1,9 @@
-﻿Public Class Altacliente
+﻿Imports System.Data
+Imports System.Data.SqlServerCe
+
+Public Class Altacliente
+
+    Private dt As New DataTable
 
     Private Sub ClienteBindingNavigatorSaveItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Me.Validate()
@@ -25,13 +30,14 @@
                     Me.ClienteBindingSource.Current("nombre") = NombreTextBox.Text
                     Me.ClienteBindingSource.Current("telefono") = TelefonoTextBox.Text
                     Me.ClienteBindingSource.Current("mail") = MailTextBox.Text
-                    
+
 
                     Me.Validate()
                     Me.ClienteBindingSource.EndEdit()
                     Me.TableAdapterManager.UpdateAll(Me.BaseBellezaDataSet)
 
                     MsgBox("se cargo con exito")
+
                     Me.ClienteTableAdapter.Fill(Me.BaseBellezaDataSet.cliente)
                     inicio.ArticulosTableAdapter.Fill(inicio.BaseBellezaDataSet.articulos)
 
@@ -53,9 +59,27 @@
             Exit Sub
 
         End If
+        Dim dt As New DataTable
+        Dim ultimo As Integer
+        Dim ultimoCliente As New SqlCeCommand("SELECT MAX(Id_cliente) FROM [cliente]", conexion) 'trae el ultimo registro que se guardo
+        conexion.Open() 'abro la conexion
+        dt.TableName = "ultimoCliente"        'a la tabla creada le doy un nombre creo que no es necesario, pero asi estaba en internet
+        dt.Load(ultimoCliente.ExecuteReader)   'lleno esa tabla declarada anteriormente con los datos que me trae la consulta de ultimoRegistro
+        Dim reader As SqlCeDataReader = ultimoCliente.ExecuteReader
+
+        'registro = ultimoRegistro.ExecuteReader
 
 
-      
+
+        If reader.Read Then
+            ultimo = dt.Rows(0).Item(0).ToString
+            reader.Close()
+            MsgBox("El número de cliente es:    " + ultimo.ToString)
+            conexion.Close()
+
+        End If
+
+
 
     End Sub
 

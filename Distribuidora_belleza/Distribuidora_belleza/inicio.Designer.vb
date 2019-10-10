@@ -28,7 +28,6 @@ Partial Class inicio
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
-        Me.ArchivoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.NuevoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ArticuloToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ClienteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -43,11 +42,14 @@ Partial Class inicio
         Me.ClienteToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ProveedorToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.DetalleToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.CajaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ConfiguracionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.NuevaVentaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ConfiguracionToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.UsuariosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CrearUsuarioToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ModificarUsuarioToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ConsultarYEliminarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CerrarSesionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AyudaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Button5 = New System.Windows.Forms.Button()
         Me.BaseBellezaDataSet = New form1.BaseBellezaDataSet()
@@ -60,7 +62,6 @@ Partial Class inicio
         Me.EmpleadoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ProveedorBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ArticulosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.CerrarSesionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.BaseBellezaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ClienteBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -107,18 +108,12 @@ Partial Class inicio
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ArchivoToolStripMenuItem, Me.NuevoToolStripMenuItem, Me.ConsultaToolStripMenuItem, Me.CajaToolStripMenuItem, Me.ConfiguracionToolStripMenuItem, Me.ConfiguracionToolStripMenuItem1, Me.AyudaToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NuevoToolStripMenuItem, Me.ConsultaToolStripMenuItem, Me.ConfiguracionToolStripMenuItem, Me.ConfiguracionToolStripMenuItem1, Me.AyudaToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(711, 24)
         Me.MenuStrip1.TabIndex = 4
         Me.MenuStrip1.Text = "MenuStrip1"
-        '
-        'ArchivoToolStripMenuItem
-        '
-        Me.ArchivoToolStripMenuItem.Name = "ArchivoToolStripMenuItem"
-        Me.ArchivoToolStripMenuItem.Size = New System.Drawing.Size(60, 20)
-        Me.ArchivoToolStripMenuItem.Text = "Archivo"
         '
         'NuevoToolStripMenuItem
         '
@@ -168,7 +163,7 @@ Partial Class inicio
         'VentaToolStripMenuItem
         '
         Me.VentaToolStripMenuItem.Name = "VentaToolStripMenuItem"
-        Me.VentaToolStripMenuItem.Size = New System.Drawing.Size(103, 22)
+        Me.VentaToolStripMenuItem.Size = New System.Drawing.Size(104, 22)
         Me.VentaToolStripMenuItem.Text = "Venta"
         '
         'EliminarToolStripMenuItem
@@ -208,23 +203,17 @@ Partial Class inicio
         Me.DetalleToolStripMenuItem.Size = New System.Drawing.Size(161, 22)
         Me.DetalleToolStripMenuItem.Text = " Detalle de venta"
         '
-        'CajaToolStripMenuItem
-        '
-        Me.CajaToolStripMenuItem.Name = "CajaToolStripMenuItem"
-        Me.CajaToolStripMenuItem.Size = New System.Drawing.Size(42, 20)
-        Me.CajaToolStripMenuItem.Text = "Caja"
-        '
         'ConfiguracionToolStripMenuItem
         '
         Me.ConfiguracionToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NuevaVentaToolStripMenuItem})
         Me.ConfiguracionToolStripMenuItem.Name = "ConfiguracionToolStripMenuItem"
-        Me.ConfiguracionToolStripMenuItem.Size = New System.Drawing.Size(53, 20)
+        Me.ConfiguracionToolStripMenuItem.Size = New System.Drawing.Size(54, 20)
         Me.ConfiguracionToolStripMenuItem.Text = "Ventas"
         '
         'NuevaVentaToolStripMenuItem
         '
         Me.NuevaVentaToolStripMenuItem.Name = "NuevaVentaToolStripMenuItem"
-        Me.NuevaVentaToolStripMenuItem.Size = New System.Drawing.Size(140, 22)
+        Me.NuevaVentaToolStripMenuItem.Size = New System.Drawing.Size(141, 22)
         Me.NuevaVentaToolStripMenuItem.Text = "Nueva Venta"
         '
         'ConfiguracionToolStripMenuItem1
@@ -236,9 +225,34 @@ Partial Class inicio
         '
         'UsuariosToolStripMenuItem
         '
+        Me.UsuariosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CrearUsuarioToolStripMenuItem, Me.ModificarUsuarioToolStripMenuItem, Me.ConsultarYEliminarToolStripMenuItem})
         Me.UsuariosToolStripMenuItem.Name = "UsuariosToolStripMenuItem"
         Me.UsuariosToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.UsuariosToolStripMenuItem.Text = "Usuarios"
+        '
+        'CrearUsuarioToolStripMenuItem
+        '
+        Me.CrearUsuarioToolStripMenuItem.Name = "CrearUsuarioToolStripMenuItem"
+        Me.CrearUsuarioToolStripMenuItem.Size = New System.Drawing.Size(186, 22)
+        Me.CrearUsuarioToolStripMenuItem.Text = "Crear Usuario"
+        '
+        'ModificarUsuarioToolStripMenuItem
+        '
+        Me.ModificarUsuarioToolStripMenuItem.Name = "ModificarUsuarioToolStripMenuItem"
+        Me.ModificarUsuarioToolStripMenuItem.Size = New System.Drawing.Size(186, 22)
+        Me.ModificarUsuarioToolStripMenuItem.Text = "Actualizar Usuario"
+        '
+        'ConsultarYEliminarToolStripMenuItem
+        '
+        Me.ConsultarYEliminarToolStripMenuItem.Name = "ConsultarYEliminarToolStripMenuItem"
+        Me.ConsultarYEliminarToolStripMenuItem.Size = New System.Drawing.Size(186, 22)
+        Me.ConsultarYEliminarToolStripMenuItem.Text = " Consultar y Eliminar "
+        '
+        'CerrarSesionToolStripMenuItem
+        '
+        Me.CerrarSesionToolStripMenuItem.Name = "CerrarSesionToolStripMenuItem"
+        Me.CerrarSesionToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.CerrarSesionToolStripMenuItem.Text = "Cerrar Sesion"
         '
         'AyudaToolStripMenuItem
         '
@@ -308,12 +322,6 @@ Partial Class inicio
         Me.ArticulosBindingSource.DataMember = "articulos"
         Me.ArticulosBindingSource.DataSource = Me.BaseBellezaDataSet
         '
-        'CerrarSesionToolStripMenuItem
-        '
-        Me.CerrarSesionToolStripMenuItem.Name = "CerrarSesionToolStripMenuItem"
-        Me.CerrarSesionToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.CerrarSesionToolStripMenuItem.Text = "Cerrar Sesion"
-        '
         'inicio
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -344,10 +352,8 @@ Partial Class inicio
     Friend WithEvents Button3 As System.Windows.Forms.Button
     Friend WithEvents Button4 As System.Windows.Forms.Button
     Friend WithEvents MenuStrip1 As System.Windows.Forms.MenuStrip
-    Friend WithEvents ArchivoToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents NuevoToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ConsultaToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents CajaToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ConfiguracionToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ConfiguracionToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents AyudaToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
@@ -377,4 +383,7 @@ Partial Class inicio
     Friend WithEvents DetalleToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents UsuariosToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents CerrarSesionToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents CrearUsuarioToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ModificarUsuarioToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ConsultarYEliminarToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 End Class
