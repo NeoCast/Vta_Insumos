@@ -29,13 +29,15 @@ Partial Class Consulta_usuarios
         Me.EmpleadoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.EmpleadoTableAdapter = New form1.BaseBellezaDataSetTableAdapters.empleadoTableAdapter()
         Me.TableAdapterManager = New form1.BaseBellezaDataSetTableAdapters.TableAdapterManager()
-        Me.Registro_usuarioBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Registro_usuarioTableAdapter = New form1.BaseBellezaDataSetTableAdapters.Registro_usuarioTableAdapter()
+        Me.Registro_usuarioBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Registro_usuarioDataGridView = New System.Windows.Forms.DataGridView()
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.btnBuscar = New System.Windows.Forms.Button()
+        Me.btnEliminar = New System.Windows.Forms.Button()
         CType(Me.BaseBellezaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EmpleadoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Registro_usuarioBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -84,14 +86,14 @@ Partial Class Consulta_usuarios
         Me.TableAdapterManager.UpdateOrder = form1.BaseBellezaDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         Me.TableAdapterManager.ventasTableAdapter = Nothing
         '
+        'Registro_usuarioTableAdapter
+        '
+        Me.Registro_usuarioTableAdapter.ClearBeforeFill = True
+        '
         'Registro_usuarioBindingSource
         '
         Me.Registro_usuarioBindingSource.DataMember = "Registro_usuario"
         Me.Registro_usuarioBindingSource.DataSource = Me.BaseBellezaDataSet
-        '
-        'Registro_usuarioTableAdapter
-        '
-        Me.Registro_usuarioTableAdapter.ClearBeforeFill = True
         '
         'Registro_usuarioDataGridView
         '
@@ -128,11 +130,31 @@ Partial Class Consulta_usuarios
         Me.DataGridViewTextBoxColumn4.HeaderText = "id_empleado"
         Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
         '
+        'btnBuscar
+        '
+        Me.btnBuscar.Location = New System.Drawing.Point(375, 15)
+        Me.btnBuscar.Name = "btnBuscar"
+        Me.btnBuscar.Size = New System.Drawing.Size(75, 23)
+        Me.btnBuscar.TabIndex = 17
+        Me.btnBuscar.Text = "Buscar"
+        Me.btnBuscar.UseVisualStyleBackColor = True
+        '
+        'btnEliminar
+        '
+        Me.btnEliminar.Location = New System.Drawing.Point(497, 15)
+        Me.btnEliminar.Name = "btnEliminar"
+        Me.btnEliminar.Size = New System.Drawing.Size(75, 23)
+        Me.btnEliminar.TabIndex = 18
+        Me.btnEliminar.Text = "Eliminar"
+        Me.btnEliminar.UseVisualStyleBackColor = True
+        '
         'Consulta_usuarios
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(870, 378)
+        Me.Controls.Add(Me.btnEliminar)
+        Me.Controls.Add(Me.btnBuscar)
         Me.Controls.Add(Me.Registro_usuarioDataGridView)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Label1)
@@ -159,4 +181,6 @@ Partial Class Consulta_usuarios
     Friend WithEvents DataGridViewTextBoxColumn2 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn3 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn4 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents btnBuscar As System.Windows.Forms.Button
+    Friend WithEvents btnEliminar As System.Windows.Forms.Button
 End Class

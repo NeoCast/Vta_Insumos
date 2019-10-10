@@ -24,7 +24,6 @@ Partial Class ModificarEliminar_Usuario
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.btnActualizar = New System.Windows.Forms.Button()
-        Me.btnEliminar = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -33,18 +32,18 @@ Partial Class ModificarEliminar_Usuario
         Me.txtTipo = New System.Windows.Forms.TextBox()
         Me.txtContraseña = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.BaseBellezaDataSet = New form1.BaseBellezaDataSet()
-        Me.Registro_usuarioBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Registro_usuarioTableAdapter = New form1.BaseBellezaDataSetTableAdapters.Registro_usuarioTableAdapter()
-        Me.TableAdapterManager = New form1.BaseBellezaDataSetTableAdapters.TableAdapterManager()
         Me.Registro_usuarioDataGridView = New System.Windows.Forms.DataGridView()
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        CType(Me.BaseBellezaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Registro_usuarioBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Registro_usuarioBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.BaseBellezaDataSet = New form1.BaseBellezaDataSet()
+        Me.Registro_usuarioTableAdapter = New form1.BaseBellezaDataSetTableAdapters.Registro_usuarioTableAdapter()
+        Me.TableAdapterManager = New form1.BaseBellezaDataSetTableAdapters.TableAdapterManager()
         CType(Me.Registro_usuarioDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Registro_usuarioBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.BaseBellezaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'btnActualizar
@@ -55,15 +54,6 @@ Partial Class ModificarEliminar_Usuario
         Me.btnActualizar.TabIndex = 0
         Me.btnActualizar.Text = "Actulizar"
         Me.btnActualizar.UseVisualStyleBackColor = True
-        '
-        'btnEliminar
-        '
-        Me.btnEliminar.Location = New System.Drawing.Point(61, 269)
-        Me.btnEliminar.Name = "btnEliminar"
-        Me.btnEliminar.Size = New System.Drawing.Size(75, 23)
-        Me.btnEliminar.TabIndex = 1
-        Me.btnEliminar.Text = "Eliminar"
-        Me.btnEliminar.UseVisualStyleBackColor = True
         '
         'Label1
         '
@@ -129,32 +119,6 @@ Partial Class ModificarEliminar_Usuario
         Me.Label4.TabIndex = 9
         Me.Label4.Text = "Contraseña"
         '
-        'BaseBellezaDataSet
-        '
-        Me.BaseBellezaDataSet.DataSetName = "BaseBellezaDataSet"
-        Me.BaseBellezaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'Registro_usuarioBindingSource
-        '
-        Me.Registro_usuarioBindingSource.DataMember = "Registro_usuario"
-        Me.Registro_usuarioBindingSource.DataSource = Me.BaseBellezaDataSet
-        '
-        'Registro_usuarioTableAdapter
-        '
-        Me.Registro_usuarioTableAdapter.ClearBeforeFill = True
-        '
-        'TableAdapterManager
-        '
-        Me.TableAdapterManager.articulosTableAdapter = Nothing
-        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
-        Me.TableAdapterManager.clienteTableAdapter = Nothing
-        Me.TableAdapterManager.detalle_vtaTableAdapter = Nothing
-        Me.TableAdapterManager.empleadoTableAdapter = Nothing
-        Me.TableAdapterManager.proveedorTableAdapter = Nothing
-        Me.TableAdapterManager.Registro_usuarioTableAdapter = Me.Registro_usuarioTableAdapter
-        Me.TableAdapterManager.UpdateOrder = form1.BaseBellezaDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
-        Me.TableAdapterManager.ventasTableAdapter = Nothing
-        '
         'Registro_usuarioDataGridView
         '
         Me.Registro_usuarioDataGridView.AutoGenerateColumns = False
@@ -190,6 +154,32 @@ Partial Class ModificarEliminar_Usuario
         Me.DataGridViewTextBoxColumn4.HeaderText = "id_empleado"
         Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
         '
+        'Registro_usuarioBindingSource
+        '
+        Me.Registro_usuarioBindingSource.DataMember = "Registro_usuario"
+        Me.Registro_usuarioBindingSource.DataSource = Me.BaseBellezaDataSet
+        '
+        'BaseBellezaDataSet
+        '
+        Me.BaseBellezaDataSet.DataSetName = "BaseBellezaDataSet"
+        Me.BaseBellezaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'Registro_usuarioTableAdapter
+        '
+        Me.Registro_usuarioTableAdapter.ClearBeforeFill = True
+        '
+        'TableAdapterManager
+        '
+        Me.TableAdapterManager.articulosTableAdapter = Nothing
+        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.clienteTableAdapter = Nothing
+        Me.TableAdapterManager.detalle_vtaTableAdapter = Nothing
+        Me.TableAdapterManager.empleadoTableAdapter = Nothing
+        Me.TableAdapterManager.proveedorTableAdapter = Nothing
+        Me.TableAdapterManager.Registro_usuarioTableAdapter = Me.Registro_usuarioTableAdapter
+        Me.TableAdapterManager.UpdateOrder = form1.BaseBellezaDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        Me.TableAdapterManager.ventasTableAdapter = Nothing
+        '
         'ModificarEliminar_Usuario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -204,19 +194,17 @@ Partial Class ModificarEliminar_Usuario
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.btnEliminar)
         Me.Controls.Add(Me.btnActualizar)
         Me.Name = "ModificarEliminar_Usuario"
         Me.Text = "ModificarEliminar_Usuario"
-        CType(Me.BaseBellezaDataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Registro_usuarioBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Registro_usuarioDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Registro_usuarioBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.BaseBellezaDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
     Friend WithEvents btnActualizar As System.Windows.Forms.Button
-    Friend WithEvents btnEliminar As System.Windows.Forms.Button
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label
