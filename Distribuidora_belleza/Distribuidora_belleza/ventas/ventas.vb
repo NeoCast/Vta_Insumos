@@ -9,9 +9,6 @@ Public Class ventas
     Private dt As New DataTable
 
 
-
-    Public conexion As New SqlCeConnection("Data Source=C:\Users\thoma\Documents\GitKraken\Vta_Insumos\Distribuidora_belleza\Distribuidora_belleza\BaseBelleza.sdf")
-
     Private Sub ventas_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         'TODO: esta línea de código carga datos en la tabla 'BaseBellezaDataSet.Registro_usuario' Puede moverla o quitarla según sea necesario.
         Me.Registro_usuarioTableAdapter.Fill(Me.BaseBellezaDataSet.Registro_usuario)
@@ -122,12 +119,22 @@ Public Class ventas
     End Sub
 
     Private Sub Button4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button4.Click
-        Dim stock, stockMin As Integer
+        ' Dim stock, stockMin, checkStock As Integer
+        Dim q As Integer = 0
 
-        stock = Val(txtstock.Text)
-        stockMin = Val(txtminimo.Text)
+        Dim fila As New DataGridViewRow 'creo el objeto fila de la clase datagridviewRow para poder recorrer todas las filas del datagrid del form
+
+        For Each fila In DataGridView1.Rows 'utilizo este for each solo para evaluar que no se quiera enviar una venta vacia
+            q += 1
 
 
+        Next fila
+        If q = 1 Then
+            MsgBox("no hay nada")
+            Exit Sub
+
+        End If
+       
 
         'armo el insert con sus parametros correspondientes
         Dim cmdVentas As New SqlCeCommand("insert into ventas(fecha,total,cod_vendedor,cod_cliente) values (@fecha, @total, @cod_vendedor, @cod_cliente)", conexion)
@@ -171,7 +178,6 @@ Public Class ventas
         'End Try
 
 
-        Dim fila As New DataGridViewRow 'creo el objeto fila de la clase datagridviewRow para poder recorrer todas las filas del datagrid del form
         'Try
 
 
@@ -181,8 +187,8 @@ Public Class ventas
                 Exit Sub
             Else
                 Dim cmd As New SqlCeCommand("insert into detalle_vta(id_venta,id_cliente,id_vendedor,id_articulo,descripcion,precio,cantidad,total_articulo,fecha) values (@id_venta,@id_cliente,@id_vendedor,@id_art, @descripcion, @precio, @cantidad, @total, @fecha)", conexion)
-
-
+                Dim update As New SqlCeCommand("update articulos set cantidad_stock=@cant where id_articulo ='" & Convert.ToInt32(fila.Cells("Id_Articulo").Value) & "'")
+                update.Parameters.Add("cant", SqlDbType.Int).Value = Convert.ToInt32(fila.Cells("Cantidad").Value)
                 'agrego los parametros para el insert
                 With cmd.Parameters
                     .Add("@id_venta", SqlDbType.Int).Value = ultimaVenta
@@ -195,11 +201,12 @@ Public Class ventas
                     .Add("@total", SqlDbType.Float).Value = Convert.ToDouble(fila.Cells("Total").Value)
                     .Add("@fecha", SqlDbType.DateTime).Value = Convert.ToDateTime(fecha)
                 End With
-                
+
 
                 conexion.Open() 'abro la conexion
 
                 cmd.ExecuteNonQuery() ' ejecuto el insert
+                update.ExecuteNonQuery() 'ejecuto el update para cambiar el valor del stock
 
 
                 conexion.Close()    'cierro la conexion
@@ -217,7 +224,16 @@ Public Class ventas
     Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
         Dim i As Integer
         i = DataGridView1.CurrentRow.Index
-        DataGridView1.Rows.RemoveAt(i)
+        Try
+            DataGridView1.Rows.RemoveAt(i)
+
+        Catch ex As Exception
+            Exit Sub
+
+        End Try
+
+
+
 
     End Sub
 
