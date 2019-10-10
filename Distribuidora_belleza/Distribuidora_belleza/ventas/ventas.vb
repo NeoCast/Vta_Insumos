@@ -282,4 +282,9 @@ Public Class ventas
         lblfecha.Text = Date.Now.ToShortDateString
 
     End Sub
+
+    Private Sub Button6_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button6.Click
+        Altacliente.Show()
+
+    End Sub
 End Class

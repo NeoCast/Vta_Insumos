@@ -74,6 +74,7 @@ Partial Class ventas
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.lblfecha = New System.Windows.Forms.Label()
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
+        Me.Button6 = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BaseBellezaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -372,6 +373,7 @@ Partial Class ventas
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.Button6)
         Me.GroupBox1.Controls.Add(Me.BtnConsulta)
         Me.GroupBox1.Controls.Add(Me.Label10)
         Me.GroupBox1.Controls.Add(Me.txtCliente)
@@ -384,7 +386,7 @@ Partial Class ventas
         '
         'BtnConsulta
         '
-        Me.BtnConsulta.Location = New System.Drawing.Point(76, 91)
+        Me.BtnConsulta.Location = New System.Drawing.Point(22, 91)
         Me.BtnConsulta.Name = "BtnConsulta"
         Me.BtnConsulta.Size = New System.Drawing.Size(70, 33)
         Me.BtnConsulta.TabIndex = 29
@@ -506,6 +508,15 @@ Partial Class ventas
         '
         Me.Timer2.Enabled = True
         '
+        'Button6
+        '
+        Me.Button6.Location = New System.Drawing.Point(129, 91)
+        Me.Button6.Name = "Button6"
+        Me.Button6.Size = New System.Drawing.Size(70, 33)
+        Me.Button6.TabIndex = 30
+        Me.Button6.Text = "Nuevo"
+        Me.Button6.UseVisualStyleBackColor = True
+        '
         'ventas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -593,4 +604,5 @@ Partial Class ventas
     Friend WithEvents Timer1 As System.Windows.Forms.Timer
     Friend WithEvents lblfecha As System.Windows.Forms.Label
     Friend WithEvents Timer2 As System.Windows.Forms.Timer
+    Friend WithEvents Button6 As System.Windows.Forms.Button
 End Class

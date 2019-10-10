@@ -42,6 +42,36 @@ Partial Class Altacliente
         CType(Me.ClienteBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
+        'NombreLabel
+        '
+        NombreLabel.AutoSize = True
+        NombreLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        NombreLabel.Location = New System.Drawing.Point(41, 52)
+        NombreLabel.Name = "NombreLabel"
+        NombreLabel.Size = New System.Drawing.Size(60, 17)
+        NombreLabel.TabIndex = 3
+        NombreLabel.Text = "nombre:"
+        '
+        'TelefonoLabel
+        '
+        TelefonoLabel.AutoSize = True
+        TelefonoLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        TelefonoLabel.Location = New System.Drawing.Point(41, 93)
+        TelefonoLabel.Name = "TelefonoLabel"
+        TelefonoLabel.Size = New System.Drawing.Size(63, 17)
+        TelefonoLabel.TabIndex = 5
+        TelefonoLabel.Text = "telefono:"
+        '
+        'MailLabel
+        '
+        MailLabel.AutoSize = True
+        MailLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        MailLabel.Location = New System.Drawing.Point(41, 133)
+        MailLabel.Name = "MailLabel"
+        MailLabel.Size = New System.Drawing.Size(37, 17)
+        MailLabel.TabIndex = 7
+        MailLabel.Text = "mail:"
+        '
         'BaseBellezaDataSet
         '
         Me.BaseBellezaDataSet.DataSetName = "BaseBellezaDataSet"
@@ -61,77 +91,53 @@ Partial Class Altacliente
         Me.TableAdapterManager.articulosTableAdapter = Nothing
         Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
         Me.TableAdapterManager.clienteTableAdapter = Me.ClienteTableAdapter
+        Me.TableAdapterManager.detalle_vtaTableAdapter = Nothing
         Me.TableAdapterManager.empleadoTableAdapter = Nothing
         Me.TableAdapterManager.proveedorTableAdapter = Nothing
+        Me.TableAdapterManager.Registro_usuarioTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = form1.BaseBellezaDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
-        '
-        'NombreLabel
-        '
-        NombreLabel.AutoSize = True
-        NombreLabel.Location = New System.Drawing.Point(41, 55)
-        NombreLabel.Name = "NombreLabel"
-        NombreLabel.Size = New System.Drawing.Size(45, 13)
-        NombreLabel.TabIndex = 3
-        NombreLabel.Text = "nombre:"
+        Me.TableAdapterManager.ventasTableAdapter = Nothing
         '
         'NombreTextBox
         '
         Me.NombreTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClienteBindingSource, "nombre", True))
-        Me.NombreTextBox.Location = New System.Drawing.Point(99, 52)
+        Me.NombreTextBox.Location = New System.Drawing.Point(130, 52)
         Me.NombreTextBox.Name = "NombreTextBox"
         Me.NombreTextBox.Size = New System.Drawing.Size(100, 20)
         Me.NombreTextBox.TabIndex = 4
         '
-        'TelefonoLabel
-        '
-        TelefonoLabel.AutoSize = True
-        TelefonoLabel.Location = New System.Drawing.Point(41, 96)
-        TelefonoLabel.Name = "TelefonoLabel"
-        TelefonoLabel.Size = New System.Drawing.Size(48, 13)
-        TelefonoLabel.TabIndex = 5
-        TelefonoLabel.Text = "telefono:"
-        '
         'TelefonoTextBox
         '
         Me.TelefonoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClienteBindingSource, "telefono", True))
-        Me.TelefonoTextBox.Location = New System.Drawing.Point(99, 93)
+        Me.TelefonoTextBox.Location = New System.Drawing.Point(130, 93)
         Me.TelefonoTextBox.Name = "TelefonoTextBox"
         Me.TelefonoTextBox.Size = New System.Drawing.Size(100, 20)
         Me.TelefonoTextBox.TabIndex = 6
         '
-        'MailLabel
-        '
-        MailLabel.AutoSize = True
-        MailLabel.Location = New System.Drawing.Point(41, 136)
-        MailLabel.Name = "MailLabel"
-        MailLabel.Size = New System.Drawing.Size(28, 13)
-        MailLabel.TabIndex = 7
-        MailLabel.Text = "mail:"
-        '
         'MailTextBox
         '
         Me.MailTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClienteBindingSource, "mail", True))
-        Me.MailTextBox.Location = New System.Drawing.Point(99, 133)
+        Me.MailTextBox.Location = New System.Drawing.Point(130, 133)
         Me.MailTextBox.Name = "MailTextBox"
         Me.MailTextBox.Size = New System.Drawing.Size(100, 20)
         Me.MailTextBox.TabIndex = 8
         '
         'btnagregar
         '
-        Me.btnagregar.Location = New System.Drawing.Point(28, 189)
+        Me.btnagregar.Location = New System.Drawing.Point(44, 189)
         Me.btnagregar.Name = "btnagregar"
-        Me.btnagregar.Size = New System.Drawing.Size(75, 25)
+        Me.btnagregar.Size = New System.Drawing.Size(76, 43)
         Me.btnagregar.TabIndex = 9
-        Me.btnagregar.Text = "agregar"
+        Me.btnagregar.Text = "Agregar"
         Me.btnagregar.UseVisualStyleBackColor = True
         '
         'btnfin
         '
-        Me.btnfin.Location = New System.Drawing.Point(151, 189)
+        Me.btnfin.Location = New System.Drawing.Point(154, 189)
         Me.btnfin.Name = "btnfin"
-        Me.btnfin.Size = New System.Drawing.Size(75, 23)
+        Me.btnfin.Size = New System.Drawing.Size(76, 43)
         Me.btnfin.TabIndex = 10
-        Me.btnfin.Text = "fin"
+        Me.btnfin.Text = "Fin"
         Me.btnfin.UseVisualStyleBackColor = True
         '
         'Altacliente
@@ -147,8 +153,12 @@ Partial Class Altacliente
         Me.Controls.Add(Me.TelefonoTextBox)
         Me.Controls.Add(MailLabel)
         Me.Controls.Add(Me.MailTextBox)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "Altacliente"
-        Me.Text = "Altacliente"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = "Nuevo Cliente"
         CType(Me.BaseBellezaDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ClienteBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)

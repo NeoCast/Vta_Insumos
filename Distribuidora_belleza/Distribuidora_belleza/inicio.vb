@@ -1,5 +1,16 @@
 ﻿Public Class inicio
 
+    Private Sub inicio_FormClosing(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles Me.FormClosing
+        Dim resultado As Integer
+        resultado = MsgBox("¿Desea cerrar sesion?", 32 + 1)
+        If resultado <> 1 Then
+            e.Cancel = True
+        Else
+            loggin2.Show()
+
+        End If
+    End Sub
+
     Private Sub inicio_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         'TODO: esta línea de código carga datos en la tabla 'BaseBellezaDataSet.articulos' Puede moverla o quitarla según sea necesario.
         Me.ArticulosTableAdapter.Fill(Me.BaseBellezaDataSet.articulos)
@@ -68,8 +79,8 @@
 
     End Sub
 
-    
-   
+
+
     Private Sub ArticuloToolStripMenuItem1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ArticuloToolStripMenuItem1.Click
         Baja_articulo.Show()
 
@@ -84,7 +95,7 @@
 
     End Sub
 
-   
+
     Private Sub NuevaVentaToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NuevaVentaToolStripMenuItem.Click
         ventas.Show()
 
@@ -97,6 +108,14 @@
 
     Private Sub DetalleToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DetalleToolStripMenuItem.Click
         consulta_detalle.Show()
+
+    End Sub
+
+    Private Sub CerrarSesionToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CerrarSesionToolStripMenuItem.Click
+        For Each frm As Form In Application.OpenForms
+            frm.Close()
+
+        Next frm
 
     End Sub
 End Class
