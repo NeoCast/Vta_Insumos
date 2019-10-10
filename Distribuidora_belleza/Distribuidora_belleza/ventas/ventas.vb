@@ -56,7 +56,7 @@ Public Class ventas
                     MsgBox("Por favor contacte al proveedor del articulo: " + TextBox1.Text + "para rellenar el stock")
                 End If
             Catch ex As Exception
-
+                MsgBox("no se encontro el articulo")
             End Try
             
             End If
@@ -174,10 +174,10 @@ Public Class ventas
 
 
 
-        If reader.Read Then
-            ultimaVenta = dt.Rows(0).Item(0).ToString
-            reader.Close()
-            MsgBox("busqueda del primero con exito")
+        If reader.Read Then 'lee el registro
+            ultimaVenta = dt.Rows(0).Item(0).ToString   'asigna a ultimaVenta el registro que trajo de la consulta
+            reader.Close() 'cierro el reader
+
             conexion.Close()
 
         End If
@@ -224,7 +224,8 @@ Public Class ventas
 
         Next fila
         MsgBox("se ha cargado con exito")
-        conexion.Close()
+        Me.Close()
+
         'Catch ex As Exception
         '    MsgBox(ex.ToString)
         'End Try

@@ -61,6 +61,7 @@ Partial Class ventas
         Me.Label10 = New System.Windows.Forms.Label()
         Me.txtCliente = New System.Windows.Forms.TextBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Button6 = New System.Windows.Forms.Button()
         Me.BtnConsulta = New System.Windows.Forms.Button()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
@@ -74,7 +75,6 @@ Partial Class ventas
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.lblfecha = New System.Windows.Forms.Label()
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
-        Me.Button6 = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BaseBellezaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -384,6 +384,15 @@ Partial Class ventas
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Cliente"
         '
+        'Button6
+        '
+        Me.Button6.Location = New System.Drawing.Point(129, 91)
+        Me.Button6.Name = "Button6"
+        Me.Button6.Size = New System.Drawing.Size(70, 33)
+        Me.Button6.TabIndex = 30
+        Me.Button6.Text = "Nuevo"
+        Me.Button6.UseVisualStyleBackColor = True
+        '
         'BtnConsulta
         '
         Me.BtnConsulta.Location = New System.Drawing.Point(22, 91)
@@ -508,19 +517,11 @@ Partial Class ventas
         '
         Me.Timer2.Enabled = True
         '
-        'Button6
-        '
-        Me.Button6.Location = New System.Drawing.Point(129, 91)
-        Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(70, 33)
-        Me.Button6.TabIndex = 30
-        Me.Button6.Text = "Nuevo"
-        Me.Button6.UseVisualStyleBackColor = True
-        '
         'ventas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.Teal
         Me.ClientSize = New System.Drawing.Size(1145, 684)
         Me.Controls.Add(Me.lblfecha)
         Me.Controls.Add(Me.lbltiempo)
@@ -535,7 +536,11 @@ Partial Class ventas
         Me.Controls.Add(Me.txtVentaTotal)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.DataGridView1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "ventas"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "ventas"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).EndInit()

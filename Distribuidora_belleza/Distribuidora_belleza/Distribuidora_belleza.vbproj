@@ -316,6 +316,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Loggin\CrearUsuario.resx">
       <DependentUpon>CrearUsuario.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Loggin\loggin2.resx">
       <DependentUpon>loggin2.vb</DependentUpon>

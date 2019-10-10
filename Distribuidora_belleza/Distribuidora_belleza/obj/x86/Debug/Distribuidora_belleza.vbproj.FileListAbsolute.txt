@@ -90,3 +90,4 @@ C:\Users\thoma\Documents\GitKraken\Vta_Insumos\Distribuidora_belleza\Distribuido
 C:\Users\Usuario\Documents\github\Vta_Insumos\Distribuidora_belleza\Distribuidora_belleza\obj\x86\Debug\form1.loggin2.resources
 C:\Users\Usuario\Documents\github\Vta_Insumos\Distribuidora_belleza\Distribuidora_belleza\obj\x86\Debug\form1.ModificarEliminar_Usuario.resources
 C:\Users\Usuario\Documents\github\Vta_Insumos\Distribuidora_belleza\Distribuidora_belleza\obj\x86\Debug\form1.Ayuda.resources
+C:\Users\thoma\Documents\GitKraken\Vta_Insumos\Distribuidora_belleza\Distribuidora_belleza\obj\x86\Debug\form1.Ayuda.resources

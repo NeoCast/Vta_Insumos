@@ -46,12 +46,9 @@ Partial Class inicio
         Me.NuevaVentaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ConfiguracionToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.UsuariosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-<<<<<<< Updated upstream
         Me.CrearUsuarioToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ModificarUsuarioToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ConsultarYEliminarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-=======
->>>>>>> Stashed changes
         Me.CerrarSesionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AyudaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Button5 = New System.Windows.Forms.Button()
@@ -65,6 +62,7 @@ Partial Class inicio
         Me.EmpleadoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ProveedorBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ArticulosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.btnVender = New System.Windows.Forms.Button()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.BaseBellezaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ClienteBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -75,36 +73,36 @@ Partial Class inicio
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(350, 90)
+        Me.Button1.Location = New System.Drawing.Point(313, 99)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(84, 54)
+        Me.Button1.Size = New System.Drawing.Size(121, 54)
         Me.Button1.TabIndex = 0
         Me.Button1.Text = "ARTICULO"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(194, 90)
+        Me.Button2.Location = New System.Drawing.Point(129, 99)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(84, 54)
+        Me.Button2.Size = New System.Drawing.Size(119, 54)
         Me.Button2.TabIndex = 1
         Me.Button2.Text = "CLIENTE"
         Me.Button2.UseVisualStyleBackColor = True
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(194, 175)
+        Me.Button3.Location = New System.Drawing.Point(129, 175)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(84, 54)
+        Me.Button3.Size = New System.Drawing.Size(119, 63)
         Me.Button3.TabIndex = 2
         Me.Button3.Text = "EMPLEADO"
         Me.Button3.UseVisualStyleBackColor = True
         '
         'Button4
         '
-        Me.Button4.Location = New System.Drawing.Point(350, 175)
+        Me.Button4.Location = New System.Drawing.Point(313, 175)
         Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(84, 54)
+        Me.Button4.Size = New System.Drawing.Size(121, 63)
         Me.Button4.TabIndex = 3
         Me.Button4.Text = "PROVEEDOR"
         Me.Button4.UseVisualStyleBackColor = True
@@ -114,7 +112,7 @@ Partial Class inicio
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NuevoToolStripMenuItem, Me.ConsultaToolStripMenuItem, Me.ConfiguracionToolStripMenuItem, Me.ConfiguracionToolStripMenuItem1, Me.AyudaToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(711, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(582, 24)
         Me.MenuStrip1.TabIndex = 4
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -166,11 +164,7 @@ Partial Class inicio
         'VentaToolStripMenuItem
         '
         Me.VentaToolStripMenuItem.Name = "VentaToolStripMenuItem"
-<<<<<<< Updated upstream
-        Me.VentaToolStripMenuItem.Size = New System.Drawing.Size(104, 22)
-=======
-        Me.VentaToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
->>>>>>> Stashed changes
+        Me.VentaToolStripMenuItem.Size = New System.Drawing.Size(103, 22)
         Me.VentaToolStripMenuItem.Text = "Venta"
         '
         'EliminarToolStripMenuItem
@@ -183,25 +177,25 @@ Partial Class inicio
         'ClienteToolStripMenuItem1
         '
         Me.ClienteToolStripMenuItem1.Name = "ClienteToolStripMenuItem1"
-        Me.ClienteToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
+        Me.ClienteToolStripMenuItem1.Size = New System.Drawing.Size(128, 22)
         Me.ClienteToolStripMenuItem1.Text = "Cliente"
         '
         'ArticuloToolStripMenuItem1
         '
         Me.ArticuloToolStripMenuItem1.Name = "ArticuloToolStripMenuItem1"
-        Me.ArticuloToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
+        Me.ArticuloToolStripMenuItem1.Size = New System.Drawing.Size(128, 22)
         Me.ArticuloToolStripMenuItem1.Text = "Articulo"
         '
         'ClienteToolStripMenuItem2
         '
         Me.ClienteToolStripMenuItem2.Name = "ClienteToolStripMenuItem2"
-        Me.ClienteToolStripMenuItem2.Size = New System.Drawing.Size(152, 22)
+        Me.ClienteToolStripMenuItem2.Size = New System.Drawing.Size(128, 22)
         Me.ClienteToolStripMenuItem2.Text = "Empleado"
         '
         'ProveedorToolStripMenuItem1
         '
         Me.ProveedorToolStripMenuItem1.Name = "ProveedorToolStripMenuItem1"
-        Me.ProveedorToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
+        Me.ProveedorToolStripMenuItem1.Size = New System.Drawing.Size(128, 22)
         Me.ProveedorToolStripMenuItem1.Text = "Proveedor"
         '
         'DetalleToolStripMenuItem
@@ -214,17 +208,13 @@ Partial Class inicio
         '
         Me.ConfiguracionToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NuevaVentaToolStripMenuItem})
         Me.ConfiguracionToolStripMenuItem.Name = "ConfiguracionToolStripMenuItem"
-        Me.ConfiguracionToolStripMenuItem.Size = New System.Drawing.Size(54, 20)
+        Me.ConfiguracionToolStripMenuItem.Size = New System.Drawing.Size(53, 20)
         Me.ConfiguracionToolStripMenuItem.Text = "Ventas"
         '
         'NuevaVentaToolStripMenuItem
         '
         Me.NuevaVentaToolStripMenuItem.Name = "NuevaVentaToolStripMenuItem"
-<<<<<<< Updated upstream
-        Me.NuevaVentaToolStripMenuItem.Size = New System.Drawing.Size(141, 22)
-=======
-        Me.NuevaVentaToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
->>>>>>> Stashed changes
+        Me.NuevaVentaToolStripMenuItem.Size = New System.Drawing.Size(140, 22)
         Me.NuevaVentaToolStripMenuItem.Text = "Nueva Venta"
         '
         'ConfiguracionToolStripMenuItem1
@@ -238,10 +228,9 @@ Partial Class inicio
         '
         Me.UsuariosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CrearUsuarioToolStripMenuItem, Me.ModificarUsuarioToolStripMenuItem, Me.ConsultarYEliminarToolStripMenuItem})
         Me.UsuariosToolStripMenuItem.Name = "UsuariosToolStripMenuItem"
-        Me.UsuariosToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.UsuariosToolStripMenuItem.Size = New System.Drawing.Size(143, 22)
         Me.UsuariosToolStripMenuItem.Text = "Usuarios"
         '
-<<<<<<< Updated upstream
         'CrearUsuarioToolStripMenuItem
         '
         Me.CrearUsuarioToolStripMenuItem.Name = "CrearUsuarioToolStripMenuItem"
@@ -260,12 +249,10 @@ Partial Class inicio
         Me.ConsultarYEliminarToolStripMenuItem.Size = New System.Drawing.Size(186, 22)
         Me.ConsultarYEliminarToolStripMenuItem.Text = " Consultar y Eliminar "
         '
-=======
->>>>>>> Stashed changes
         'CerrarSesionToolStripMenuItem
         '
         Me.CerrarSesionToolStripMenuItem.Name = "CerrarSesionToolStripMenuItem"
-        Me.CerrarSesionToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.CerrarSesionToolStripMenuItem.Size = New System.Drawing.Size(143, 22)
         Me.CerrarSesionToolStripMenuItem.Text = "Cerrar Sesion"
         '
         'AyudaToolStripMenuItem
@@ -276,9 +263,9 @@ Partial Class inicio
         '
         'Button5
         '
-        Me.Button5.Location = New System.Drawing.Point(257, 333)
+        Me.Button5.Location = New System.Drawing.Point(232, 349)
         Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(75, 23)
+        Me.Button5.Size = New System.Drawing.Size(101, 44)
         Me.Button5.TabIndex = 5
         Me.Button5.Text = "salir"
         Me.Button5.UseVisualStyleBackColor = True
@@ -336,19 +323,34 @@ Partial Class inicio
         Me.ArticulosBindingSource.DataMember = "articulos"
         Me.ArticulosBindingSource.DataSource = Me.BaseBellezaDataSet
         '
+        'btnVender
+        '
+        Me.btnVender.Location = New System.Drawing.Point(129, 260)
+        Me.btnVender.Name = "btnVender"
+        Me.btnVender.Size = New System.Drawing.Size(305, 62)
+        Me.btnVender.TabIndex = 6
+        Me.btnVender.Text = "VENDER  (F1)"
+        Me.btnVender.UseVisualStyleBackColor = True
+        '
         'inicio
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(711, 405)
+        Me.BackColor = System.Drawing.Color.Teal
+        Me.ClientSize = New System.Drawing.Size(582, 453)
+        Me.Controls.Add(Me.btnVender)
         Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.MenuStrip1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.MainMenuStrip = Me.MenuStrip1
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "inicio"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "inicio"
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
@@ -400,4 +402,5 @@ Partial Class inicio
     Friend WithEvents CrearUsuarioToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ModificarUsuarioToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ConsultarYEliminarToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents btnVender As System.Windows.Forms.Button
 End Class
