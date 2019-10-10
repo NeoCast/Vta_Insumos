@@ -38,26 +38,33 @@ Public Class ventas
 
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
         Dim consulta As String
+
         consulta = TextBox1.Text
 
         If TextBox1.Text = "" Then
             MsgBox("El campo esta vacio")
         Else
-            ArticulosTableAdapter.buscarArticulo((Me.BaseBellezaDataSet.articulos), TextBox1.Text)
+            Try
+                ArticulosTableAdapter.buscarArticulo((Me.BaseBellezaDataSet.articulos), TextBox1.Text)
 
 
-            Me.txtDescripcion.Text = Me.ArticulosBindingSource.Current("descripcion")
-            Me.txtPrecio.Text = Me.ArticulosBindingSource.Current("precio")
-            Me.txtstock.Text = Me.ArticulosBindingSource.Current("cantidad_stock")
-            Me.txtminimo.Text = Me.ArticulosBindingSource.Current("stock_minimo")
-            If Val(txtstock.Text) < Val(txtminimo.Text) Then
-                MsgBox("Por favor contacte al proveedor del articulo: " + TextBox1.Text + "para rellenar el stock")
+                Me.txtDescripcion.Text = Me.ArticulosBindingSource.Current("descripcion")
+                Me.txtPrecio.Text = Me.ArticulosBindingSource.Current("precio")
+                Me.txtstock.Text = Me.ArticulosBindingSource.Current("cantidad_stock")
+                Me.txtminimo.Text = Me.ArticulosBindingSource.Current("stock_minimo")
+                If Val(txtstock.Text) < Val(txtminimo.Text) Then
+                    MsgBox("Por favor contacte al proveedor del articulo: " + TextBox1.Text + "para rellenar el stock")
+                End If
+            Catch ex As Exception
+
+            End Try
+            
             End If
 
             Button3.Enabled = True
 
 
-        End If
+
 
     End Sub
 
@@ -90,6 +97,8 @@ Public Class ventas
             Button4.Enabled = True
             Button5.Enabled = True
 
+            txtstock.Clear()
+            txtminimo.Clear()
 
             TextBox1.Clear()
             txtDescripcion.Clear()
@@ -187,7 +196,7 @@ Public Class ventas
                 Exit Sub
             Else
                 Dim cmd As New SqlCeCommand("insert into detalle_vta(id_venta,id_cliente,id_vendedor,id_articulo,descripcion,precio,cantidad,total_articulo,fecha) values (@id_venta,@id_cliente,@id_vendedor,@id_art, @descripcion, @precio, @cantidad, @total, @fecha)", conexion)
-                Dim update As New SqlCeCommand("update articulos set cantidad_stock=@cant where id_articulo ='" & Convert.ToInt32(fila.Cells("Id_Articulo").Value) & "'")
+                Dim update As New SqlCeCommand("update articulos set cantidad_stock=@cant where id_articulo ='" & Convert.ToInt32(fila.Cells("Id_Articulo").Value) & "'", conexion)
                 update.Parameters.Add("cant", SqlDbType.Int).Value = Convert.ToInt32(fila.Cells("Cantidad").Value)
                 'agrego los parametros para el insert
                 With cmd.Parameters
@@ -284,7 +293,7 @@ Public Class ventas
     End Sub
 
     Private Sub Button6_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button6.Click
-        Altacliente.Show()
+        Altacliente.ShowDialog()
 
     End Sub
 End Class

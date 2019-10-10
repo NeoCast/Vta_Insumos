@@ -315,6 +315,8 @@ Partial Class AltaArticulo
         Me.Controls.Add(MarcaLabel)
         Me.Controls.Add(Me.MarcaTextBox)
         Me.Controls.Add(Me.ShapeContainer1)
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "AltaArticulo"
         Me.Text = "NUEVO ARTICULO"
         CType(Me.ArticulosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()

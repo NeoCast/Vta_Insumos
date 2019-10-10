@@ -47,15 +47,16 @@ Partial Class Consulta_usuarios
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(112, 15)
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(60, 41)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(43, 13)
+        Me.Label1.Size = New System.Drawing.Size(57, 17)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Usuario"
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(216, 12)
+        Me.TextBox1.Location = New System.Drawing.Point(154, 41)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(100, 20)
         Me.TextBox1.TabIndex = 7
@@ -101,7 +102,7 @@ Partial Class Consulta_usuarios
         Me.Registro_usuarioDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.Registro_usuarioDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4})
         Me.Registro_usuarioDataGridView.DataSource = Me.Registro_usuarioBindingSource
-        Me.Registro_usuarioDataGridView.Location = New System.Drawing.Point(102, 70)
+        Me.Registro_usuarioDataGridView.Location = New System.Drawing.Point(49, 122)
         Me.Registro_usuarioDataGridView.Name = "Registro_usuarioDataGridView"
         Me.Registro_usuarioDataGridView.Size = New System.Drawing.Size(445, 220)
         Me.Registro_usuarioDataGridView.TabIndex = 16
@@ -132,18 +133,20 @@ Partial Class Consulta_usuarios
         '
         'btnBuscar
         '
-        Me.btnBuscar.Location = New System.Drawing.Point(375, 15)
+        Me.btnBuscar.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnBuscar.Location = New System.Drawing.Point(322, 29)
         Me.btnBuscar.Name = "btnBuscar"
-        Me.btnBuscar.Size = New System.Drawing.Size(75, 23)
+        Me.btnBuscar.Size = New System.Drawing.Size(74, 42)
         Me.btnBuscar.TabIndex = 17
         Me.btnBuscar.Text = "Buscar"
         Me.btnBuscar.UseVisualStyleBackColor = True
         '
         'btnEliminar
         '
-        Me.btnEliminar.Location = New System.Drawing.Point(497, 15)
+        Me.btnEliminar.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnEliminar.Location = New System.Drawing.Point(413, 29)
         Me.btnEliminar.Name = "btnEliminar"
-        Me.btnEliminar.Size = New System.Drawing.Size(75, 23)
+        Me.btnEliminar.Size = New System.Drawing.Size(75, 42)
         Me.btnEliminar.TabIndex = 18
         Me.btnEliminar.Text = "Eliminar"
         Me.btnEliminar.UseVisualStyleBackColor = True
@@ -152,14 +155,17 @@ Partial Class Consulta_usuarios
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(870, 378)
+        Me.ClientSize = New System.Drawing.Size(542, 386)
         Me.Controls.Add(Me.btnEliminar)
         Me.Controls.Add(Me.btnBuscar)
         Me.Controls.Add(Me.Registro_usuarioDataGridView)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Label1)
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "Consulta_usuarios"
-        Me.Text = "Consulta_usuarios"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = "Consultar Usuarios"
         CType(Me.BaseBellezaDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.EmpleadoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Registro_usuarioBindingSource, System.ComponentModel.ISupportInitialize).EndInit()

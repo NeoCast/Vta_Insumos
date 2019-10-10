@@ -48,9 +48,10 @@ Partial Class ModificarEliminar_Usuario
         '
         'btnActualizar
         '
-        Me.btnActualizar.Location = New System.Drawing.Point(61, 214)
+        Me.btnActualizar.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnActualizar.Location = New System.Drawing.Point(81, 245)
         Me.btnActualizar.Name = "btnActualizar"
-        Me.btnActualizar.Size = New System.Drawing.Size(75, 23)
+        Me.btnActualizar.Size = New System.Drawing.Size(81, 58)
         Me.btnActualizar.TabIndex = 0
         Me.btnActualizar.Text = "Actulizar"
         Me.btnActualizar.UseVisualStyleBackColor = True
@@ -58,54 +59,57 @@ Partial Class ModificarEliminar_Usuario
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(36, 77)
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(20, 77)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(81, 13)
+        Me.Label1.Size = New System.Drawing.Size(106, 17)
         Me.Label1.TabIndex = 2
         Me.Label1.Text = "Id de Empleado"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(36, 35)
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(20, 35)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(43, 13)
+        Me.Label2.Size = New System.Drawing.Size(57, 17)
         Me.Label2.TabIndex = 3
         Me.Label2.Text = "Usuario"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(36, 117)
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(20, 117)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(28, 13)
+        Me.Label3.Size = New System.Drawing.Size(36, 17)
         Me.Label3.TabIndex = 4
         Me.Label3.Text = "Tipo"
         '
         'txtId_empleado
         '
-        Me.txtId_empleado.Location = New System.Drawing.Point(123, 74)
+        Me.txtId_empleado.Location = New System.Drawing.Point(139, 76)
         Me.txtId_empleado.Name = "txtId_empleado"
         Me.txtId_empleado.Size = New System.Drawing.Size(100, 20)
         Me.txtId_empleado.TabIndex = 5
         '
         'txtUsuario
         '
-        Me.txtUsuario.Location = New System.Drawing.Point(123, 35)
+        Me.txtUsuario.Location = New System.Drawing.Point(139, 37)
         Me.txtUsuario.Name = "txtUsuario"
         Me.txtUsuario.Size = New System.Drawing.Size(100, 20)
         Me.txtUsuario.TabIndex = 6
         '
         'txtTipo
         '
-        Me.txtTipo.Location = New System.Drawing.Point(123, 117)
+        Me.txtTipo.Location = New System.Drawing.Point(139, 119)
         Me.txtTipo.Name = "txtTipo"
         Me.txtTipo.Size = New System.Drawing.Size(100, 20)
         Me.txtTipo.TabIndex = 7
         '
         'txtContraseña
         '
-        Me.txtContraseña.Location = New System.Drawing.Point(123, 162)
+        Me.txtContraseña.Location = New System.Drawing.Point(139, 164)
         Me.txtContraseña.Name = "txtContraseña"
         Me.txtContraseña.Size = New System.Drawing.Size(100, 20)
         Me.txtContraseña.TabIndex = 8
@@ -113,9 +117,10 @@ Partial Class ModificarEliminar_Usuario
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(36, 162)
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(20, 162)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(61, 13)
+        Me.Label4.Size = New System.Drawing.Size(81, 17)
         Me.Label4.TabIndex = 9
         Me.Label4.Text = "Contraseña"
         '

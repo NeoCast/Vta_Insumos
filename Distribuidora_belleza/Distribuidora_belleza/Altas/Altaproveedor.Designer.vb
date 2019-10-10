@@ -51,6 +51,66 @@ Partial Class Altaproveedor
         CType(Me.ProveedorBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
+        'NombreLabel
+        '
+        NombreLabel.AutoSize = True
+        NombreLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        NombreLabel.Location = New System.Drawing.Point(42, 45)
+        NombreLabel.Name = "NombreLabel"
+        NombreLabel.Size = New System.Drawing.Size(60, 17)
+        NombreLabel.TabIndex = 3
+        NombreLabel.Text = "nombre:"
+        '
+        'TelefonoLabel
+        '
+        TelefonoLabel.AutoSize = True
+        TelefonoLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        TelefonoLabel.Location = New System.Drawing.Point(42, 71)
+        TelefonoLabel.Name = "TelefonoLabel"
+        TelefonoLabel.Size = New System.Drawing.Size(63, 17)
+        TelefonoLabel.TabIndex = 5
+        TelefonoLabel.Text = "telefono:"
+        '
+        'MailLabel
+        '
+        MailLabel.AutoSize = True
+        MailLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        MailLabel.Location = New System.Drawing.Point(42, 97)
+        MailLabel.Name = "MailLabel"
+        MailLabel.Size = New System.Drawing.Size(37, 17)
+        MailLabel.TabIndex = 7
+        MailLabel.Text = "mail:"
+        '
+        'LocalidadLabel
+        '
+        LocalidadLabel.AutoSize = True
+        LocalidadLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        LocalidadLabel.Location = New System.Drawing.Point(42, 123)
+        LocalidadLabel.Name = "LocalidadLabel"
+        LocalidadLabel.Size = New System.Drawing.Size(68, 17)
+        LocalidadLabel.TabIndex = 9
+        LocalidadLabel.Text = "localidad:"
+        '
+        'DireccionLabel
+        '
+        DireccionLabel.AutoSize = True
+        DireccionLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DireccionLabel.Location = New System.Drawing.Point(42, 149)
+        DireccionLabel.Name = "DireccionLabel"
+        DireccionLabel.Size = New System.Drawing.Size(69, 17)
+        DireccionLabel.TabIndex = 11
+        DireccionLabel.Text = "direccion:"
+        '
+        'C_pLabel
+        '
+        C_pLabel.AutoSize = True
+        C_pLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        C_pLabel.Location = New System.Drawing.Point(42, 175)
+        C_pLabel.Name = "C_pLabel"
+        C_pLabel.Size = New System.Drawing.Size(31, 17)
+        C_pLabel.TabIndex = 13
+        C_pLabel.Text = "c p:"
+        '
         'BaseBellezaDataSet
         '
         Me.BaseBellezaDataSet.DataSetName = "BaseBellezaDataSet"
@@ -70,18 +130,12 @@ Partial Class Altaproveedor
         Me.TableAdapterManager.articulosTableAdapter = Nothing
         Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
         Me.TableAdapterManager.clienteTableAdapter = Nothing
+        Me.TableAdapterManager.detalle_vtaTableAdapter = Nothing
         Me.TableAdapterManager.empleadoTableAdapter = Nothing
         Me.TableAdapterManager.proveedorTableAdapter = Me.ProveedorTableAdapter
+        Me.TableAdapterManager.Registro_usuarioTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = form1.BaseBellezaDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
-        '
-        'NombreLabel
-        '
-        NombreLabel.AutoSize = True
-        NombreLabel.Location = New System.Drawing.Point(63, 45)
-        NombreLabel.Name = "NombreLabel"
-        NombreLabel.Size = New System.Drawing.Size(45, 13)
-        NombreLabel.TabIndex = 3
-        NombreLabel.Text = "nombre:"
+        Me.TableAdapterManager.ventasTableAdapter = Nothing
         '
         'NombreTextBox
         '
@@ -91,15 +145,6 @@ Partial Class Altaproveedor
         Me.NombreTextBox.Size = New System.Drawing.Size(100, 20)
         Me.NombreTextBox.TabIndex = 4
         '
-        'TelefonoLabel
-        '
-        TelefonoLabel.AutoSize = True
-        TelefonoLabel.Location = New System.Drawing.Point(63, 71)
-        TelefonoLabel.Name = "TelefonoLabel"
-        TelefonoLabel.Size = New System.Drawing.Size(48, 13)
-        TelefonoLabel.TabIndex = 5
-        TelefonoLabel.Text = "telefono:"
-        '
         'TelefonoTextBox
         '
         Me.TelefonoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ProveedorBindingSource, "telefono", True))
@@ -107,15 +152,6 @@ Partial Class Altaproveedor
         Me.TelefonoTextBox.Name = "TelefonoTextBox"
         Me.TelefonoTextBox.Size = New System.Drawing.Size(100, 20)
         Me.TelefonoTextBox.TabIndex = 6
-        '
-        'MailLabel
-        '
-        MailLabel.AutoSize = True
-        MailLabel.Location = New System.Drawing.Point(63, 97)
-        MailLabel.Name = "MailLabel"
-        MailLabel.Size = New System.Drawing.Size(28, 13)
-        MailLabel.TabIndex = 7
-        MailLabel.Text = "mail:"
         '
         'MailTextBox
         '
@@ -125,15 +161,6 @@ Partial Class Altaproveedor
         Me.MailTextBox.Size = New System.Drawing.Size(100, 20)
         Me.MailTextBox.TabIndex = 8
         '
-        'LocalidadLabel
-        '
-        LocalidadLabel.AutoSize = True
-        LocalidadLabel.Location = New System.Drawing.Point(63, 123)
-        LocalidadLabel.Name = "LocalidadLabel"
-        LocalidadLabel.Size = New System.Drawing.Size(52, 13)
-        LocalidadLabel.TabIndex = 9
-        LocalidadLabel.Text = "localidad:"
-        '
         'LocalidadTextBox
         '
         Me.LocalidadTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ProveedorBindingSource, "localidad", True))
@@ -142,15 +169,6 @@ Partial Class Altaproveedor
         Me.LocalidadTextBox.Size = New System.Drawing.Size(100, 20)
         Me.LocalidadTextBox.TabIndex = 10
         '
-        'DireccionLabel
-        '
-        DireccionLabel.AutoSize = True
-        DireccionLabel.Location = New System.Drawing.Point(63, 149)
-        DireccionLabel.Name = "DireccionLabel"
-        DireccionLabel.Size = New System.Drawing.Size(53, 13)
-        DireccionLabel.TabIndex = 11
-        DireccionLabel.Text = "direccion:"
-        '
         'DireccionTextBox
         '
         Me.DireccionTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ProveedorBindingSource, "direccion", True))
@@ -158,15 +176,6 @@ Partial Class Altaproveedor
         Me.DireccionTextBox.Name = "DireccionTextBox"
         Me.DireccionTextBox.Size = New System.Drawing.Size(100, 20)
         Me.DireccionTextBox.TabIndex = 12
-        '
-        'C_pLabel
-        '
-        C_pLabel.AutoSize = True
-        C_pLabel.Location = New System.Drawing.Point(63, 175)
-        C_pLabel.Name = "C_pLabel"
-        C_pLabel.Size = New System.Drawing.Size(25, 13)
-        C_pLabel.TabIndex = 13
-        C_pLabel.Text = "c p:"
         '
         'C_pTextBox
         '
@@ -178,20 +187,20 @@ Partial Class Altaproveedor
         '
         'btnagregar
         '
-        Me.btnagregar.Location = New System.Drawing.Point(33, 227)
+        Me.btnagregar.Location = New System.Drawing.Point(45, 227)
         Me.btnagregar.Name = "btnagregar"
-        Me.btnagregar.Size = New System.Drawing.Size(75, 23)
+        Me.btnagregar.Size = New System.Drawing.Size(88, 42)
         Me.btnagregar.TabIndex = 15
-        Me.btnagregar.Text = "agregar"
+        Me.btnagregar.Text = "Agregar"
         Me.btnagregar.UseVisualStyleBackColor = True
         '
         'btnfin
         '
-        Me.btnfin.Location = New System.Drawing.Point(163, 227)
+        Me.btnfin.Location = New System.Drawing.Point(151, 227)
         Me.btnfin.Name = "btnfin"
-        Me.btnfin.Size = New System.Drawing.Size(75, 23)
+        Me.btnfin.Size = New System.Drawing.Size(88, 42)
         Me.btnfin.TabIndex = 16
-        Me.btnfin.Text = "fin"
+        Me.btnfin.Text = "Fin"
         Me.btnfin.UseVisualStyleBackColor = True
         '
         'Altaproveedor
@@ -213,6 +222,9 @@ Partial Class Altaproveedor
         Me.Controls.Add(Me.DireccionTextBox)
         Me.Controls.Add(C_pLabel)
         Me.Controls.Add(Me.C_pTextBox)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "Altaproveedor"
         Me.Text = "NUEVO PROVEEDOR"
         CType(Me.BaseBellezaDataSet, System.ComponentModel.ISupportInitialize).EndInit()

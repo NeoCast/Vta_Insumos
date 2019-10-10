@@ -38,7 +38,7 @@
             ModificarEmpleado.txtDireccion.Text = EmpleadoDataGridView.Item(6, fila).Value()
             ModificarEmpleado.txtCp.Text = EmpleadoDataGridView.Item(7, fila).Value()
 
-            ModificarEmpleado.Show()
+            ModificarEmpleado.ShowDialog()
 
         End If
     End Sub

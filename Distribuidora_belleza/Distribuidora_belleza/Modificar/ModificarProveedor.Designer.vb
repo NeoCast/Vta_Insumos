@@ -42,79 +42,76 @@ Partial Class ModificarProveedor
         Me.ProveedorBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ProveedorTableAdapter = New form1.BaseBellezaDataSetTableAdapters.proveedorTableAdapter()
         Me.TableAdapterManager = New form1.BaseBellezaDataSetTableAdapters.TableAdapterManager()
-        Me.ProveedorDataGridView = New System.Windows.Forms.DataGridView()
-        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
+        Me.LineShape1 = New Microsoft.VisualBasic.PowerPacks.LineShape()
         CType(Me.BaseBellezaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ProveedorBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ProveedorDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(12, 55)
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(265, 24)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(42, 13)
+        Me.Label1.Size = New System.Drawing.Size(56, 17)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "nombre"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(12, 84)
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(15, 68)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(45, 13)
+        Me.Label2.Size = New System.Drawing.Size(59, 17)
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "telefono"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(12, 116)
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(265, 71)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(25, 13)
+        Me.Label3.Size = New System.Drawing.Size(33, 17)
         Me.Label3.TabIndex = 2
         Me.Label3.Text = "mail"
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(12, 154)
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(15, 120)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(49, 13)
+        Me.Label4.Size = New System.Drawing.Size(64, 17)
         Me.Label4.TabIndex = 3
         Me.Label4.Text = "localidad"
         '
         'txtNombre
         '
-        Me.txtNombre.Location = New System.Drawing.Point(85, 53)
+        Me.txtNombre.Location = New System.Drawing.Point(338, 22)
         Me.txtNombre.Name = "txtNombre"
         Me.txtNombre.Size = New System.Drawing.Size(100, 20)
         Me.txtNombre.TabIndex = 4
         '
         'txtTelefono
         '
-        Me.txtTelefono.Location = New System.Drawing.Point(85, 84)
+        Me.txtTelefono.Location = New System.Drawing.Point(112, 68)
         Me.txtTelefono.Name = "txtTelefono"
         Me.txtTelefono.Size = New System.Drawing.Size(100, 20)
         Me.txtTelefono.TabIndex = 5
         '
         'txtMail
         '
-        Me.txtMail.Location = New System.Drawing.Point(85, 113)
+        Me.txtMail.Location = New System.Drawing.Point(338, 68)
         Me.txtMail.Name = "txtMail"
         Me.txtMail.Size = New System.Drawing.Size(100, 20)
         Me.txtMail.TabIndex = 6
         '
         'txtLocalidad
         '
-        Me.txtLocalidad.Location = New System.Drawing.Point(85, 151)
+        Me.txtLocalidad.Location = New System.Drawing.Point(112, 117)
         Me.txtLocalidad.Name = "txtLocalidad"
         Me.txtLocalidad.Size = New System.Drawing.Size(100, 20)
         Me.txtLocalidad.TabIndex = 7
@@ -122,56 +119,60 @@ Partial Class ModificarProveedor
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(12, 188)
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(265, 117)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(50, 13)
+        Me.Label5.Size = New System.Drawing.Size(65, 17)
         Me.Label5.TabIndex = 8
         Me.Label5.Text = "direccion"
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(12, 224)
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(15, 166)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(25, 13)
+        Me.Label6.Size = New System.Drawing.Size(31, 17)
         Me.Label6.TabIndex = 9
         Me.Label6.Text = "c_p"
         '
         'txtDireccion
         '
-        Me.txtDireccion.Location = New System.Drawing.Point(85, 188)
+        Me.txtDireccion.Location = New System.Drawing.Point(338, 117)
         Me.txtDireccion.Name = "txtDireccion"
         Me.txtDireccion.Size = New System.Drawing.Size(100, 20)
         Me.txtDireccion.TabIndex = 10
         '
         'txtC_p
         '
-        Me.txtC_p.Location = New System.Drawing.Point(85, 224)
+        Me.txtC_p.Location = New System.Drawing.Point(112, 163)
         Me.txtC_p.Name = "txtC_p"
         Me.txtC_p.Size = New System.Drawing.Size(100, 20)
         Me.txtC_p.TabIndex = 11
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(12, 266)
+        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.Location = New System.Drawing.Point(306, 210)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.Size = New System.Drawing.Size(116, 49)
         Me.Button1.TabIndex = 12
-        Me.Button1.Text = "modificar"
+        Me.Button1.Text = "Modificar"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(9, 22)
+        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(12, 24)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(66, 13)
+        Me.Label7.Size = New System.Drawing.Size(88, 17)
         Me.Label7.TabIndex = 13
         Me.Label7.Text = "id proveedor"
         '
         'txtId_proveedor
         '
-        Me.txtId_proveedor.Location = New System.Drawing.Point(85, 19)
+        Me.txtId_proveedor.Location = New System.Drawing.Point(112, 21)
         Me.txtId_proveedor.Name = "txtId_proveedor"
         Me.txtId_proveedor.Size = New System.Drawing.Size(100, 20)
         Me.txtId_proveedor.TabIndex = 14
@@ -195,71 +196,36 @@ Partial Class ModificarProveedor
         Me.TableAdapterManager.articulosTableAdapter = Nothing
         Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
         Me.TableAdapterManager.clienteTableAdapter = Nothing
+        Me.TableAdapterManager.detalle_vtaTableAdapter = Nothing
         Me.TableAdapterManager.empleadoTableAdapter = Nothing
         Me.TableAdapterManager.proveedorTableAdapter = Me.ProveedorTableAdapter
+        Me.TableAdapterManager.Registro_usuarioTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = form1.BaseBellezaDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         Me.TableAdapterManager.ventasTableAdapter = Nothing
         '
-        'ProveedorDataGridView
+        'ShapeContainer1
         '
-        Me.ProveedorDataGridView.AutoGenerateColumns = False
-        Me.ProveedorDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.ProveedorDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6, Me.DataGridViewTextBoxColumn7})
-        Me.ProveedorDataGridView.DataSource = Me.ProveedorBindingSource
-        Me.ProveedorDataGridView.Location = New System.Drawing.Point(191, 24)
-        Me.ProveedorDataGridView.Name = "ProveedorDataGridView"
-        Me.ProveedorDataGridView.Size = New System.Drawing.Size(545, 220)
-        Me.ProveedorDataGridView.TabIndex = 16
+        Me.ShapeContainer1.Location = New System.Drawing.Point(0, 0)
+        Me.ShapeContainer1.Margin = New System.Windows.Forms.Padding(0)
+        Me.ShapeContainer1.Name = "ShapeContainer1"
+        Me.ShapeContainer1.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.LineShape1})
+        Me.ShapeContainer1.Size = New System.Drawing.Size(498, 317)
+        Me.ShapeContainer1.TabIndex = 15
+        Me.ShapeContainer1.TabStop = False
         '
-        'DataGridViewTextBoxColumn1
+        'LineShape1
         '
-        Me.DataGridViewTextBoxColumn1.DataPropertyName = "id_proveedor"
-        Me.DataGridViewTextBoxColumn1.HeaderText = "id_proveedor"
-        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
-        Me.DataGridViewTextBoxColumn1.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn2
-        '
-        Me.DataGridViewTextBoxColumn2.DataPropertyName = "nombre"
-        Me.DataGridViewTextBoxColumn2.HeaderText = "nombre"
-        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
-        '
-        'DataGridViewTextBoxColumn3
-        '
-        Me.DataGridViewTextBoxColumn3.DataPropertyName = "telefono"
-        Me.DataGridViewTextBoxColumn3.HeaderText = "telefono"
-        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
-        '
-        'DataGridViewTextBoxColumn4
-        '
-        Me.DataGridViewTextBoxColumn4.DataPropertyName = "mail"
-        Me.DataGridViewTextBoxColumn4.HeaderText = "mail"
-        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
-        '
-        'DataGridViewTextBoxColumn5
-        '
-        Me.DataGridViewTextBoxColumn5.DataPropertyName = "localidad"
-        Me.DataGridViewTextBoxColumn5.HeaderText = "localidad"
-        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
-        '
-        'DataGridViewTextBoxColumn6
-        '
-        Me.DataGridViewTextBoxColumn6.DataPropertyName = "direccion"
-        Me.DataGridViewTextBoxColumn6.HeaderText = "direccion"
-        Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
-        '
-        'DataGridViewTextBoxColumn7
-        '
-        Me.DataGridViewTextBoxColumn7.DataPropertyName = "c_p"
-        Me.DataGridViewTextBoxColumn7.HeaderText = "c_p"
-        Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
+        Me.LineShape1.Name = "LineShape1"
+        Me.LineShape1.X1 = 238
+        Me.LineShape1.X2 = 238
+        Me.LineShape1.Y1 = 19
+        Me.LineShape1.Y2 = 211
         '
         'ModificarProveedor
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(763, 342)
-        Me.Controls.Add(Me.ProveedorDataGridView)
+        Me.ClientSize = New System.Drawing.Size(498, 317)
         Me.Controls.Add(Me.txtId_proveedor)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Button1)
@@ -275,11 +241,15 @@ Partial Class ModificarProveedor
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.ShapeContainer1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "ModificarProveedor"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "ModificarProveedor"
         CType(Me.BaseBellezaDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ProveedorBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ProveedorDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -303,12 +273,6 @@ Partial Class ModificarProveedor
     Friend WithEvents ProveedorBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents ProveedorTableAdapter As form1.BaseBellezaDataSetTableAdapters.proveedorTableAdapter
     Friend WithEvents TableAdapterManager As form1.BaseBellezaDataSetTableAdapters.TableAdapterManager
-    Friend WithEvents ProveedorDataGridView As System.Windows.Forms.DataGridView
-    Friend WithEvents DataGridViewTextBoxColumn1 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn2 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn3 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn4 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn5 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn6 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn7 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents ShapeContainer1 As Microsoft.VisualBasic.PowerPacks.ShapeContainer
+    Friend WithEvents LineShape1 As Microsoft.VisualBasic.PowerPacks.LineShape
 End Class

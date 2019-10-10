@@ -46,9 +46,12 @@ Partial Class inicio
         Me.NuevaVentaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ConfiguracionToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.UsuariosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+<<<<<<< Updated upstream
         Me.CrearUsuarioToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ModificarUsuarioToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ConsultarYEliminarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+=======
+>>>>>>> Stashed changes
         Me.CerrarSesionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AyudaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Button5 = New System.Windows.Forms.Button()
@@ -72,7 +75,7 @@ Partial Class inicio
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(34, 55)
+        Me.Button1.Location = New System.Drawing.Point(350, 90)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(84, 54)
         Me.Button1.TabIndex = 0
@@ -81,7 +84,7 @@ Partial Class inicio
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(34, 127)
+        Me.Button2.Location = New System.Drawing.Point(194, 90)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(84, 54)
         Me.Button2.TabIndex = 1
@@ -90,7 +93,7 @@ Partial Class inicio
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(34, 201)
+        Me.Button3.Location = New System.Drawing.Point(194, 175)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(84, 54)
         Me.Button3.TabIndex = 2
@@ -99,7 +102,7 @@ Partial Class inicio
         '
         'Button4
         '
-        Me.Button4.Location = New System.Drawing.Point(34, 278)
+        Me.Button4.Location = New System.Drawing.Point(350, 175)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(84, 54)
         Me.Button4.TabIndex = 3
@@ -163,7 +166,11 @@ Partial Class inicio
         'VentaToolStripMenuItem
         '
         Me.VentaToolStripMenuItem.Name = "VentaToolStripMenuItem"
+<<<<<<< Updated upstream
         Me.VentaToolStripMenuItem.Size = New System.Drawing.Size(104, 22)
+=======
+        Me.VentaToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+>>>>>>> Stashed changes
         Me.VentaToolStripMenuItem.Text = "Venta"
         '
         'EliminarToolStripMenuItem
@@ -176,25 +183,25 @@ Partial Class inicio
         'ClienteToolStripMenuItem1
         '
         Me.ClienteToolStripMenuItem1.Name = "ClienteToolStripMenuItem1"
-        Me.ClienteToolStripMenuItem1.Size = New System.Drawing.Size(128, 22)
+        Me.ClienteToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
         Me.ClienteToolStripMenuItem1.Text = "Cliente"
         '
         'ArticuloToolStripMenuItem1
         '
         Me.ArticuloToolStripMenuItem1.Name = "ArticuloToolStripMenuItem1"
-        Me.ArticuloToolStripMenuItem1.Size = New System.Drawing.Size(128, 22)
+        Me.ArticuloToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
         Me.ArticuloToolStripMenuItem1.Text = "Articulo"
         '
         'ClienteToolStripMenuItem2
         '
         Me.ClienteToolStripMenuItem2.Name = "ClienteToolStripMenuItem2"
-        Me.ClienteToolStripMenuItem2.Size = New System.Drawing.Size(128, 22)
+        Me.ClienteToolStripMenuItem2.Size = New System.Drawing.Size(152, 22)
         Me.ClienteToolStripMenuItem2.Text = "Empleado"
         '
         'ProveedorToolStripMenuItem1
         '
         Me.ProveedorToolStripMenuItem1.Name = "ProveedorToolStripMenuItem1"
-        Me.ProveedorToolStripMenuItem1.Size = New System.Drawing.Size(128, 22)
+        Me.ProveedorToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
         Me.ProveedorToolStripMenuItem1.Text = "Proveedor"
         '
         'DetalleToolStripMenuItem
@@ -213,7 +220,11 @@ Partial Class inicio
         'NuevaVentaToolStripMenuItem
         '
         Me.NuevaVentaToolStripMenuItem.Name = "NuevaVentaToolStripMenuItem"
+<<<<<<< Updated upstream
         Me.NuevaVentaToolStripMenuItem.Size = New System.Drawing.Size(141, 22)
+=======
+        Me.NuevaVentaToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+>>>>>>> Stashed changes
         Me.NuevaVentaToolStripMenuItem.Text = "Nueva Venta"
         '
         'ConfiguracionToolStripMenuItem1
@@ -230,6 +241,7 @@ Partial Class inicio
         Me.UsuariosToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.UsuariosToolStripMenuItem.Text = "Usuarios"
         '
+<<<<<<< Updated upstream
         'CrearUsuarioToolStripMenuItem
         '
         Me.CrearUsuarioToolStripMenuItem.Name = "CrearUsuarioToolStripMenuItem"
@@ -248,6 +260,8 @@ Partial Class inicio
         Me.ConsultarYEliminarToolStripMenuItem.Size = New System.Drawing.Size(186, 22)
         Me.ConsultarYEliminarToolStripMenuItem.Text = " Consultar y Eliminar "
         '
+=======
+>>>>>>> Stashed changes
         'CerrarSesionToolStripMenuItem
         '
         Me.CerrarSesionToolStripMenuItem.Name = "CerrarSesionToolStripMenuItem"
@@ -262,7 +276,7 @@ Partial Class inicio
         '
         'Button5
         '
-        Me.Button5.Location = New System.Drawing.Point(257, 294)
+        Me.Button5.Location = New System.Drawing.Point(257, 333)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(75, 23)
         Me.Button5.TabIndex = 5

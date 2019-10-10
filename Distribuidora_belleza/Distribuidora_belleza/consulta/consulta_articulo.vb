@@ -20,18 +20,19 @@
         If TextBox1.Text = "" Then
             ArticulosTableAdapter.Fill(Me.BaseBellezaDataSet.articulos)
 
-       
+        ElseIf ComboBox1.SelectedItem = "id_articulo" Then
+            ArticulosTableAdapter.buscarArticulo((Me.BaseBellezaDataSet.articulos), consulta)
 
         ElseIf ComboBox1.SelectedItem = "descripcion" Then
 
             ArticulosTableAdapter.consultaDescripcion((Me.BaseBellezaDataSet.articulos), consulta)
 
         ElseIf ComboBox1.SelectedItem = "rubro" Then
-            ArticulosTableAdapter.consultaRubro((Me.BaseBellezaDataSet.articulos), TextBox1.Text)
+            ArticulosTableAdapter.consultaRubro((Me.BaseBellezaDataSet.articulos), consulta)
 
         Else
 
-            ArticulosTableAdapter.consultaMarca((Me.BaseBellezaDataSet.articulos), TextBox1.Text)
+            ArticulosTableAdapter.consultaMarca((Me.BaseBellezaDataSet.articulos), consulta)
 
         End If
 
@@ -42,10 +43,10 @@
 
   
 
-    Private Sub ArticulosDataGridView_CellContentDoubleClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles ArticulosDataGridView.CellContentDoubleClick
+    Private Sub ArticulosDataGridView_CellContentDoubleClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs)
         Dim fila As Integer
         fila = ArticulosDataGridView.CurrentCellAddress.Y
-        If ArticulosDataGridView.Item(0, fila).Value Is DBNull.Value Then
+        If Me.ArticulosDataGridView.Item(0, fila).Value Is DBNull.Value Then
             Exit Sub
         Else
 
@@ -56,7 +57,7 @@
             ModificarArticulo.txtRubro.Text = ArticulosDataGridView.Item(4, fila).Value()
             ModificarArticulo.txtMarca.Text = ArticulosDataGridView.Item(5, fila).Value()
 
-            ModificarArticulo.Show()
+            ModificarArticulo.ShowDialog()
 
         End If
     End Sub

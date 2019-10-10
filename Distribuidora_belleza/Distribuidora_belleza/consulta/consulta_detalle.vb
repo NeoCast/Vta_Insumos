@@ -14,8 +14,12 @@
     End Sub
 
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
-       
-        Me.Detalle_vtaTableAdapter.consulta_detalle((Me.BaseBellezaDataSet.detalle_vta), TextBox1.Text)
+        Try
+            Me.Detalle_vtaTableAdapter.consulta_detalle((Me.BaseBellezaDataSet.detalle_vta), TextBox1.Text)
+
+        Catch ex As Exception
+            MsgBox("no se encontro")
+        End Try
 
     End Sub
 End Class

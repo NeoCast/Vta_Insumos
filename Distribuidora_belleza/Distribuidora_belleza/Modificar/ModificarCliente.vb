@@ -23,6 +23,8 @@
             Me.ClienteTableAdapter.modificarCliente(txtNombre.Text, txtTelefono.Text, txtMail.Text, txtId_cliente.Text)
             Me.TableAdapterManager.UpdateAll(Me.BaseBellezaDataSet)
             consulta_cliente.ClienteTableAdapter.Fill(consulta_cliente.BaseBellezaDataSet.cliente)
+            Me.ClienteTableAdapter.Fill(Me.BaseBellezaDataSet.cliente)
+            MsgBox("Modificacion realizada con exito")
             Me.Close()
         End If
     End Sub

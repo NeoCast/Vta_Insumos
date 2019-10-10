@@ -26,7 +26,7 @@
     Private Sub ProveedorDataGridView_CellDoubleClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles ProveedorDataGridView.CellDoubleClick
         Dim fila As Integer
         fila = ProveedorDataGridView.CurrentCellAddress.Y
-        If ProveedorDataGridView.Item(0, fila).Value Is DBNull.Value Then
+        If Me.ProveedorDataGridView.Item(0, fila).Value Is DBNull.Value Then
             Exit Sub
         Else
             ModificarProveedor.txtId_proveedor.Text = ProveedorDataGridView.Item(0, fila).Value()

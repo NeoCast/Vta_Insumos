@@ -243,7 +243,7 @@ Partial Class ventas
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(58, 602)
+        Me.Button2.Location = New System.Drawing.Point(58, 598)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(90, 50)
         Me.Button2.TabIndex = 16

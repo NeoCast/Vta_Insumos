@@ -21,6 +21,7 @@
             Me.EmpleadoTableAdapter.modificarEmpleado(txtNombre.Text, txtApellido.Text, txtDni.Text, txtTelefono.Text, txtLocalidad.Text, txtDireccion.Text, txtCp.Text, txtId_empleado.Text)
             Me.TableAdapterManager.UpdateAll(Me.BaseBellezaDataSet)
             consulta_empleados.EmpleadoTableAdapter.Fill(consulta_empleados.BaseBellezaDataSet.empleado)
+            MsgBox("Modificacion realizada con exito")
             Me.Close()
         End If
 

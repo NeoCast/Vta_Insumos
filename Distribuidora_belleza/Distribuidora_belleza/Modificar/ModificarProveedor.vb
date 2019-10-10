@@ -16,6 +16,7 @@
             Me.ProveedorBindingSource.EndEdit()
             Me.TableAdapterManager.UpdateAll(Me.BaseBellezaDataSet)
             consulta_proveedor.ProveedorTableAdapter.Fill(consulta_proveedor.BaseBellezaDataSet.proveedor)
+            MsgBox("Modificacion realizada con exito")
             Me.Close()
 
         End If

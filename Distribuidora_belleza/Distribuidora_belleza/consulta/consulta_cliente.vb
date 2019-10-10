@@ -27,7 +27,7 @@
 
         Dim fila As Integer
         fila = ClienteDataGridView.CurrentCellAddress.Y
-        If ClienteDataGridView.Item(0, fila).Value Is DBNull.Value Then
+        If Me.ClienteDataGridView.Item(0, fila).Value Is DBNull.Value Then
             Exit Sub
         Else
 
@@ -35,9 +35,14 @@
             ModificarCliente.txtNombre.Text = ClienteDataGridView.Item(1, fila).Value()
             ModificarCliente.txtTelefono.Text = ClienteDataGridView.Item(2, fila).Value()
             ModificarCliente.txtMail.Text = ClienteDataGridView.Item(3, fila).Value()
-           
-            ModificarCliente.Show()
+
+            ModificarCliente.ShowDialog()
 
         End If
+    End Sub
+
+    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+        Me.Close()
+
     End Sub
 End Class

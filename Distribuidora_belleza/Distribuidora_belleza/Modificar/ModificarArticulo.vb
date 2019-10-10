@@ -22,6 +22,7 @@
             Me.ArticulosTableAdapter.modificarArticulo(txtDescripcion.Text, txtCantidad_de_stock.Text, txtPrecio.Text, txtRubro.Text, txtMarca.Text, txtId_articulo.Text)
             Me.TableAdapterManager.UpdateAll(Me.BaseBellezaDataSet)
             consulta_articulo.ArticulosTableAdapter.Fill(consulta_articulo.BaseBellezaDataSet.articulos)
+            MsgBox("Modificacion realizada con exito")
             Me.Close()
         End If
 

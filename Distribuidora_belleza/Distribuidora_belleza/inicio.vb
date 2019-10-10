@@ -114,10 +114,8 @@
     End Sub
 
     Private Sub CerrarSesionToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CerrarSesionToolStripMenuItem.Click
-        For Each frm As Form In Application.OpenForms
-            frm.Close()
-
-        Next frm
+        Me.Close()
+        loggin2.Show()
 
     End Sub
 

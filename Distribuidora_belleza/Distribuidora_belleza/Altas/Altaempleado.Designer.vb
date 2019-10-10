@@ -247,7 +247,11 @@ Partial Class Altaempleado
         Me.Controls.Add(Me.DireccionTextBox)
         Me.Controls.Add(C_pLabel)
         Me.Controls.Add(Me.C_pTextBox)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "Altaempleado"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Altaempleado"
         CType(Me.BaseBellezaDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.EmpleadoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()

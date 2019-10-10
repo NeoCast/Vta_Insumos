@@ -38,6 +38,8 @@ Partial Class Baja_articulo
         Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.BaseBellezaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ArticulosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ArticulosDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -46,7 +48,7 @@ Partial Class Baja_articulo
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(37, 51)
+        Me.Label1.Location = New System.Drawing.Point(28, 27)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(68, 13)
         Me.Label1.TabIndex = 0
@@ -54,25 +56,25 @@ Partial Class Baja_articulo
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(111, 44)
+        Me.TextBox1.Location = New System.Drawing.Point(112, 24)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(100, 20)
         Me.TextBox1.TabIndex = 1
         '
         'BtnBuscar
         '
-        Me.BtnBuscar.Location = New System.Drawing.Point(40, 162)
+        Me.BtnBuscar.Location = New System.Drawing.Point(272, 27)
         Me.BtnBuscar.Name = "BtnBuscar"
-        Me.BtnBuscar.Size = New System.Drawing.Size(75, 23)
+        Me.BtnBuscar.Size = New System.Drawing.Size(81, 38)
         Me.BtnBuscar.TabIndex = 2
         Me.BtnBuscar.Text = "buscar"
         Me.BtnBuscar.UseVisualStyleBackColor = True
         '
         'BtnEliminar
         '
-        Me.BtnEliminar.Location = New System.Drawing.Point(159, 162)
+        Me.BtnEliminar.Location = New System.Drawing.Point(382, 27)
         Me.BtnEliminar.Name = "BtnEliminar"
-        Me.BtnEliminar.Size = New System.Drawing.Size(75, 23)
+        Me.BtnEliminar.Size = New System.Drawing.Size(82, 38)
         Me.BtnEliminar.TabIndex = 3
         Me.BtnEliminar.Text = "Eliminar"
         Me.BtnEliminar.UseVisualStyleBackColor = True
@@ -96,8 +98,10 @@ Partial Class Baja_articulo
         Me.TableAdapterManager.articulosTableAdapter = Me.ArticulosTableAdapter
         Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
         Me.TableAdapterManager.clienteTableAdapter = Nothing
+        Me.TableAdapterManager.detalle_vtaTableAdapter = Nothing
         Me.TableAdapterManager.empleadoTableAdapter = Nothing
         Me.TableAdapterManager.proveedorTableAdapter = Nothing
+        Me.TableAdapterManager.Registro_usuarioTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = form1.BaseBellezaDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         Me.TableAdapterManager.ventasTableAdapter = Nothing
         '
@@ -105,12 +109,12 @@ Partial Class Baja_articulo
         '
         Me.ArticulosDataGridView.AutoGenerateColumns = False
         Me.ArticulosDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.ArticulosDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6})
+        Me.ArticulosDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6, Me.DataGridViewTextBoxColumn7, Me.DataGridViewTextBoxColumn8})
         Me.ArticulosDataGridView.DataSource = Me.ArticulosBindingSource
-        Me.ArticulosDataGridView.Location = New System.Drawing.Point(251, 67)
+        Me.ArticulosDataGridView.Location = New System.Drawing.Point(31, 110)
         Me.ArticulosDataGridView.Name = "ArticulosDataGridView"
-        Me.ArticulosDataGridView.Size = New System.Drawing.Size(628, 220)
-        Me.ArticulosDataGridView.TabIndex = 5
+        Me.ArticulosDataGridView.Size = New System.Drawing.Size(859, 220)
+        Me.ArticulosDataGridView.TabIndex = 4
         '
         'DataGridViewTextBoxColumn1
         '
@@ -149,16 +153,31 @@ Partial Class Baja_articulo
         Me.DataGridViewTextBoxColumn6.HeaderText = "marca"
         Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
         '
+        'DataGridViewTextBoxColumn7
+        '
+        Me.DataGridViewTextBoxColumn7.DataPropertyName = "id_proveedor"
+        Me.DataGridViewTextBoxColumn7.HeaderText = "id_proveedor"
+        Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
+        '
+        'DataGridViewTextBoxColumn8
+        '
+        Me.DataGridViewTextBoxColumn8.DataPropertyName = "stock_minimo"
+        Me.DataGridViewTextBoxColumn8.HeaderText = "stock_minimo"
+        Me.DataGridViewTextBoxColumn8.Name = "DataGridViewTextBoxColumn8"
+        '
         'Baja_articulo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(891, 364)
+        Me.ClientSize = New System.Drawing.Size(891, 370)
         Me.Controls.Add(Me.ArticulosDataGridView)
         Me.Controls.Add(Me.BtnEliminar)
         Me.Controls.Add(Me.BtnBuscar)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Label1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "Baja_articulo"
         Me.Text = "Baja_articulo"
         CType(Me.BaseBellezaDataSet, System.ComponentModel.ISupportInitialize).EndInit()
@@ -183,4 +202,6 @@ Partial Class Baja_articulo
     Friend WithEvents DataGridViewTextBoxColumn4 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn5 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn6 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn7 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn8 As System.Windows.Forms.DataGridViewTextBoxColumn
 End Class
