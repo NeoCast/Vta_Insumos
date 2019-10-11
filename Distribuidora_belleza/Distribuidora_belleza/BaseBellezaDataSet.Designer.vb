@@ -4520,7 +4520,7 @@ Namespace BaseBellezaDataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Private Sub InitCommandCollection()
-            Me._commandCollection = New Global.System.Data.SqlServerCe.SqlCeCommand(6) {}
+            Me._commandCollection = New Global.System.Data.SqlServerCe.SqlCeCommand(7) {}
             Me._commandCollection(0) = New Global.System.Data.SqlServerCe.SqlCeCommand()
             Me._commandCollection(0).Connection = Me.Connection
             Me._commandCollection(0).CommandText = "SELECT id_articulo, descripcion, cantidad_stock, precio, rubro, marca, id_proveed"& _ 
@@ -4566,6 +4566,12 @@ Namespace BaseBellezaDataSetTableAdapters
             Me._commandCollection(6).Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p4", Global.System.Data.SqlDbType.NVarChar, 50, Global.System.Data.ParameterDirection.Input, true, 0, 0, "rubro", Global.System.Data.DataRowVersion.Current, Nothing))
             Me._commandCollection(6).Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p5", Global.System.Data.SqlDbType.NVarChar, 50, Global.System.Data.ParameterDirection.Input, true, 0, 0, "marca", Global.System.Data.DataRowVersion.Current, Nothing))
             Me._commandCollection(6).Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p6", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, true, 0, 0, "id_articulo", Global.System.Data.DataRowVersion.Original, Nothing))
+            Me._commandCollection(7) = New Global.System.Data.SqlServerCe.SqlCeCommand()
+            Me._commandCollection(7).Connection = Me.Connection
+            Me._commandCollection(7).CommandText = "SELECT        cantidad_stock"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            articulos"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (id_articul"& _ 
+                "o = @art)"
+            Me._commandCollection(7).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(7).Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@art", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, true, 0, 0, "id_articulo", Global.System.Data.DataRowVersion.Current, Nothing))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -4653,6 +4659,20 @@ Namespace BaseBellezaDataSetTableAdapters
             Else
                 Me.Adapter.SelectCommand.Parameters(0).Value = CType(rubro,String)
             End If
+            If (Me.ClearBeforeFill = true) Then
+                dataTable.Clear
+            End If
+            Dim returnValue As Integer = Me.Adapter.Fill(dataTable)
+            Return returnValue
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, false)>  _
+        Public Overloads Overridable Function traerStock(ByVal dataTable As BaseBellezaDataSet.articulosDataTable, ByVal art As Integer) As Integer
+            Me.Adapter.SelectCommand = Me.CommandCollection(7)
+            Me.Adapter.SelectCommand.Parameters(0).Value = CType(art,Integer)
             If (Me.ClearBeforeFill = true) Then
                 dataTable.Clear
             End If

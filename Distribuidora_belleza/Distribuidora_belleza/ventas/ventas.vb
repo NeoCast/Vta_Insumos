@@ -8,6 +8,16 @@ Public Class ventas
     Private fecha As Date = Date.Now
     Private dt As New DataTable
 
+    Private Sub ventas_FormClosing(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles Me.FormClosing
+        Dim revisar As Boolean
+
+
+        If conexion.State = 1 Then
+            conexion.Close()
+
+        End If
+    End Sub
+
 
     Private Sub ventas_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         'TODO: esta línea de código carga datos en la tabla 'BaseBellezaDataSet.Registro_usuario' Puede moverla o quitarla según sea necesario.
@@ -129,6 +139,11 @@ Public Class ventas
 
     Private Sub Button4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button4.Click
         ' Dim stock, stockMin, checkStock As Integer
+        If txtCliente.Text = "" Then
+            MsgBox("porfavor ingrese el numero de cliente")
+            Exit Sub
+        End If
+
         Dim q As Integer = 0
 
         Dim fila As New DataGridViewRow 'creo el objeto fila de la clase datagridviewRow para poder recorrer todas las filas del datagrid del form
@@ -170,7 +185,7 @@ Public Class ventas
         dt.Load(ultimoRegistro.ExecuteReader)   'lleno esa tabla declarada anteriormente con los datos que me trae la consulta de ultimoRegistro
         Dim reader As SqlCeDataReader = ultimoRegistro.ExecuteReader
 
-        'registro = ultimoRegistro.ExecuteReader
+
 
 
 
@@ -182,22 +197,31 @@ Public Class ventas
 
         End If
 
-        'Catch ex As Exception
-        '    MsgBox(ex.ToString)
-        'End Try
-
-
-        'Try
-
-
         For Each fila In DataGridView1.Rows 'recorro todas las filas del datagridview
-            If IsDBNull(fila.Cells) Then    'pregunto si la fila es un dato nulo para la base de datos
+            If IsDBNull(fila.Cells("Id_Articulo").Value) = True Then    'pregunto si la fila es un dato nulo para la base de datos
                 MsgBox("carga finalizada")
                 Exit Sub
             Else
+                Try
+
+               
                 Dim cmd As New SqlCeCommand("insert into detalle_vta(id_venta,id_cliente,id_vendedor,id_articulo,descripcion,precio,cantidad,total_articulo,fecha) values (@id_venta,@id_cliente,@id_vendedor,@id_art, @descripcion, @precio, @cantidad, @total, @fecha)", conexion)
-                Dim update As New SqlCeCommand("update articulos set cantidad_stock=@cant where id_articulo ='" & Convert.ToInt32(fila.Cells("Id_Articulo").Value) & "'", conexion)
-                update.Parameters.Add("cant", SqlDbType.Int).Value = Convert.ToInt32(fila.Cells("Cantidad").Value)
+                Dim update As New SqlCeCommand("update articulos set cantidad_stock=@cant where id_articulo =@articulo ", conexion)
+                Dim cantidad, stock, restarStock, art As Integer
+                ' Dim stock As New Int32
+                art = fila.Cells("Id_Articulo").Value.ToString
+                Me.ArticulosTableAdapter.traerStock((Me.BaseBellezaDataSet.articulos), art)
+
+                TextBox1.Text = Me.ArticulosBindingSource.Current("cantidad_stock")
+                stock = Val(TextBox1.Text)
+                cantidad = Convert.ToInt32(fila.Cells("Cantidad").Value)
+                restarStock = stock - cantidad
+
+
+                update.Parameters.Add("cant", SqlDbType.Int).Value = restarStock
+                update.Parameters.Add("articulo", SqlDbType.Int).Value = Convert.ToInt32(fila.Cells("Id_Articulo").Value)
+
+
                 'agrego los parametros para el insert
                 With cmd.Parameters
                     .Add("@id_venta", SqlDbType.Int).Value = ultimaVenta
@@ -219,8 +243,13 @@ Public Class ventas
 
 
                 conexion.Close()    'cierro la conexion
-            End If
+                Catch ex As Exception
+                    MsgBox("fin")
+                    Exit Sub
+                End Try
 
+            End If
+            
 
         Next fila
         MsgBox("se ha cargado con exito")

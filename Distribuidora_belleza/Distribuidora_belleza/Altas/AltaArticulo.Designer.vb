@@ -247,6 +247,8 @@ Partial Class AltaArticulo
         'Id_proveedorComboBox
         '
         Me.Id_proveedorComboBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ProveedorBindingSource, "id_proveedor", True))
+        Me.Id_proveedorComboBox.DataSource = Me.ProveedorBindingSource
+        Me.Id_proveedorComboBox.DisplayMember = "id_proveedor"
         Me.Id_proveedorComboBox.FormattingEnabled = True
         Me.Id_proveedorComboBox.Location = New System.Drawing.Point(120, 77)
         Me.Id_proveedorComboBox.Name = "Id_proveedorComboBox"
