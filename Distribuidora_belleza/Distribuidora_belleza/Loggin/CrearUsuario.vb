@@ -14,36 +14,39 @@
         Me.Registro_usuarioTableAdapter.Fill(Me.BaseBellezaDataSet.Registro_usuario)
         Me.Registro_usuarioBindingSource.AddNew()
         UsuarioTextBox.Text = ""
-       
+        Id_empleadoComboBox.Text = ""
+        NombreTextBox.Text = ""
+
         Id_empleadoComboBox.Enabled = False
         NombreTextBox.Enabled = False
 
     End Sub
 
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
-        MsgBox("inicia")
+
         If UsuarioTextBox.Text <> "" Then
-            MsgBox("a")
+
             If ContraseñaTextBox.Text <> "" Then
-                MsgBox("b")
+
                 If ComboBox1.Text <> "" Then
-                    MsgBox("c")
+
                     If ComboBox1.SelectedIndex = 0 And Id_empleadoComboBox.Text = "" Then
                         MsgBox("Por favor seleccione el codigo correspondiente del empleado", vbCritical, "error")
                     ElseIf ComboBox1.SelectedIndex = 0 Then
-                        MsgBox("c")
-                        Me.Registro_usuarioBindingSource.Current("usuario") = UsuarioTextBox.Text
-                        Me.Registro_usuarioBindingSource.Current("contraseña") = ContraseñaTextBox.Text
-                        Me.Registro_usuarioBindingSource.Current("tipo") = Convert.ToString(ComboBox1.SelectedItem)
-                        Me.Registro_usuarioBindingSource.Current("id_empleado") = Convert.ToInt32(Id_empleadoComboBox.Text)
-                        Me.Validate()
+                        'MsgBox("c")
+                        'Me.Registro_usuarioBindingSource.Current("usuario") = UsuarioTextBox.Text
+                        'Me.Registro_usuarioBindingSource.Current("contraseña") = ContraseñaTextBox.Text
+                        'Me.Registro_usuarioBindingSource.Current("tipo") = Convert.ToString(ComboBox1.SelectedItem)
+                        'Me.Registro_usuarioBindingSource.Current("id_empleado") = Convert.ToInt32(Id_empleadoComboBox.Text)
+                        'Me.Validate()
 
-                        Me.Registro_usuarioBindingSource.EndEdit()
-
+                        'Me.Registro_usuarioBindingSource.EndEdit()
+                        Me.Registro_usuarioTableAdapter.nuevoUsuario(UsuarioTextBox.Text, ContraseñaTextBox.Text, ComboBox1.Text, Convert.ToInt32(Id_empleadoComboBox.Text))
                         Me.TableAdapterManager.UpdateAll(Me.BaseBellezaDataSet)
                         MsgBox("se cargo con exito")
                         Me.Registro_usuarioTableAdapter.Fill(Me.BaseBellezaDataSet.Registro_usuario)
-                        Consulta_usuarios.Registro_usuarioTableAdapter.Fill(Me.BaseBellezaDataSet.Registro_usuario)
+                        Consulta_usuarios.Registro_usuarioTableAdapter.Fill(Consulta_usuarios.BaseBellezaDataSet.Registro_usuario)
+                        loggin2.Registro_usuarioTableAdapter.Fill(loggin2.BaseBellezaDataSet.Registro_usuario)
                         Me.Close()
                     End If
                 Else

@@ -207,13 +207,13 @@ Public Class ventas
                
                 Dim cmd As New SqlCeCommand("insert into detalle_vta(id_venta,id_cliente,id_vendedor,id_articulo,descripcion,precio,cantidad,total_articulo,fecha) values (@id_venta,@id_cliente,@id_vendedor,@id_art, @descripcion, @precio, @cantidad, @total, @fecha)", conexion)
                 Dim update As New SqlCeCommand("update articulos set cantidad_stock=@cant where id_articulo =@articulo ", conexion)
-                Dim cantidad, stock, restarStock, art As Integer
+                    Dim cantidad, stock, restarStock, art, numFila As Integer
                 ' Dim stock As New Int32
                 art = fila.Cells("Id_Articulo").Value.ToString
                 Me.ArticulosTableAdapter.traerStock((Me.BaseBellezaDataSet.articulos), art)
 
-                TextBox1.Text = Me.ArticulosBindingSource.Current("cantidad_stock")
-                stock = Val(TextBox1.Text)
+                    stock = Me.ArticulosBindingSource.Current("cantidad_stock")
+                    'stock = Val(TextBox1.Text)
                 cantidad = Convert.ToInt32(fila.Cells("Cantidad").Value)
                 restarStock = stock - cantidad
 
@@ -242,8 +242,12 @@ Public Class ventas
                 update.ExecuteNonQuery() 'ejecuto el update para cambiar el valor del stock
 
 
-                conexion.Close()    'cierro la conexion
+                    conexion.Close()    'cierro la conexion
+
+
                 Catch ex As Exception
+                    MsgBox("se va a eliminar las filas")
+                    DataGridView1.Rows.Clear()
 
                     Exit Sub
                 End Try

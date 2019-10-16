@@ -6,7 +6,8 @@
         If resultado <> 1 Then
             e.Cancel = True
         Else
-            loggin2.ShowDialog()
+
+            loggin2.Show()
 
         End If
     End Sub
@@ -120,7 +121,7 @@
 
     Private Sub CerrarSesionToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CerrarSesionToolStripMenuItem.Click
         Me.Close()
-        loggin2.Show()
+        'loggin2.Show()
 
     End Sub
 

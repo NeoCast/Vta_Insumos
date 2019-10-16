@@ -1,57 +1,4 @@
-C:\Users\Usuario\Documents\Proyecto programacion\Distribuidora_belleza\Distribuidora_belleza\bin\Debug\Distribuidora_belleza.exe.config
-C:\Users\Usuario\Documents\Proyecto programacion\Distribuidora_belleza\Distribuidora_belleza\obj\x86\Debug\form1.Resources.resources
-C:\Users\Usuario\Documents\Proyecto programacion\Distribuidora_belleza\Distribuidora_belleza\obj\x86\Debug\Distribuidora_belleza.vbproj.GenerateResource.Cache
-C:\Users\Usuario\Documents\Proyecto programacion\Distribuidora_belleza\Distribuidora_belleza\bin\Debug\BaseBelleza.sdf
-C:\Users\Usuario\Documents\Proyecto programacion\Distribuidora_belleza\Distribuidora_belleza\bin\Debug\Distribuidora_belleza.exe
-C:\Users\Usuario\Documents\Proyecto programacion\Distribuidora_belleza\Distribuidora_belleza\bin\Debug\Distribuidora_belleza.pdb
-C:\Users\Usuario\Documents\Proyecto programacion\Distribuidora_belleza\Distribuidora_belleza\bin\Debug\Distribuidora_belleza.xml
-C:\Users\Usuario\Documents\Proyecto programacion\Distribuidora_belleza\Distribuidora_belleza\obj\x86\Debug\Distribuidora_belleza.exe
-C:\Users\Usuario\Documents\Proyecto programacion\Distribuidora_belleza\Distribuidora_belleza\obj\x86\Debug\Distribuidora_belleza.xml
-C:\Users\Usuario\Documents\Proyecto programacion\Distribuidora_belleza\Distribuidora_belleza\obj\x86\Debug\Distribuidora_belleza.pdb
-C:\Users\Usuario\Documents\Proyecto programacion\Distribuidora_belleza\Distribuidora_belleza\obj\x86\Debug\form1.Altacliente.resources
-C:\Users\Usuario\Documents\Proyecto programacion\Distribuidora_belleza\Distribuidora_belleza\obj\x86\Debug\form1.Altaempleado.resources
-C:\Users\Usuario\Documents\Proyecto programacion\Distribuidora_belleza\Distribuidora_belleza\obj\x86\Debug\form1.Altaproveedor.resources
-C:\Users\Usuario\Documents\Proyecto programacion\Distribuidora_belleza\Distribuidora_belleza\obj\x86\Debug\form1.AltaArticulo.resources
-C:\Users\Usuario\Documents\Proyecto programacion\Distribuidora_belleza\Distribuidora_belleza\obj\x86\Debug\form1.consulta_articulo.resources
-C:\Users\Usuario\Documents\Proyecto programacion\Distribuidora_belleza\Distribuidora_belleza\obj\x86\Debug\form1.consulta_cliente.resources
-C:\Users\Usuario\Documents\Proyecto programacion\Distribuidora_belleza\Distribuidora_belleza\obj\x86\Debug\form1.inicio.resources
-C:\Users\Usuario\Documents\Proyecto programacion\Distribuidora_belleza\Distribuidora_belleza\obj\x86\Debug\form1.consulta_empleados.resources
-C:\Users\Usuario\Documents\Proyecto programacion\Distribuidora_belleza\Distribuidora_belleza\obj\x86\Debug\form1.consulta_proveedor.resources
-C:\Users\Usuario\Documents\Proyecto programacion\Distribuidora_belleza\Distribuidora_belleza\obj\x86\Debug\form1.ModificarProveedor.resources
-C:\Users\Usuario\Documents\Proyecto programacion\Distribuidora_belleza\Distribuidora_belleza\obj\x86\Debug\form1.ModificarArticulo.resources
-C:\Users\Usuario\Documents\Proyecto programacion\Distribuidora_belleza\Distribuidora_belleza\obj\x86\Debug\form1.ModificarCliente.resources
-C:\Users\Usuario\Documents\Proyecto programacion\Distribuidora_belleza\Distribuidora_belleza\obj\x86\Debug\form1.ModificarEmpleado.resources
-C:\Users\Usuario\Documents\github\Vta_Insumos\Distribuidora_belleza\Distribuidora_belleza\bin\Debug\Distribuidora_belleza.exe.config
-C:\Users\Usuario\Documents\github\Vta_Insumos\Distribuidora_belleza\Distribuidora_belleza\obj\x86\Debug\Distribuidora_belleza.exe
-C:\Users\Usuario\Documents\github\Vta_Insumos\Distribuidora_belleza\Distribuidora_belleza\obj\x86\Debug\Distribuidora_belleza.xml
-C:\Users\Usuario\Documents\github\Vta_Insumos\Distribuidora_belleza\Distribuidora_belleza\obj\x86\Debug\Distribuidora_belleza.pdb
-C:\Users\Usuario\Documents\github\Vta_Insumos\Distribuidora_belleza\Distribuidora_belleza\bin\Debug\Distribuidora_belleza.exe
-C:\Users\Usuario\Documents\github\Vta_Insumos\Distribuidora_belleza\Distribuidora_belleza\bin\Debug\Distribuidora_belleza.pdb
-C:\Users\Usuario\Documents\github\Vta_Insumos\Distribuidora_belleza\Distribuidora_belleza\bin\Debug\Distribuidora_belleza.xml
-C:\Users\Usuario\Documents\github\Vta_Insumos\Distribuidora_belleza\Distribuidora_belleza\obj\x86\Debug\form1.AltaArticulo.resources
-C:\Users\Usuario\Documents\github\Vta_Insumos\Distribuidora_belleza\Distribuidora_belleza\obj\x86\Debug\form1.Altacliente.resources
-C:\Users\Usuario\Documents\github\Vta_Insumos\Distribuidora_belleza\Distribuidora_belleza\obj\x86\Debug\form1.Altaempleado.resources
-C:\Users\Usuario\Documents\github\Vta_Insumos\Distribuidora_belleza\Distribuidora_belleza\obj\x86\Debug\form1.Altaproveedor.resources
-C:\Users\Usuario\Documents\github\Vta_Insumos\Distribuidora_belleza\Distribuidora_belleza\obj\x86\Debug\form1.Baja_cliente.resources
-C:\Users\Usuario\Documents\github\Vta_Insumos\Distribuidora_belleza\Distribuidora_belleza\obj\x86\Debug\form1.consulta_articulo.resources
-C:\Users\Usuario\Documents\github\Vta_Insumos\Distribuidora_belleza\Distribuidora_belleza\obj\x86\Debug\form1.consulta_cliente.resources
-C:\Users\Usuario\Documents\github\Vta_Insumos\Distribuidora_belleza\Distribuidora_belleza\obj\x86\Debug\form1.consulta_empleados.resources
-C:\Users\Usuario\Documents\github\Vta_Insumos\Distribuidora_belleza\Distribuidora_belleza\obj\x86\Debug\form1.consulta_proveedor.resources
-C:\Users\Usuario\Documents\github\Vta_Insumos\Distribuidora_belleza\Distribuidora_belleza\obj\x86\Debug\form1.inicio.resources
-C:\Users\Usuario\Documents\github\Vta_Insumos\Distribuidora_belleza\Distribuidora_belleza\obj\x86\Debug\form1.ModificarArticulo.resources
-C:\Users\Usuario\Documents\github\Vta_Insumos\Distribuidora_belleza\Distribuidora_belleza\obj\x86\Debug\form1.ModificarCliente.resources
-C:\Users\Usuario\Documents\github\Vta_Insumos\Distribuidora_belleza\Distribuidora_belleza\obj\x86\Debug\form1.ModificarEmpleado.resources
-C:\Users\Usuario\Documents\github\Vta_Insumos\Distribuidora_belleza\Distribuidora_belleza\obj\x86\Debug\form1.ModificarProveedor.resources
-C:\Users\Usuario\Documents\github\Vta_Insumos\Distribuidora_belleza\Distribuidora_belleza\obj\x86\Debug\form1.Resources.resources
-C:\Users\Usuario\Documents\github\Vta_Insumos\Distribuidora_belleza\Distribuidora_belleza\obj\x86\Debug\Distribuidora_belleza.vbproj.GenerateResource.Cache
-C:\Users\Usuario\Documents\github\Vta_Insumos\Distribuidora_belleza\Distribuidora_belleza\obj\x86\Debug\form1.Baja_articulo.resources
-C:\Users\Usuario\Documents\github\Vta_Insumos\Distribuidora_belleza\Distribuidora_belleza\obj\x86\Debug\form1.Baja_empleados.resources
-C:\Users\Usuario\Documents\github\Vta_Insumos\Distribuidora_belleza\Distribuidora_belleza\obj\x86\Debug\form1.Baja_proveedores.resources
-C:\Users\Usuario\Documents\github\Vta_Insumos\Distribuidora_belleza\Distribuidora_belleza\obj\x86\Debug\form1.ventas.resources
 C:\Users\thoma\Documents\GitKraken\Vta_Insumos\Distribuidora_belleza\Distribuidora_belleza\bin\Debug\Distribuidora_belleza.exe.config
-C:\Users\thoma\Documents\GitKraken\Vta_Insumos\Distribuidora_belleza\Distribuidora_belleza\obj\x86\Debug\Distribuidora_belleza.exe
-C:\Users\thoma\Documents\GitKraken\Vta_Insumos\Distribuidora_belleza\Distribuidora_belleza\obj\x86\Debug\Distribuidora_belleza.xml
-C:\Users\thoma\Documents\GitKraken\Vta_Insumos\Distribuidora_belleza\Distribuidora_belleza\obj\x86\Debug\Distribuidora_belleza.pdb
 C:\Users\thoma\Documents\GitKraken\Vta_Insumos\Distribuidora_belleza\Distribuidora_belleza\bin\Debug\Distribuidora_belleza.exe
 C:\Users\thoma\Documents\GitKraken\Vta_Insumos\Distribuidora_belleza\Distribuidora_belleza\bin\Debug\Distribuidora_belleza.pdb
 C:\Users\thoma\Documents\GitKraken\Vta_Insumos\Distribuidora_belleza\Distribuidora_belleza\bin\Debug\Distribuidora_belleza.xml
@@ -60,15 +7,22 @@ C:\Users\thoma\Documents\GitKraken\Vta_Insumos\Distribuidora_belleza\Distribuido
 C:\Users\thoma\Documents\GitKraken\Vta_Insumos\Distribuidora_belleza\Distribuidora_belleza\obj\x86\Debug\form1.Altacliente.resources
 C:\Users\thoma\Documents\GitKraken\Vta_Insumos\Distribuidora_belleza\Distribuidora_belleza\obj\x86\Debug\form1.Altaempleado.resources
 C:\Users\thoma\Documents\GitKraken\Vta_Insumos\Distribuidora_belleza\Distribuidora_belleza\obj\x86\Debug\form1.Altaproveedor.resources
+C:\Users\thoma\Documents\GitKraken\Vta_Insumos\Distribuidora_belleza\Distribuidora_belleza\obj\x86\Debug\form1.Ayuda.resources
 C:\Users\thoma\Documents\GitKraken\Vta_Insumos\Distribuidora_belleza\Distribuidora_belleza\obj\x86\Debug\form1.Baja_articulo.resources
 C:\Users\thoma\Documents\GitKraken\Vta_Insumos\Distribuidora_belleza\Distribuidora_belleza\obj\x86\Debug\form1.Baja_cliente.resources
 C:\Users\thoma\Documents\GitKraken\Vta_Insumos\Distribuidora_belleza\Distribuidora_belleza\obj\x86\Debug\form1.Baja_empleados.resources
 C:\Users\thoma\Documents\GitKraken\Vta_Insumos\Distribuidora_belleza\Distribuidora_belleza\obj\x86\Debug\form1.Baja_proveedores.resources
 C:\Users\thoma\Documents\GitKraken\Vta_Insumos\Distribuidora_belleza\Distribuidora_belleza\obj\x86\Debug\form1.consulta_articulo.resources
 C:\Users\thoma\Documents\GitKraken\Vta_Insumos\Distribuidora_belleza\Distribuidora_belleza\obj\x86\Debug\form1.consulta_cliente.resources
+C:\Users\thoma\Documents\GitKraken\Vta_Insumos\Distribuidora_belleza\Distribuidora_belleza\obj\x86\Debug\form1.consulta_detalle.resources
 C:\Users\thoma\Documents\GitKraken\Vta_Insumos\Distribuidora_belleza\Distribuidora_belleza\obj\x86\Debug\form1.consulta_empleados.resources
 C:\Users\thoma\Documents\GitKraken\Vta_Insumos\Distribuidora_belleza\Distribuidora_belleza\obj\x86\Debug\form1.consulta_proveedor.resources
+C:\Users\thoma\Documents\GitKraken\Vta_Insumos\Distribuidora_belleza\Distribuidora_belleza\obj\x86\Debug\form1.consulta_vta.resources
 C:\Users\thoma\Documents\GitKraken\Vta_Insumos\Distribuidora_belleza\Distribuidora_belleza\obj\x86\Debug\form1.inicio.resources
+C:\Users\thoma\Documents\GitKraken\Vta_Insumos\Distribuidora_belleza\Distribuidora_belleza\obj\x86\Debug\form1.Consulta_usuarios.resources
+C:\Users\thoma\Documents\GitKraken\Vta_Insumos\Distribuidora_belleza\Distribuidora_belleza\obj\x86\Debug\form1.CrearUsuario.resources
+C:\Users\thoma\Documents\GitKraken\Vta_Insumos\Distribuidora_belleza\Distribuidora_belleza\obj\x86\Debug\form1.loggin2.resources
+C:\Users\thoma\Documents\GitKraken\Vta_Insumos\Distribuidora_belleza\Distribuidora_belleza\obj\x86\Debug\form1.ModificarEliminar_Usuario.resources
 C:\Users\thoma\Documents\GitKraken\Vta_Insumos\Distribuidora_belleza\Distribuidora_belleza\obj\x86\Debug\form1.ModificarArticulo.resources
 C:\Users\thoma\Documents\GitKraken\Vta_Insumos\Distribuidora_belleza\Distribuidora_belleza\obj\x86\Debug\form1.ModificarCliente.resources
 C:\Users\thoma\Documents\GitKraken\Vta_Insumos\Distribuidora_belleza\Distribuidora_belleza\obj\x86\Debug\form1.ModificarEmpleado.resources
@@ -76,18 +30,6 @@ C:\Users\thoma\Documents\GitKraken\Vta_Insumos\Distribuidora_belleza\Distribuido
 C:\Users\thoma\Documents\GitKraken\Vta_Insumos\Distribuidora_belleza\Distribuidora_belleza\obj\x86\Debug\form1.Resources.resources
 C:\Users\thoma\Documents\GitKraken\Vta_Insumos\Distribuidora_belleza\Distribuidora_belleza\obj\x86\Debug\form1.ventas.resources
 C:\Users\thoma\Documents\GitKraken\Vta_Insumos\Distribuidora_belleza\Distribuidora_belleza\obj\x86\Debug\Distribuidora_belleza.vbproj.GenerateResource.Cache
-C:\Users\Usuario\Documents\github\Vta_Insumos\Distribuidora_belleza\Distribuidora_belleza\obj\x86\Debug\Distribuidora_belleza.vbprojResolveAssemblyReference.cache
-C:\Users\Usuario\Documents\github\Vta_Insumos\Distribuidora_belleza\Distribuidora_belleza\obj\x86\Debug\form1.consulta_vta.resources
-C:\Users\Usuario\Documents\github\Vta_Insumos\Distribuidora_belleza\Distribuidora_belleza\obj\x86\Debug\form1.consulta_detalle.resources
-C:\Users\thoma\Documents\GitKraken\Vta_Insumos\Distribuidora_belleza\Distribuidora_belleza\obj\x86\Debug\form1.consulta_detalle.resources
-C:\Users\thoma\Documents\GitKraken\Vta_Insumos\Distribuidora_belleza\Distribuidora_belleza\obj\x86\Debug\form1.consulta_vta.resources
-C:\Users\thoma\Documents\GitKraken\Vta_Insumos\Distribuidora_belleza\Distribuidora_belleza\obj\x86\Debug\form1.CrearUsuario.resources
-C:\Users\Usuario\Documents\github\Vta_Insumos\Distribuidora_belleza\Distribuidora_belleza\obj\x86\Debug\form1.Consulta_usuarios.resources
-C:\Users\Usuario\Documents\github\Vta_Insumos\Distribuidora_belleza\Distribuidora_belleza\obj\x86\Debug\form1.CrearUsuario.resources
-C:\Users\thoma\Documents\GitKraken\Vta_Insumos\Distribuidora_belleza\Distribuidora_belleza\obj\x86\Debug\form1.Consulta_usuarios.resources
-C:\Users\thoma\Documents\GitKraken\Vta_Insumos\Distribuidora_belleza\Distribuidora_belleza\obj\x86\Debug\form1.ModificarEliminar_Usuario.resources
-C:\Users\thoma\Documents\GitKraken\Vta_Insumos\Distribuidora_belleza\Distribuidora_belleza\obj\x86\Debug\form1.loggin2.resources
-C:\Users\Usuario\Documents\github\Vta_Insumos\Distribuidora_belleza\Distribuidora_belleza\obj\x86\Debug\form1.loggin2.resources
-C:\Users\Usuario\Documents\github\Vta_Insumos\Distribuidora_belleza\Distribuidora_belleza\obj\x86\Debug\form1.ModificarEliminar_Usuario.resources
-C:\Users\Usuario\Documents\github\Vta_Insumos\Distribuidora_belleza\Distribuidora_belleza\obj\x86\Debug\form1.Ayuda.resources
-C:\Users\thoma\Documents\GitKraken\Vta_Insumos\Distribuidora_belleza\Distribuidora_belleza\obj\x86\Debug\form1.Ayuda.resources
+C:\Users\thoma\Documents\GitKraken\Vta_Insumos\Distribuidora_belleza\Distribuidora_belleza\obj\x86\Debug\Distribuidora_belleza.exe
+C:\Users\thoma\Documents\GitKraken\Vta_Insumos\Distribuidora_belleza\Distribuidora_belleza\obj\x86\Debug\Distribuidora_belleza.xml
+C:\Users\thoma\Documents\GitKraken\Vta_Insumos\Distribuidora_belleza\Distribuidora_belleza\obj\x86\Debug\Distribuidora_belleza.pdb
