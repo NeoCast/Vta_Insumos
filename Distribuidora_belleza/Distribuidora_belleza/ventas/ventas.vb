@@ -244,9 +244,14 @@ Public Class ventas
 
                 conexion.Close()    'cierro la conexion
                 Catch ex As Exception
-                    MsgBox("fin")
+
                     Exit Sub
                 End Try
+
+                ' Dim i As String
+                ' i = DataGridView1.CurrentRow.Index
+               
+                txtVentaTotal.Clear()
 
             End If
             

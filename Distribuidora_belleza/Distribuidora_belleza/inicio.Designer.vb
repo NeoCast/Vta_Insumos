@@ -63,6 +63,11 @@ Partial Class inicio
         Me.ProveedorBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ArticulosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.btnVender = New System.Windows.Forms.Button()
+        Me.ModifivcToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ArticuloToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ClienteToolStripMenuItem3 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ProveedorToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EmpleadoToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.BaseBellezaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ClienteBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -126,30 +131,30 @@ Partial Class inicio
         'ArticuloToolStripMenuItem
         '
         Me.ArticuloToolStripMenuItem.Name = "ArticuloToolStripMenuItem"
-        Me.ArticuloToolStripMenuItem.Size = New System.Drawing.Size(128, 22)
+        Me.ArticuloToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.ArticuloToolStripMenuItem.Text = "Articulo"
         '
         'ClienteToolStripMenuItem
         '
         Me.ClienteToolStripMenuItem.Name = "ClienteToolStripMenuItem"
-        Me.ClienteToolStripMenuItem.Size = New System.Drawing.Size(128, 22)
+        Me.ClienteToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.ClienteToolStripMenuItem.Text = "Cliente"
         '
         'EmpleadoToolStripMenuItem
         '
         Me.EmpleadoToolStripMenuItem.Name = "EmpleadoToolStripMenuItem"
-        Me.EmpleadoToolStripMenuItem.Size = New System.Drawing.Size(128, 22)
+        Me.EmpleadoToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.EmpleadoToolStripMenuItem.Text = "Empleado"
         '
         'ProveedorToolStripMenuItem
         '
         Me.ProveedorToolStripMenuItem.Name = "ProveedorToolStripMenuItem"
-        Me.ProveedorToolStripMenuItem.Size = New System.Drawing.Size(128, 22)
+        Me.ProveedorToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.ProveedorToolStripMenuItem.Text = "Proveedor"
         '
         'ConsultaToolStripMenuItem
         '
-        Me.ConsultaToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BuscarToolStripMenuItem, Me.EliminarToolStripMenuItem, Me.DetalleToolStripMenuItem})
+        Me.ConsultaToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BuscarToolStripMenuItem, Me.EliminarToolStripMenuItem, Me.DetalleToolStripMenuItem, Me.ModifivcToolStripMenuItem})
         Me.ConsultaToolStripMenuItem.Name = "ConsultaToolStripMenuItem"
         Me.ConsultaToolStripMenuItem.Size = New System.Drawing.Size(66, 20)
         Me.ConsultaToolStripMenuItem.Text = "Consulta"
@@ -164,7 +169,7 @@ Partial Class inicio
         'VentaToolStripMenuItem
         '
         Me.VentaToolStripMenuItem.Name = "VentaToolStripMenuItem"
-        Me.VentaToolStripMenuItem.Size = New System.Drawing.Size(103, 22)
+        Me.VentaToolStripMenuItem.Size = New System.Drawing.Size(104, 22)
         Me.VentaToolStripMenuItem.Text = "Venta"
         '
         'EliminarToolStripMenuItem
@@ -177,25 +182,25 @@ Partial Class inicio
         'ClienteToolStripMenuItem1
         '
         Me.ClienteToolStripMenuItem1.Name = "ClienteToolStripMenuItem1"
-        Me.ClienteToolStripMenuItem1.Size = New System.Drawing.Size(128, 22)
+        Me.ClienteToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
         Me.ClienteToolStripMenuItem1.Text = "Cliente"
         '
         'ArticuloToolStripMenuItem1
         '
         Me.ArticuloToolStripMenuItem1.Name = "ArticuloToolStripMenuItem1"
-        Me.ArticuloToolStripMenuItem1.Size = New System.Drawing.Size(128, 22)
+        Me.ArticuloToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
         Me.ArticuloToolStripMenuItem1.Text = "Articulo"
         '
         'ClienteToolStripMenuItem2
         '
         Me.ClienteToolStripMenuItem2.Name = "ClienteToolStripMenuItem2"
-        Me.ClienteToolStripMenuItem2.Size = New System.Drawing.Size(128, 22)
+        Me.ClienteToolStripMenuItem2.Size = New System.Drawing.Size(152, 22)
         Me.ClienteToolStripMenuItem2.Text = "Empleado"
         '
         'ProveedorToolStripMenuItem1
         '
         Me.ProveedorToolStripMenuItem1.Name = "ProveedorToolStripMenuItem1"
-        Me.ProveedorToolStripMenuItem1.Size = New System.Drawing.Size(128, 22)
+        Me.ProveedorToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
         Me.ProveedorToolStripMenuItem1.Text = "Proveedor"
         '
         'DetalleToolStripMenuItem
@@ -208,13 +213,13 @@ Partial Class inicio
         '
         Me.ConfiguracionToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NuevaVentaToolStripMenuItem})
         Me.ConfiguracionToolStripMenuItem.Name = "ConfiguracionToolStripMenuItem"
-        Me.ConfiguracionToolStripMenuItem.Size = New System.Drawing.Size(53, 20)
+        Me.ConfiguracionToolStripMenuItem.Size = New System.Drawing.Size(54, 20)
         Me.ConfiguracionToolStripMenuItem.Text = "Ventas"
         '
         'NuevaVentaToolStripMenuItem
         '
         Me.NuevaVentaToolStripMenuItem.Name = "NuevaVentaToolStripMenuItem"
-        Me.NuevaVentaToolStripMenuItem.Size = New System.Drawing.Size(140, 22)
+        Me.NuevaVentaToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.NuevaVentaToolStripMenuItem.Text = "Nueva Venta"
         '
         'ConfiguracionToolStripMenuItem1
@@ -228,7 +233,7 @@ Partial Class inicio
         '
         Me.UsuariosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CrearUsuarioToolStripMenuItem, Me.ModificarUsuarioToolStripMenuItem, Me.ConsultarYEliminarToolStripMenuItem})
         Me.UsuariosToolStripMenuItem.Name = "UsuariosToolStripMenuItem"
-        Me.UsuariosToolStripMenuItem.Size = New System.Drawing.Size(143, 22)
+        Me.UsuariosToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.UsuariosToolStripMenuItem.Text = "Usuarios"
         '
         'CrearUsuarioToolStripMenuItem
@@ -252,7 +257,7 @@ Partial Class inicio
         'CerrarSesionToolStripMenuItem
         '
         Me.CerrarSesionToolStripMenuItem.Name = "CerrarSesionToolStripMenuItem"
-        Me.CerrarSesionToolStripMenuItem.Size = New System.Drawing.Size(143, 22)
+        Me.CerrarSesionToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.CerrarSesionToolStripMenuItem.Text = "Cerrar Sesion"
         '
         'AyudaToolStripMenuItem
@@ -332,6 +337,37 @@ Partial Class inicio
         Me.btnVender.Text = "VENDER  (F1)"
         Me.btnVender.UseVisualStyleBackColor = True
         '
+        'ModifivcToolStripMenuItem
+        '
+        Me.ModifivcToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ArticuloToolStripMenuItem2, Me.ClienteToolStripMenuItem3, Me.ProveedorToolStripMenuItem2, Me.EmpleadoToolStripMenuItem1})
+        Me.ModifivcToolStripMenuItem.Name = "ModifivcToolStripMenuItem"
+        Me.ModifivcToolStripMenuItem.Size = New System.Drawing.Size(161, 22)
+        Me.ModifivcToolStripMenuItem.Text = "Modificar"
+        '
+        'ArticuloToolStripMenuItem2
+        '
+        Me.ArticuloToolStripMenuItem2.Name = "ArticuloToolStripMenuItem2"
+        Me.ArticuloToolStripMenuItem2.Size = New System.Drawing.Size(152, 22)
+        Me.ArticuloToolStripMenuItem2.Text = "Articulo"
+        '
+        'ClienteToolStripMenuItem3
+        '
+        Me.ClienteToolStripMenuItem3.Name = "ClienteToolStripMenuItem3"
+        Me.ClienteToolStripMenuItem3.Size = New System.Drawing.Size(152, 22)
+        Me.ClienteToolStripMenuItem3.Text = "Cliente"
+        '
+        'ProveedorToolStripMenuItem2
+        '
+        Me.ProveedorToolStripMenuItem2.Name = "ProveedorToolStripMenuItem2"
+        Me.ProveedorToolStripMenuItem2.Size = New System.Drawing.Size(152, 22)
+        Me.ProveedorToolStripMenuItem2.Text = "Proveedor"
+        '
+        'EmpleadoToolStripMenuItem1
+        '
+        Me.EmpleadoToolStripMenuItem1.Name = "EmpleadoToolStripMenuItem1"
+        Me.EmpleadoToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
+        Me.EmpleadoToolStripMenuItem1.Text = "Empleado"
+        '
         'inicio
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -403,4 +439,9 @@ Partial Class inicio
     Friend WithEvents ModificarUsuarioToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ConsultarYEliminarToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents btnVender As System.Windows.Forms.Button
+    Friend WithEvents ModifivcToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ArticuloToolStripMenuItem2 As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ClienteToolStripMenuItem3 As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ProveedorToolStripMenuItem2 As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents EmpleadoToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
 End Class

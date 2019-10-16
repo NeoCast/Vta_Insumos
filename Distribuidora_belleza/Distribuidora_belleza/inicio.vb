@@ -151,4 +151,26 @@
         ventas.ShowDialog()
 
     End Sub
+
+    Private Sub ArticuloToolStripMenuItem2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ArticuloToolStripMenuItem2.Click
+        ModificarArticulo.ShowDialog()
+
+
+    End Sub
+
+    Private Sub ClienteToolStripMenuItem3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ClienteToolStripMenuItem3.Click
+        ModificarCliente.ShowDialog()
+
+
+    End Sub
+
+    Private Sub ProveedorToolStripMenuItem2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ProveedorToolStripMenuItem2.Click
+        ModificarProveedor.ShowDialog()
+
+    End Sub
+
+    Private Sub EmpleadoToolStripMenuItem1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles EmpleadoToolStripMenuItem1.Click
+        ModificarEmpleado.ShowDialog()
+
+    End Sub
 End Class
