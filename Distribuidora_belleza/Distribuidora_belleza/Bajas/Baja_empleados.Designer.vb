@@ -98,8 +98,10 @@ Partial Class Baja_empleados
         Me.TableAdapterManager.articulosTableAdapter = Nothing
         Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
         Me.TableAdapterManager.clienteTableAdapter = Nothing
+        Me.TableAdapterManager.detalle_vtaTableAdapter = Nothing
         Me.TableAdapterManager.empleadoTableAdapter = Me.EmpleadoTableAdapter
         Me.TableAdapterManager.proveedorTableAdapter = Nothing
+        Me.TableAdapterManager.Registro_usuarioTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = form1.BaseBellezaDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         Me.TableAdapterManager.ventasTableAdapter = Nothing
         '
@@ -167,6 +169,7 @@ Partial Class Baja_empleados
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.Teal
         Me.ClientSize = New System.Drawing.Size(879, 389)
         Me.Controls.Add(Me.EmpleadoDataGridView)
         Me.Controls.Add(Me.TextBox1)

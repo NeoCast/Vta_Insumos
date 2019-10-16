@@ -97,8 +97,10 @@ Partial Class Baja_proveedores
         Me.TableAdapterManager.articulosTableAdapter = Nothing
         Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
         Me.TableAdapterManager.clienteTableAdapter = Nothing
+        Me.TableAdapterManager.detalle_vtaTableAdapter = Nothing
         Me.TableAdapterManager.empleadoTableAdapter = Nothing
         Me.TableAdapterManager.proveedorTableAdapter = Me.ProveedorTableAdapter
+        Me.TableAdapterManager.Registro_usuarioTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = form1.BaseBellezaDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         Me.TableAdapterManager.ventasTableAdapter = Nothing
         '
@@ -160,6 +162,7 @@ Partial Class Baja_proveedores
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.Teal
         Me.ClientSize = New System.Drawing.Size(865, 334)
         Me.Controls.Add(Me.ProveedorDataGridView)
         Me.Controls.Add(Me.TextBox1)

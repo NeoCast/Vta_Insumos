@@ -23,7 +23,7 @@
     End Sub
 
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
-
+        Dim empleado As Integer = 0
         If UsuarioTextBox.Text <> "" Then
 
             If ContraseñaTextBox.Text <> "" Then
@@ -47,10 +47,20 @@
                         Me.Registro_usuarioTableAdapter.Fill(Me.BaseBellezaDataSet.Registro_usuario)
                         Consulta_usuarios.Registro_usuarioTableAdapter.Fill(Consulta_usuarios.BaseBellezaDataSet.Registro_usuario)
                         loggin2.Registro_usuarioTableAdapter.Fill(loggin2.BaseBellezaDataSet.Registro_usuario)
-                        Me.Close()
+
+                    ElseIf ComboBox1.SelectedIndex = 1 Then
+
+
+                        Me.Registro_usuarioTableAdapter.nuevoUsuario(UsuarioTextBox.Text, ContraseñaTextBox.Text, ComboBox1.Text, empleado)
+                        Me.TableAdapterManager.UpdateAll(Me.BaseBellezaDataSet)
+                        MsgBox("se cargo con exito")
+                        Me.Registro_usuarioTableAdapter.Fill(Me.BaseBellezaDataSet.Registro_usuario)
+                        Consulta_usuarios.Registro_usuarioTableAdapter.Fill(Consulta_usuarios.BaseBellezaDataSet.Registro_usuario)
+                        loggin2.Registro_usuarioTableAdapter.Fill(loggin2.BaseBellezaDataSet.Registro_usuario)
+
                     End If
                 Else
-                    MsgBox("combo1 no vqcio")
+                    MsgBox("seleccione el tipo de usuario")
                 End If
             Else
 

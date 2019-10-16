@@ -50,6 +50,8 @@ Partial Class AltaArticulo
         Me.Label1 = New System.Windows.Forms.Label()
         Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
         Me.LineShape1 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
         DescripcionLabel = New System.Windows.Forms.Label()
         Cantidad_stockLabel = New System.Windows.Forms.Label()
         PrecioLabel = New System.Windows.Forms.Label()
@@ -292,11 +294,33 @@ Partial Class AltaArticulo
         Me.LineShape1.Y1 = 68
         Me.LineShape1.Y2 = 287
         '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(250, 137)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(135, 17)
+        Me.Label2.TabIndex = 20
+        Me.Label2.Text = "¿Nuevo Proveedor?"
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(390, 119)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(70, 52)
+        Me.Button1.TabIndex = 21
+        Me.Button1.Text = "Nuevo"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'AltaArticulo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.Teal
         Me.ClientSize = New System.Drawing.Size(482, 390)
+        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(NombreLabel)
         Me.Controls.Add(Me.NombreTextBox)
@@ -317,6 +341,7 @@ Partial Class AltaArticulo
         Me.Controls.Add(MarcaLabel)
         Me.Controls.Add(Me.MarcaTextBox)
         Me.Controls.Add(Me.ShapeContainer1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "AltaArticulo"
@@ -347,4 +372,6 @@ Partial Class AltaArticulo
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents ShapeContainer1 As Microsoft.VisualBasic.PowerPacks.ShapeContainer
     Friend WithEvents LineShape1 As Microsoft.VisualBasic.PowerPacks.LineShape
+    Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents Button1 As System.Windows.Forms.Button
 End Class

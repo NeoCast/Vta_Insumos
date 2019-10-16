@@ -121,6 +121,7 @@ Partial Class loggin2
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.Teal
         Me.ClientSize = New System.Drawing.Size(274, 254)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Label2)

@@ -26,6 +26,9 @@
 
                     MsgBox("se cargo con exito")
                     Me.ProveedorTableAdapter.Fill(Me.BaseBellezaDataSet.proveedor)
+                    AltaArticulo.ProveedorTableAdapter.Fill(AltaArticulo.BaseBellezaDataSet.proveedor)
+                    Me.ProveedorBindingSource.AddNew()
+
                     NombreTextBox.Focus()
                 Else
                     MsgBox("ingrese un mail")

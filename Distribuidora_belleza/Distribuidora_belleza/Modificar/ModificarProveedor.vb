@@ -4,7 +4,7 @@
     Private Sub ModificarProveedor_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         'TODO: esta línea de código carga datos en la tabla 'BaseBellezaDataSet.proveedor' Puede moverla o quitarla según sea necesario.
         Me.ProveedorTableAdapter.Fill(Me.BaseBellezaDataSet.proveedor)
-        txtId_proveedor.Enabled = False
+        'txtId_proveedor.Enabled = False
     End Sub
 
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click

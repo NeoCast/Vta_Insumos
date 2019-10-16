@@ -65,6 +65,7 @@ Partial Class consulta_empleados
         Me.TableAdapterManager.detalle_vtaTableAdapter = Nothing
         Me.TableAdapterManager.empleadoTableAdapter = Me.EmpleadoTableAdapter
         Me.TableAdapterManager.proveedorTableAdapter = Nothing
+        Me.TableAdapterManager.Registro_usuarioTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = form1.BaseBellezaDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         Me.TableAdapterManager.ventasTableAdapter = Nothing
         '
@@ -148,6 +149,7 @@ Partial Class consulta_empleados
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.Teal
         Me.ClientSize = New System.Drawing.Size(905, 512)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.TextBox1)

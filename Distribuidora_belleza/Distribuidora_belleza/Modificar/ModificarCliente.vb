@@ -10,7 +10,7 @@
     Private Sub ModificarCliente_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         'TODO: esta línea de código carga datos en la tabla 'BaseBellezaDataSet.cliente' Puede moverla o quitarla según sea necesario.
         Me.ClienteTableAdapter.Fill(Me.BaseBellezaDataSet.cliente)
-        txtId_cliente.Enabled = False
+        'txtId_cliente.Enabled = False
     End Sub
 
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click

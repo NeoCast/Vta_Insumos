@@ -9,7 +9,7 @@ Public Class ventas
     Private dt As New DataTable
 
     Private Sub ventas_FormClosing(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles Me.FormClosing
-        Dim revisar As Boolean
+
 
 
         If conexion.State = 1 Then
@@ -104,7 +104,7 @@ Public Class ventas
             DataGridView1.Rows.Add(TextBox1.Text, txtDescripcion.Text, txtPrecio.Text, NumericUpDown1.Value, txtTotal.Text)
 
             Button2.Enabled = True
-            Button4.Enabled = True
+
             Button5.Enabled = True
 
             txtstock.Clear()
@@ -133,6 +133,7 @@ Public Class ventas
 
         Next fila
         txtVentaTotal.Text = total
+        Button4.Enabled = True
 
 
     End Sub

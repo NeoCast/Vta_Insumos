@@ -29,7 +29,7 @@
                         Me.ArticulosBindingSource.Current("precio") = PrecioTextBox.Text
                         Me.ArticulosBindingSource.Current("rubro") = RubroTextBox.Text
                         Me.ArticulosBindingSource.Current("marca") = MarcaTextBox.Text
-                        Me.ArticulosBindingSource.Current("id_proveedor") = Id_proveedorComboBox.SelectedItem
+                        Me.ArticulosBindingSource.Current("id_proveedor") = Id_proveedorComboBox.Text
                         Me.ArticulosBindingSource.Current("stock_minimo") = Stock_minimoTextBox.Text
 
                         Me.Validate()
@@ -68,6 +68,11 @@
 
     Private Sub btnfin_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnfin.Click
         Me.Close()
+
+    End Sub
+
+    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+        Altaproveedor.ShowDialog()
 
     End Sub
 End Class

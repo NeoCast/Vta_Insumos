@@ -169,6 +169,7 @@ Partial Class Baja_articulo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.Teal
         Me.ClientSize = New System.Drawing.Size(891, 370)
         Me.Controls.Add(Me.ArticulosDataGridView)
         Me.Controls.Add(Me.BtnEliminar)

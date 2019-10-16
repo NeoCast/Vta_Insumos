@@ -28,13 +28,13 @@ Partial Class Baja_cliente
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.BtnBuscar = New System.Windows.Forms.Button()
         Me.ClienteDataGridView = New System.Windows.Forms.DataGridView()
-        Me.BtnEliminar = New System.Windows.Forms.Button()
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ClienteBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.BaseBellezaDataSet = New form1.BaseBellezaDataSet()
+        Me.BtnEliminar = New System.Windows.Forms.Button()
         Me.ClienteTableAdapter = New form1.BaseBellezaDataSetTableAdapters.clienteTableAdapter()
         Me.TableAdapterManager = New form1.BaseBellezaDataSetTableAdapters.TableAdapterManager()
         CType(Me.ClienteDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -87,15 +87,6 @@ Partial Class Baja_cliente
         Me.ClienteDataGridView.Size = New System.Drawing.Size(440, 220)
         Me.ClienteDataGridView.TabIndex = 11
         '
-        'BtnEliminar
-        '
-        Me.BtnEliminar.Location = New System.Drawing.Point(73, 268)
-        Me.BtnEliminar.Name = "BtnEliminar"
-        Me.BtnEliminar.Size = New System.Drawing.Size(75, 23)
-        Me.BtnEliminar.TabIndex = 12
-        Me.BtnEliminar.Text = "eliminar"
-        Me.BtnEliminar.UseVisualStyleBackColor = True
-        '
         'DataGridViewTextBoxColumn1
         '
         Me.DataGridViewTextBoxColumn1.DataPropertyName = "id_cliente"
@@ -131,6 +122,15 @@ Partial Class Baja_cliente
         Me.BaseBellezaDataSet.DataSetName = "BaseBellezaDataSet"
         Me.BaseBellezaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
+        'BtnEliminar
+        '
+        Me.BtnEliminar.Location = New System.Drawing.Point(73, 268)
+        Me.BtnEliminar.Name = "BtnEliminar"
+        Me.BtnEliminar.Size = New System.Drawing.Size(75, 23)
+        Me.BtnEliminar.TabIndex = 12
+        Me.BtnEliminar.Text = "eliminar"
+        Me.BtnEliminar.UseVisualStyleBackColor = True
+        '
         'ClienteTableAdapter
         '
         Me.ClienteTableAdapter.ClearBeforeFill = True
@@ -140,8 +140,10 @@ Partial Class Baja_cliente
         Me.TableAdapterManager.articulosTableAdapter = Nothing
         Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
         Me.TableAdapterManager.clienteTableAdapter = Me.ClienteTableAdapter
+        Me.TableAdapterManager.detalle_vtaTableAdapter = Nothing
         Me.TableAdapterManager.empleadoTableAdapter = Nothing
         Me.TableAdapterManager.proveedorTableAdapter = Nothing
+        Me.TableAdapterManager.Registro_usuarioTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = form1.BaseBellezaDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         Me.TableAdapterManager.ventasTableAdapter = Nothing
         '
@@ -149,6 +151,7 @@ Partial Class Baja_cliente
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.Teal
         Me.ClientSize = New System.Drawing.Size(672, 334)
         Me.Controls.Add(Me.BtnEliminar)
         Me.Controls.Add(Me.ClienteDataGridView)

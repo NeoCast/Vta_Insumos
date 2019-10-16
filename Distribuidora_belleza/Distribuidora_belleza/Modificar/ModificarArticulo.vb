@@ -10,7 +10,7 @@
     Private Sub ModificarArticulo_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         'TODO: esta línea de código carga datos en la tabla 'BaseBellezaDataSet.articulos' Puede moverla o quitarla según sea necesario.
         Me.ArticulosTableAdapter.Fill(Me.BaseBellezaDataSet.articulos)
-        txtId_articulo.Enabled = False
+        'txtId_articulo.Enabled = False
     End Sub
 
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click

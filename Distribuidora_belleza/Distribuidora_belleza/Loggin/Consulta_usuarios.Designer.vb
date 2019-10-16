@@ -155,6 +155,7 @@ Partial Class Consulta_usuarios
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.Teal
         Me.ClientSize = New System.Drawing.Size(542, 386)
         Me.Controls.Add(Me.btnEliminar)
         Me.Controls.Add(Me.btnBuscar)
