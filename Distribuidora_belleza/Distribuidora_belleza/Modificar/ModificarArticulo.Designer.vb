@@ -43,6 +43,8 @@ Partial Class ModificarArticulo
         Me.Button2 = New System.Windows.Forms.Button()
         Me.txtminimo = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Label8 = New System.Windows.Forms.Label()
         CType(Me.BaseBellezaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ArticulosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -50,7 +52,7 @@ Partial Class ModificarArticulo
         'Button1
         '
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(158, 315)
+        Me.Button1.Location = New System.Drawing.Point(158, 350)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(100, 45)
         Me.Button1.TabIndex = 0
@@ -188,7 +190,7 @@ Partial Class ModificarArticulo
         'Button2
         '
         Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(37, 315)
+        Me.Button2.Location = New System.Drawing.Point(37, 350)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(100, 45)
         Me.Button2.TabIndex = 13
@@ -212,12 +214,31 @@ Partial Class ModificarArticulo
         Me.Label7.TabIndex = 14
         Me.Label7.Text = "Stock minimo"
         '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(158, 310)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox1.TabIndex = 17
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Location = New System.Drawing.Point(34, 310)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(73, 17)
+        Me.Label8.TabIndex = 16
+        Me.Label8.Text = "proveedor"
+        '
         'ModificarArticulo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Teal
-        Me.ClientSize = New System.Drawing.Size(305, 392)
+        Me.ClientSize = New System.Drawing.Size(305, 431)
+        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.txtminimo)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Button2)
@@ -266,4 +287,6 @@ Partial Class ModificarArticulo
     Friend WithEvents Button2 As System.Windows.Forms.Button
     Friend WithEvents txtminimo As System.Windows.Forms.TextBox
     Friend WithEvents Label7 As System.Windows.Forms.Label
+    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
+    Friend WithEvents Label8 As System.Windows.Forms.Label
 End Class

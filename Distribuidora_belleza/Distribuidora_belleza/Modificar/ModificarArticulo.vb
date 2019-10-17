@@ -25,6 +25,11 @@
             consulta_articulo.ArticulosTableAdapter.Fill(consulta_articulo.BaseBellezaDataSet.articulos)
             MsgBox("Modificacion realizada con exito")
 
+            txtDescripcion.Clear()
+            txtId_articulo.Clear()
+            txtMarca.Clear()
+            txtminimo.Clear()
+
             Me.Close()
         End If
 
@@ -44,7 +49,7 @@
             txtRubro.Text = ArticulosBindingSource.Current("rubro")
             txtMarca.Text = ArticulosBindingSource.Current("marca")
             txtminimo.Text = ArticulosBindingSource.Current("stock_minimo")
-
+            TextBox1.Text = ArticulosBindingSource.Current("id_proveedor")
             Button1.Enabled = True
         End If
     End Sub

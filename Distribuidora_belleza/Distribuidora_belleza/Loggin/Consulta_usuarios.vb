@@ -70,7 +70,8 @@
                 Me.Registro_usuarioBindingSource.EndEdit()
                 Me.TableAdapterManager.UpdateAll(Me.BaseBellezaDataSet)
                 Me.Registro_usuarioTableAdapter.Fill(Me.BaseBellezaDataSet.Registro_usuario)
-                Me.Registro_usuarioTableAdapter.Fill(Me.BaseBellezaDataSet.Registro_usuario)
+                loggin2.Registro_usuarioTableAdapter.Fill(loggin2.BaseBellezaDataSet.Registro_usuario)
+
             End If
         End If
     End Sub

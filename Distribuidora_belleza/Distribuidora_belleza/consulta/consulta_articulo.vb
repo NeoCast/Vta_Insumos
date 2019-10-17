@@ -20,7 +20,7 @@
         If TextBox1.Text = "" Then
             ArticulosTableAdapter.Fill(Me.BaseBellezaDataSet.articulos)
 
-        ElseIf ComboBox1.SelectedItem = "id_articulo" Then
+        ElseIf ComboBox1.SelectedItem = "id_articulo" And IsNumeric(TextBox1.Text) Then
             ArticulosTableAdapter.buscarArticulo((Me.BaseBellezaDataSet.articulos), consulta)
 
         ElseIf ComboBox1.SelectedItem = "descripcion" Then

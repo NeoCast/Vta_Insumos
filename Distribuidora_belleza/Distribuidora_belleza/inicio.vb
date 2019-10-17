@@ -25,6 +25,8 @@
         If tipo_usuario = 2 Then
             EliminarToolStripMenuItem.Enabled = False
             UsuariosToolStripMenuItem.Enabled = False
+            ModifivcToolStripMenuItem.Enabled = False
+
 
         End If
     End Sub
@@ -143,7 +145,7 @@
         Consulta_usuarios.ShowDialog()
     End Sub
 
-    Private Sub ModificarUsuarioToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ModificarUsuarioToolStripMenuItem.Click
+    Private Sub ModificarUsuarioToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         ModificarEliminar_Usuario.ShowDialog()
 
     End Sub
@@ -172,6 +174,10 @@
 
     Private Sub EmpleadoToolStripMenuItem1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles EmpleadoToolStripMenuItem1.Click
         ModificarEmpleado.ShowDialog()
+
+    End Sub
+
+    Private Sub ModifivcToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ModifivcToolStripMenuItem.Click
 
     End Sub
 End Class
