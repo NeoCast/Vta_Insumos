@@ -91,6 +91,10 @@ Public Class ventas
         Dim cantidad As Integer
         Dim total As Double
         Dim precio As Double = Val(txtPrecio.Text)
+        If NumericUpDown1.Value > Val(txtstock.Text) Then
+            MsgBox("no se puede vender mas de lo que hay en stock")
+            Exit Sub
+        End If
         cantidad = NumericUpDown1.Value
         total = cantidad * precio
         txtTotal.Text = total
@@ -104,6 +108,9 @@ Public Class ventas
             Exit Sub
         ElseIf Val(txtstock.Text) = 0 Then
             MsgBox("se ha agotado el producto porfavor contactese con el proveedor pertinente")
+            Exit Sub
+        ElseIf Val(txtstock.Text) < NumericUpDown1.Value Then
+            MsgBox("no se puede vender mas de lo que hay en stock")
             Exit Sub
         Else
             DataGridView1.Rows.Add(TextBox1.Text, txtDescripcion.Text, txtPrecio.Text, NumericUpDown1.Value, txtTotal.Text)
