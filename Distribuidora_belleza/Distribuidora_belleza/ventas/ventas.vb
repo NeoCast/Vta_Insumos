@@ -12,10 +12,12 @@ Public Class ventas
 
 
 
+
         If conexion.State = 1 Then
             conexion.Close()
 
         End If
+        DataGridView1.Rows.Clear()
     End Sub
 
 
@@ -26,7 +28,7 @@ Public Class ventas
         Me.VentasTableAdapter.Fill(Me.BaseBellezaDataSet.ventas)
         'TODO: esta línea de código carga datos en la tabla 'BaseBellezaDataSet.articulos' Puede moverla o quitarla según sea necesario.
         Me.ArticulosTableAdapter.Fill(Me.BaseBellezaDataSet.articulos)
-        DateTimePicker1.Value = Now
+        'DateTimePicker1.Value = Now
         Button2.Enabled = False
         Button3.Enabled = False
         Button4.Enabled = False
@@ -100,6 +102,9 @@ Public Class ventas
         If NumericUpDown1.Value = 0 Then
             MsgBox("por favor ingrese una cantidad valida")
             Exit Sub
+        ElseIf Val(txtstock.Text) = 0 Then
+            MsgBox("se ha agotado el producto porfavor contactese con el proveedor pertinente")
+            Exit Sub
         Else
             DataGridView1.Rows.Add(TextBox1.Text, txtDescripcion.Text, txtPrecio.Text, NumericUpDown1.Value, txtTotal.Text)
 
@@ -143,6 +148,13 @@ Public Class ventas
         If txtCliente.Text = "" Then
             MsgBox("porfavor ingrese el numero de cliente")
             Exit Sub
+        ElseIf txtVentaTotal.Text = "" Then
+            MsgBox("porfavor calcule el total antes de vender el productor")
+            Exit Sub
+        ElseIf txtVentaTotal.Text = 0 Then
+            MsgBox("no se puede realizar la venta")
+            Exit Sub
+
         End If
 
         Dim q As Integer = 0
@@ -247,7 +259,7 @@ Public Class ventas
 
 
                 Catch ex As Exception
-                    MsgBox("se va a eliminar las filas")
+
                     DataGridView1.Rows.Clear()
 
                     Exit Sub

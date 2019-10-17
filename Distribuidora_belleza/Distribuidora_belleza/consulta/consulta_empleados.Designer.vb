@@ -154,6 +154,9 @@ Partial Class consulta_empleados
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.EmpleadoDataGridView)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "consulta_empleados"
         Me.Text = "consulta_empleados"
         CType(Me.BaseBellezaDataSet, System.ComponentModel.ISupportInitialize).EndInit()

@@ -11,6 +11,7 @@
         'TODO: esta línea de código carga datos en la tabla 'BaseBellezaDataSet.empleado' Puede moverla o quitarla según sea necesario.
         Me.EmpleadoTableAdapter.Fill(Me.BaseBellezaDataSet.empleado)
         'txtId_empleado.Enabled = False
+        Button1.Enabled = False
     End Sub
 
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
@@ -26,5 +27,24 @@
         End If
 
        
+    End Sub
+
+    Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
+        Dim codconsulta, fila As Integer
+        codconsulta = txtId_empleado.Text
+        fila = Me.EmpleadoBindingSource.Find("id_empleado", codconsulta)
+        If fila = -1 Then
+            MsgBox("No se encontro")
+        Else
+            EmpleadoTableAdapter.buscarEmpleado((Me.BaseBellezaDataSet.empleado), txtId_empleado.Text)
+            txtNombre.Text = EmpleadoBindingSource.Current("nombre")
+            txtApellido.Text = EmpleadoBindingSource.Current("apellido")
+            txtDni.Text = EmpleadoBindingSource.Current("dni")
+            txtTelefono.Text = EmpleadoBindingSource.Current("telefono")
+            txtLocalidad.Text = EmpleadoBindingSource.Current("localidad")
+            txtDireccion.Text = EmpleadoBindingSource.Current("direccion")
+            txtCp.Text = EmpleadoBindingSource.Current("c_p")
+            Button1.Enabled = True
+        End If
     End Sub
 End Class

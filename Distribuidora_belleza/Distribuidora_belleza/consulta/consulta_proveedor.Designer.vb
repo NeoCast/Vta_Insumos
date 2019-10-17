@@ -147,6 +147,9 @@ Partial Class consulta_proveedor
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.ProveedorDataGridView)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "consulta_proveedor"
         Me.Text = "consulta_proveedor"
         CType(Me.BaseBellezaDataSet, System.ComponentModel.ISupportInitialize).EndInit()

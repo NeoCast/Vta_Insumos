@@ -35,7 +35,6 @@ Partial Class ventas
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
         Me.NumericUpDown1 = New System.Windows.Forms.NumericUpDown()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.txtDescripcion = New System.Windows.Forms.TextBox()
@@ -46,7 +45,6 @@ Partial Class ventas
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.Button5 = New System.Windows.Forms.Button()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.txtstock = New System.Windows.Forms.TextBox()
@@ -144,7 +142,7 @@ Partial Class ventas
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(18, 221)
+        Me.Label3.Location = New System.Drawing.Point(18, 186)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(48, 17)
         Me.Label3.TabIndex = 3
@@ -154,7 +152,7 @@ Partial Class ventas
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(19, 257)
+        Me.Label4.Location = New System.Drawing.Point(19, 222)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(64, 17)
         Me.Label4.TabIndex = 4
@@ -164,7 +162,7 @@ Partial Class ventas
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(19, 294)
+        Me.Label5.Location = New System.Drawing.Point(19, 259)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(40, 17)
         Me.Label5.TabIndex = 5
@@ -180,19 +178,9 @@ Partial Class ventas
         Me.Label6.TabIndex = 6
         Me.Label6.Text = "Venta Total:"
         '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(19, 188)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(47, 17)
-        Me.Label7.TabIndex = 7
-        Me.Label7.Text = "Fecha"
-        '
         'NumericUpDown1
         '
-        Me.NumericUpDown1.Location = New System.Drawing.Point(115, 257)
+        Me.NumericUpDown1.Location = New System.Drawing.Point(115, 222)
         Me.NumericUpDown1.Name = "NumericUpDown1"
         Me.NumericUpDown1.Size = New System.Drawing.Size(100, 20)
         Me.NumericUpDown1.TabIndex = 8
@@ -213,14 +201,14 @@ Partial Class ventas
         '
         'txtPrecio
         '
-        Me.txtPrecio.Location = New System.Drawing.Point(116, 220)
+        Me.txtPrecio.Location = New System.Drawing.Point(116, 185)
         Me.txtPrecio.Name = "txtPrecio"
         Me.txtPrecio.Size = New System.Drawing.Size(99, 20)
         Me.txtPrecio.TabIndex = 12
         '
         'txtTotal
         '
-        Me.txtTotal.Location = New System.Drawing.Point(115, 296)
+        Me.txtTotal.Location = New System.Drawing.Point(115, 261)
         Me.txtTotal.Name = "txtTotal"
         Me.txtTotal.Size = New System.Drawing.Size(100, 20)
         Me.txtTotal.TabIndex = 13
@@ -267,14 +255,6 @@ Partial Class ventas
         Me.Button4.TabIndex = 18
         Me.Button4.Text = "VENDER"
         Me.Button4.UseVisualStyleBackColor = True
-        '
-        'DateTimePicker1
-        '
-        Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateTimePicker1.Location = New System.Drawing.Point(115, 184)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(100, 20)
-        Me.DateTimePicker1.TabIndex = 19
         '
         'Button5
         '
@@ -414,15 +394,13 @@ Partial Class ventas
         Me.GroupBox2.Controls.Add(Me.Label4)
         Me.GroupBox2.Controls.Add(Me.Label8)
         Me.GroupBox2.Controls.Add(Me.Label5)
-        Me.GroupBox2.Controls.Add(Me.Label7)
-        Me.GroupBox2.Controls.Add(Me.DateTimePicker1)
         Me.GroupBox2.Controls.Add(Me.NumericUpDown1)
         Me.GroupBox2.Controls.Add(Me.txtPrecio)
         Me.GroupBox2.Controls.Add(Me.txtDescripcion)
         Me.GroupBox2.Controls.Add(Me.txtTotal)
         Me.GroupBox2.Location = New System.Drawing.Point(24, 172)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(251, 348)
+        Me.GroupBox2.Size = New System.Drawing.Size(251, 322)
         Me.GroupBox2.TabIndex = 28
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Articulo"
@@ -565,7 +543,6 @@ Partial Class ventas
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents Label6 As System.Windows.Forms.Label
-    Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents NumericUpDown1 As System.Windows.Forms.NumericUpDown
     Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
     Friend WithEvents txtDescripcion As System.Windows.Forms.TextBox
@@ -580,7 +557,6 @@ Partial Class ventas
     Friend WithEvents ArticulosBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents ArticulosTableAdapter As form1.BaseBellezaDataSetTableAdapters.articulosTableAdapter
     Friend WithEvents TableAdapterManager As form1.BaseBellezaDataSetTableAdapters.TableAdapterManager
-    Friend WithEvents DateTimePicker1 As System.Windows.Forms.DateTimePicker
     Friend WithEvents Button5 As System.Windows.Forms.Button
     Friend WithEvents Label8 As System.Windows.Forms.Label
     Friend WithEvents txtstock As System.Windows.Forms.TextBox

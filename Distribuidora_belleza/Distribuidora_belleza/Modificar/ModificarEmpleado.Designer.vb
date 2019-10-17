@@ -44,6 +44,7 @@ Partial Class ModificarEmpleado
         Me.EmpleadoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.EmpleadoTableAdapter = New form1.BaseBellezaDataSetTableAdapters.empleadoTableAdapter()
         Me.TableAdapterManager = New form1.BaseBellezaDataSetTableAdapters.TableAdapterManager()
+        Me.Button2 = New System.Windows.Forms.Button()
         CType(Me.BaseBellezaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EmpleadoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -187,9 +188,9 @@ Partial Class ModificarEmpleado
         'Button1
         '
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(46, 316)
+        Me.Button1.Location = New System.Drawing.Point(147, 322)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(121, 43)
+        Me.Button1.Size = New System.Drawing.Size(81, 43)
         Me.Button1.TabIndex = 16
         Me.Button1.Text = "Modificar"
         Me.Button1.UseVisualStyleBackColor = True
@@ -220,11 +221,23 @@ Partial Class ModificarEmpleado
         Me.TableAdapterManager.UpdateOrder = form1.BaseBellezaDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         Me.TableAdapterManager.ventasTableAdapter = Nothing
         '
+        'Button2
+        '
+        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.Location = New System.Drawing.Point(37, 322)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(81, 43)
+        Me.Button2.TabIndex = 17
+        Me.Button2.Text = "Buscar"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
         'ModificarEmpleado
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.Teal
         Me.ClientSize = New System.Drawing.Size(257, 393)
+        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.txtCp)
         Me.Controls.Add(Me.txtDireccion)
@@ -275,4 +288,5 @@ Partial Class ModificarEmpleado
     Friend WithEvents EmpleadoBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents EmpleadoTableAdapter As form1.BaseBellezaDataSetTableAdapters.empleadoTableAdapter
     Friend WithEvents TableAdapterManager As form1.BaseBellezaDataSetTableAdapters.TableAdapterManager
+    Friend WithEvents Button2 As System.Windows.Forms.Button
 End Class

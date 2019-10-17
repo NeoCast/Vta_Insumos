@@ -40,6 +40,9 @@ Partial Class ModificarArticulo
         Me.ArticulosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ArticulosTableAdapter = New form1.BaseBellezaDataSetTableAdapters.articulosTableAdapter()
         Me.TableAdapterManager = New form1.BaseBellezaDataSetTableAdapters.TableAdapterManager()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.txtminimo = New System.Windows.Forms.TextBox()
+        Me.Label7 = New System.Windows.Forms.Label()
         CType(Me.BaseBellezaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ArticulosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -47,9 +50,9 @@ Partial Class ModificarArticulo
         'Button1
         '
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(84, 291)
+        Me.Button1.Location = New System.Drawing.Point(158, 315)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(111, 42)
+        Me.Button1.Size = New System.Drawing.Size(100, 45)
         Me.Button1.TabIndex = 0
         Me.Button1.Text = "Modificar"
         Me.Button1.UseVisualStyleBackColor = True
@@ -88,7 +91,7 @@ Partial Class ModificarArticulo
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(34, 161)
+        Me.Label4.Location = New System.Drawing.Point(34, 194)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(47, 17)
         Me.Label4.TabIndex = 4
@@ -98,7 +101,7 @@ Partial Class ModificarArticulo
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(34, 201)
+        Me.Label5.Location = New System.Drawing.Point(34, 234)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(42, 17)
         Me.Label5.TabIndex = 5
@@ -108,7 +111,7 @@ Partial Class ModificarArticulo
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(34, 238)
+        Me.Label6.Location = New System.Drawing.Point(34, 271)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(47, 17)
         Me.Label6.TabIndex = 6
@@ -137,21 +140,21 @@ Partial Class ModificarArticulo
         '
         'txtPrecio
         '
-        Me.txtPrecio.Location = New System.Drawing.Point(158, 158)
+        Me.txtPrecio.Location = New System.Drawing.Point(158, 191)
         Me.txtPrecio.Name = "txtPrecio"
         Me.txtPrecio.Size = New System.Drawing.Size(100, 20)
         Me.txtPrecio.TabIndex = 10
         '
         'txtRubro
         '
-        Me.txtRubro.Location = New System.Drawing.Point(158, 197)
+        Me.txtRubro.Location = New System.Drawing.Point(158, 230)
         Me.txtRubro.Name = "txtRubro"
         Me.txtRubro.Size = New System.Drawing.Size(100, 20)
         Me.txtRubro.TabIndex = 11
         '
         'txtMarca
         '
-        Me.txtMarca.Location = New System.Drawing.Point(158, 238)
+        Me.txtMarca.Location = New System.Drawing.Point(158, 271)
         Me.txtMarca.Name = "txtMarca"
         Me.txtMarca.Size = New System.Drawing.Size(100, 20)
         Me.txtMarca.TabIndex = 12
@@ -182,11 +185,42 @@ Partial Class ModificarArticulo
         Me.TableAdapterManager.UpdateOrder = form1.BaseBellezaDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         Me.TableAdapterManager.ventasTableAdapter = Nothing
         '
+        'Button2
+        '
+        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.Location = New System.Drawing.Point(37, 315)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(100, 45)
+        Me.Button2.TabIndex = 13
+        Me.Button2.Text = "Buscar"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'txtminimo
+        '
+        Me.txtminimo.Location = New System.Drawing.Point(158, 155)
+        Me.txtminimo.Name = "txtminimo"
+        Me.txtminimo.Size = New System.Drawing.Size(100, 20)
+        Me.txtminimo.TabIndex = 15
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(34, 158)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(91, 17)
+        Me.Label7.TabIndex = 14
+        Me.Label7.Text = "Stock minimo"
+        '
         'ModificarArticulo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(293, 368)
+        Me.BackColor = System.Drawing.Color.Teal
+        Me.ClientSize = New System.Drawing.Size(305, 392)
+        Me.Controls.Add(Me.txtminimo)
+        Me.Controls.Add(Me.Label7)
+        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.txtMarca)
         Me.Controls.Add(Me.txtRubro)
         Me.Controls.Add(Me.txtPrecio)
@@ -229,4 +263,7 @@ Partial Class ModificarArticulo
     Friend WithEvents ArticulosBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents ArticulosTableAdapter As form1.BaseBellezaDataSetTableAdapters.articulosTableAdapter
     Friend WithEvents TableAdapterManager As form1.BaseBellezaDataSetTableAdapters.TableAdapterManager
+    Friend WithEvents Button2 As System.Windows.Forms.Button
+    Friend WithEvents txtminimo As System.Windows.Forms.TextBox
+    Friend WithEvents Label7 As System.Windows.Forms.Label
 End Class

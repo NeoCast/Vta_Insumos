@@ -10,7 +10,8 @@
     Private Sub ModificarCliente_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         'TODO: esta línea de código carga datos en la tabla 'BaseBellezaDataSet.cliente' Puede moverla o quitarla según sea necesario.
         Me.ClienteTableAdapter.Fill(Me.BaseBellezaDataSet.cliente)
-        'txtId_cliente.Enabled = False
+        Button1.Enabled = False
+
     End Sub
 
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
@@ -26,6 +27,22 @@
             Me.ClienteTableAdapter.Fill(Me.BaseBellezaDataSet.cliente)
             MsgBox("Modificacion realizada con exito")
             Me.Close()
+        End If
+    End Sub
+
+    Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
+        Dim codconsulta, fila As Integer
+        codconsulta = txtId_cliente.Text
+        fila = Me.ClienteBindingSource.Find("id_cliente", codconsulta)
+        If fila = -1 Then
+            MsgBox("No se encontro")
+        Else
+            ClienteTableAdapter.buscarCliente((Me.BaseBellezaDataSet.cliente), txtId_cliente.Text)
+            txtNombre.Text = ClienteBindingSource.Current("nombre")
+            txtTelefono.Text = ClienteBindingSource.Current("telefono")
+            txtMail.Text = ClienteBindingSource.Current("mail")
+            Button1.Enabled = True
+
         End If
     End Sub
 End Class

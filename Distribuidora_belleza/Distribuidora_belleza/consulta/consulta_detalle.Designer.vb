@@ -164,6 +164,7 @@ Partial Class consulta_detalle
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Detalle_vtaDataGridView)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Name = "consulta_detalle"
         Me.Text = "consulta_detalle"
         CType(Me.BaseBellezaDataSet, System.ComponentModel.ISupportInitialize).EndInit()

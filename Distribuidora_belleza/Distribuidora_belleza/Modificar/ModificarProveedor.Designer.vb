@@ -44,6 +44,7 @@ Partial Class ModificarProveedor
         Me.TableAdapterManager = New form1.BaseBellezaDataSetTableAdapters.TableAdapterManager()
         Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
         Me.LineShape1 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.Button2 = New System.Windows.Forms.Button()
         CType(Me.BaseBellezaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ProveedorBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -153,7 +154,7 @@ Partial Class ModificarProveedor
         'Button1
         '
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(306, 210)
+        Me.Button1.Location = New System.Drawing.Point(289, 233)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(116, 49)
         Me.Button1.TabIndex = 12
@@ -221,11 +222,23 @@ Partial Class ModificarProveedor
         Me.LineShape1.Y1 = 19
         Me.LineShape1.Y2 = 211
         '
+        'Button2
+        '
+        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.Location = New System.Drawing.Point(96, 233)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(116, 49)
+        Me.Button2.TabIndex = 16
+        Me.Button2.Text = "Buscar"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
         'ModificarProveedor
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.Teal
         Me.ClientSize = New System.Drawing.Size(498, 317)
+        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.txtId_proveedor)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Button1)
@@ -275,4 +288,5 @@ Partial Class ModificarProveedor
     Friend WithEvents TableAdapterManager As form1.BaseBellezaDataSetTableAdapters.TableAdapterManager
     Friend WithEvents ShapeContainer1 As Microsoft.VisualBasic.PowerPacks.ShapeContainer
     Friend WithEvents LineShape1 As Microsoft.VisualBasic.PowerPacks.LineShape
+    Friend WithEvents Button2 As System.Windows.Forms.Button
 End Class

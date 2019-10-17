@@ -7,6 +7,13 @@
 
     End Sub
 
+    Private Sub CrearUsuario_FormClosing(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles Me.FormClosing
+        UsuarioTextBox.Text = ""
+        Id_empleadoComboBox.Text = ""
+        NombreTextBox.Text = ""
+
+    End Sub
+
     Private Sub CrearUsuario_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         'TODO: esta línea de código carga datos en la tabla 'BaseBellezaDataSet.empleado' Puede moverla o quitarla según sea necesario.
         Me.EmpleadoTableAdapter.Fill(Me.BaseBellezaDataSet.empleado)
@@ -33,20 +40,15 @@
                     If ComboBox1.SelectedIndex = 0 And Id_empleadoComboBox.Text = "" Then
                         MsgBox("Por favor seleccione el codigo correspondiente del empleado", vbCritical, "error")
                     ElseIf ComboBox1.SelectedIndex = 0 Then
-                        'MsgBox("c")
-                        'Me.Registro_usuarioBindingSource.Current("usuario") = UsuarioTextBox.Text
-                        'Me.Registro_usuarioBindingSource.Current("contraseña") = ContraseñaTextBox.Text
-                        'Me.Registro_usuarioBindingSource.Current("tipo") = Convert.ToString(ComboBox1.SelectedItem)
-                        'Me.Registro_usuarioBindingSource.Current("id_empleado") = Convert.ToInt32(Id_empleadoComboBox.Text)
-                        'Me.Validate()
-
-                        'Me.Registro_usuarioBindingSource.EndEdit()
+                        
                         Me.Registro_usuarioTableAdapter.nuevoUsuario(UsuarioTextBox.Text, ContraseñaTextBox.Text, ComboBox1.Text, Convert.ToInt32(Id_empleadoComboBox.Text))
                         Me.TableAdapterManager.UpdateAll(Me.BaseBellezaDataSet)
                         MsgBox("se cargo con exito")
                         Me.Registro_usuarioTableAdapter.Fill(Me.BaseBellezaDataSet.Registro_usuario)
                         Consulta_usuarios.Registro_usuarioTableAdapter.Fill(Consulta_usuarios.BaseBellezaDataSet.Registro_usuario)
                         loggin2.Registro_usuarioTableAdapter.Fill(loggin2.BaseBellezaDataSet.Registro_usuario)
+                        Me.Registro_usuarioBindingSource.AddNew()
+
 
                     ElseIf ComboBox1.SelectedIndex = 1 Then
 
@@ -57,6 +59,7 @@
                         Me.Registro_usuarioTableAdapter.Fill(Me.BaseBellezaDataSet.Registro_usuario)
                         Consulta_usuarios.Registro_usuarioTableAdapter.Fill(Consulta_usuarios.BaseBellezaDataSet.Registro_usuario)
                         loggin2.Registro_usuarioTableAdapter.Fill(loggin2.BaseBellezaDataSet.Registro_usuario)
+                        Me.Registro_usuarioBindingSource.AddNew()
 
                     End If
                 Else
@@ -74,5 +77,11 @@
             NombreTextBox.Enabled = True
 
         End If
+    End Sub
+
+    Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
+
+        Me.Close()
+
     End Sub
 End Class

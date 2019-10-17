@@ -27,12 +27,11 @@
         codconsulta = TextBox1.Text
         fila = Me.ProveedorBindingSource.Find("id_proveedor", codconsulta)
         If fila = -1 Then
-
-
+            MsgBox("no se encontro")
+        Else
             consulta = MsgBox("Desea eliminar proveedor", 32 + 1)
             If consulta = 1 Then
                 Me.ProveedorTableAdapter.eliminarProveedor(TextBox1.Text)
-                Me.ProveedorBindingSource.EndEdit()
                 Me.TableAdapterManager.UpdateAll(Me.BaseBellezaDataSet)
                 Me.ProveedorTableAdapter.Fill(Me.BaseBellezaDataSet.proveedor)
                 consulta_proveedor.ProveedorTableAdapter.Fill(Me.BaseBellezaDataSet.proveedor)

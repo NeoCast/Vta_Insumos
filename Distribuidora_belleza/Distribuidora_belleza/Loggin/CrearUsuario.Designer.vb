@@ -40,6 +40,7 @@ Partial Class CrearUsuario
         Me.EmpleadoTableAdapter = New form1.BaseBellezaDataSetTableAdapters.empleadoTableAdapter()
         Me.Id_empleadoComboBox = New System.Windows.Forms.ComboBox()
         Me.NombreTextBox = New System.Windows.Forms.TextBox()
+        Me.Button2 = New System.Windows.Forms.Button()
         UsuarioLabel = New System.Windows.Forms.Label()
         ContraseñaLabel = New System.Windows.Forms.Label()
         TipoLabel = New System.Windows.Forms.Label()
@@ -154,7 +155,7 @@ Partial Class CrearUsuario
         'Button1
         '
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(108, 247)
+        Me.Button1.Location = New System.Drawing.Point(43, 247)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(82, 47)
         Me.Button1.TabIndex = 7
@@ -190,12 +191,23 @@ Partial Class CrearUsuario
         Me.NombreTextBox.Size = New System.Drawing.Size(100, 20)
         Me.NombreTextBox.TabIndex = 10
         '
+        'Button2
+        '
+        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.Location = New System.Drawing.Point(157, 247)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(82, 47)
+        Me.Button2.TabIndex = 11
+        Me.Button2.Text = "Fin"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
         'CrearUsuario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Teal
-        Me.ClientSize = New System.Drawing.Size(323, 319)
+        Me.ClientSize = New System.Drawing.Size(293, 326)
+        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(NombreLabel)
         Me.Controls.Add(Me.NombreTextBox)
         Me.Controls.Add(Id_empleadoLabel)
@@ -232,4 +244,5 @@ Partial Class CrearUsuario
     Friend WithEvents EmpleadoTableAdapter As form1.BaseBellezaDataSetTableAdapters.empleadoTableAdapter
     Friend WithEvents Id_empleadoComboBox As System.Windows.Forms.ComboBox
     Friend WithEvents NombreTextBox As System.Windows.Forms.TextBox
+    Friend WithEvents Button2 As System.Windows.Forms.Button
 End Class
